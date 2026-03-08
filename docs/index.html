@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>TabNeuron - Spatial Tab Management & AI Research Workspace</title>
+    <meta name="description" content="TabNeuron: The native desktop workspace for your browser tabs. Map your web session onto an infinite 2D canvas, automate research with AI pipelines, command built-in MCP web tools, and sync bidirectionally with your browser.">
+    <meta name="keywords" content="Spatial Tab Management, Desktop Browser Workspace, AI Web Research, Infinite Canvas, Browser Tab Sync, AI Agent Pipelines, MCP Server, Local LLM Integration, Chrome Tab Groups, Visual Knowledge Management">
+    <meta name="author" content="Tetramatrix">
+    <meta property="og:title" content="TabNeuron - Spatial Tab Management & AI Research Workspace">
+    <meta property="og:description" content="TabNeuron: The native desktop workspace for your browser tabs. Map your web session onto an infinite 2D canvas, automate research with AI pipelines, command built-in MCP web tools, and sync bidirectionally with your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="main.png">
+
+    <!-- Google Ads (using template IDs) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6449563648591184"
+         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+<script>
+function scrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        // Überprüfe, ob das Element bereits sichtbar ist
+        const rect = targetElement.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+        // Wenn das Element sichtbar ist, aber am oberen Rand, scrollen wir so, dass es in der Mitte ist
+        if (isVisible && rect.top < window.innerHeight * 0.1) {
+            // Scrollen, sodass das Element in der Mitte des Viewports ist
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            // Ansonsten normales Scrollen
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+
+// Alternative Funktion, die immer zentriert, wenn das Element bereits sichtbar ist
+function smartScrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isInViewport) {
+            // Wenn das Element bereits sichtbar ist, zentriere es
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            // Ansonsten scroll zum Anfang des Elements
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+</script>
+</body>
+    <aside class="left">
+        <nav class="fixed-nav">
+            <!-- Google Ads - Left Sidebar -->
+            <!-- Ad code removed for clarity -->
+        </nav>
+    </aside>
+
+    <aside class="right">
+        <!-- Google Ads - Right Sidebar -->
+        <!-- Ad code removed for clarity -->
+    </aside>
+
+    <main class="wikidoc">
+        <header class="page-header">
+            <h1>TabNeuron</h1>
+            <h3>Spatial Tab Management & AI Research Workspace</h3>
+            <figure class="logo-container">
+                <img src="logo_small.png" alt="TabNeuron Logo" class="logo">
+            </figure>
+        </header>
+
+    <!-- Horizontal Navigation Bar -->
+    <nav class="horizontal-toc-nav">
+        <ul>
+            <li><a href="#inspiration">Inspiration</a></li>
+            <li><a href="#what-is-tabneuron">What is TabNeuron?</a></li>
+            <li><a href="#core-capabilities">Core Capabilities</a></li>
+            <li><a href="#chat-websites">Chat with Websites</a></li>
+            <li><a href="#ai-agents">AI Research Agents</a></li>
+            <li><a href="#canvas-sync">Canvas & Sync</a></li>
+            <li><a href="#intended-users">Intended Users</a></li>
+            <li><a href="#ai-model-config">AI Model Configuration</a></li>
+            <li><a href="#browser-extension">Browser Extension</a></li>
+            <li><a href="#system-requirements">System Requirements</a></li>
+            <li><a href="#other-products">Other Products</a></li>
+        </ul>
+    </nav>
+
+    <!-- Inspiration Section -->
+    <section class="inspiration-section" id="inspiration">
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#what-is-tabneuron')">⬇️</span>
+            <span class="nav-arrow-up" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆️</span>
+            <h2>Inspiration</h2>
+            <p>Most tab managers are confined to tiny browser sidebars or dropdown menus, trapping your research in flat, ephemeral lists. We built TabNeuron because complex web research requires space and permanence. By pulling your browser tabs out onto a native desktop canvas, you gain an infinite 2D workspace to visually group information, analyze it with AI, and take true ownership of your browsing sessions.</p>
+        </div>
+    </section>
+
+    <section class="intro-section" id="what-is-tabneuron">
+        <h2>What is TabNeuron?</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#inspiration')">⬆️</span>
+            <p>TabNeuron is a standalone desktop application that connects to your browser via a lightweight extension. It maps your active browsing session onto an infinite visual canvas. You can organize tabs spatially, chat with the extracted page content using local or cloud AI, and build agent pipelines to automate web research.</p>
+<p><em><strong>Beta Note:</strong> TabNeuron is in active development. As we refine the bidirectional browser sync and AI agent pipelines, you might encounter occasional hiccups. We are building for power users who want maximum control over their data.</em></p>
+        </div>
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="responsive-iframe-container">
+                <iframe src="https://www.youtube.com/embed/IItG9BwXkqo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p class="video-caption"><em>Demonstration of TabNeuron workspace with browser tabs</em></p>
+        </section>
+
+        <!-- Google Ads - Top Banner -->
+        <!--
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6449563648591184"
+             data-ad-slot="8910195152"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        -->
+
+        <!-- Download Section -->
+        <section class="download-section" id="download-section">
+            <div class="cta-box">
+                <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
+                <span class="nav-arrow-up" onclick="smartScrollToSection('#what-is-tabneuron')">⬆️</span>
+                <h3>Download TabNeuron</h3>
+                <p>Get started with your intelligent web workspace.</p>
+
+                <div class="download-buttons">
+                    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary">Download (Portable)</a>
+                    <a href="chrome-extension.crx" class="btn btn-secondary">Chrome Extension</a>
+                    <a href="README.txt" class="btn btn-primary">Readme</a>
+                </div>
+
+                <pre class="code-block-md5"><code>
+        $ md5sum TabNeuron.exe v1.0.7 52553cdbe714054f7a442a391d585553
+        </code></pre>
+
+                <a href="https://apps.microsoft.com/store/detail/9N8C43PZC1RN" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="50%"/></a>
+            </div>
+        </section>
+
+        <section class="capabilities-section" id="core-capabilities">
+            <h2>Core Capabilities</h2>
+            <div class="cta-box">
+                <span class="nav-arrow-down" onclick="smartScrollToSection('#chat-websites')">⬇️</span>
+                <span class="nav-arrow-up" onclick="smartScrollToSection('#download-section')">⬆️</span>
+                <ul>
+                    <li><strong>Native Desktop Workspace:</strong> Break out of the browser UI. Manage tabs on an infinite 2D spatial canvas with drag, drop, and WYSIWYG grouping tools.</li>
+                    <li><strong>Data Ownership & Backups:</strong> Save your visual workspace states locally to disk. Close your browser, and your research session remains safely backed up and restorable.</li>
+                    <li><strong>Validated App ↔ Browser Sync:</strong> AI suggests semantic tab groupings, but you stay in control. Review your visual layout and click "Apply" to sync the structure back to your browser's tab groups.</li>
+                    <li><strong>Mindmap Visualization:</strong> Toggle a structured mindmap view to get a high-level overview of all nested groups and tabs.</li>
+                    <li><strong>Visual Previews & Metadata:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags are extracted for every tab, giving you instant visual context without switching windows.</li>
+                    <li><strong>Multi-Tab Chat:</strong> Select multiple tabs on the canvas and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
+                    <li><strong>AI Agent Pipelines:</strong> Build no-code automated workflows where the output of one agent (e.g., extracting specs) becomes the input for the next (e.g., formatting a comparison table).</li>
+                    <li><strong>Built-in MCP Server:</strong> Native Model Context Protocol server giving your AI direct web access. Included tools: <code>web_fetch_content</code>, <code>web_scrape_page</code>, <code>web_extract_links</code>, <code>web_search</code>, <code>web_get_metadata</code>, and <code>web_save_snapshot</code>.</li>
+                </ul>
+            </div>
+
+            <figure class="chatbot-figure">
+                <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
+            </figure>
+        </section>
+
+    <section class="users-section" id="intended-users">
+        <h2>Intended Users</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#chat-websites')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#core-capabilities')">⬆️</span>
+            <p>TabNeuron is designed for users who need to organize and analyze web content:</p>
+            <ul>
+                <li><strong>Researchers:</strong> Manage research tabs, compare sources, and synthesize information across multiple websites.</li>
+                <li><strong>Students:</strong> Organize study materials, extract key points from articles, and create structured notes.</li>
+                <li><strong>Professionals:</strong> Track competitors, monitor industry news, and automate information gathering.</li>
+                <li><strong>Developers:</strong> Extract code examples, compare documentation, and build research workflows.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Chat with Websites Section -->
+    <section class="chat-section" id="chat-websites">
+        <h2>💬 Chat with Websites</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#ai-agents')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#core-capabilities')">⬆️</span>
+            <p>Talk directly to your open tabs. TabNeuron extracts the DOM content and metadata from your selected tabs and feeds it into your chosen LLM context.</p>
+            <h3>How it Works:</h3>
+            <ol>
+                <li>Select one or multiple tabs on the desktop canvas.</li>
+                <li>Open the context menu and select "Chat with Page(s)".</li>
+                <li>Ask natural language questions to synthesize data across all selected sources.</li>
+            </ol>
+            <h3>Multi-Tab Use Cases:</h3>
+            <ul>
+                <li>"Compare the technical specifications across these 4 review tabs."</li>
+                <li>"Extract all Python code blocks from this tutorial and format them."</li>
+                <li>"Read these 5 news articles and summarize the overarching timeline."</li>
+                <li>"What's the weather in Berlin?"</li>
+                <li>"Find best wireless earbuds under 100"</li>
+                <li>"Get latest Python release"</li>
+                <li>"Compare iPhone 16 vs Samsung S25"</li>
+                <li>"Summarize this article"</li>
+                <li>"Extract all product links from Amazon search"</li>
+                <li>"Check if website is down"</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AI Research Agents Section -->
+    <section class="agents-section" id="ai-agents">
+        <h2>🤖 AI Agents Pipeline</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#canvas-sync')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#chat-websites')">⬆️</span>
+            <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
+            <h3>Example Pipeline:</h3>
+            <ol>
+                <li><strong>Scraper Agent:</strong> Reads 10 selected product tabs and uses <code>web_extract_links</code> to find technical specs.</li>
+                <li><strong>Analyst Agent:</strong> Takes the outputted specs, compares them, and formats a Markdown table.</li>
+                <li><strong>Output Agent:</strong> Writes a final executive summary and saves it as a new, persistent text node on your canvas.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Canvas & Sync Section -->
+    <section class="sync-section" id="canvas-sync">
+        <h2>🔄 Canvas ↔ Browser Sync</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#intended-users')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ai-agents')">⬆️</span>
+            <p>Your desktop canvas and your browser stay aligned through a controlled bidirectional sync.</p>
+            <h3>Canvas → Browser:</h3>
+            <ul>
+                <li>Organize tabs spatially on the desktop canvas or let the AI cluster them semantically.</li>
+                <li>Review the layout and click "Apply".</li>
+                <li>Your browser's native tab groups are instantly updated to match your visual workspace.</li>
+            </ul>
+            <h3>Browser → Canvas:</h3>
+            <ul>
+                <li>Create groups or open new tabs directly in your browser.</li>
+                <li>TabNeuron's lightweight polling API detects the changes.</li>
+                <li>The new tabs and groups are automatically pulled onto your desktop canvas.</li>
+            </ul>
+            <p><em>Note: While our architecture is browser-agnostic, the current bridge extension only supports Chromium-based browsers (Chrome, Edge, Brave, etc.).</em></p>
+            
+            <figure class="mindmap-figure">
+                <img src="mindmap.png" alt="TabNeuron Mindmap - Visual representation of tab groups" class="mindmap-screenshot">
+                <figcaption class="image-caption">Mindmap - Visual representation of tab groups and their relationships</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- AI Model Configuration Section -->
+    <section class="config-section" id="ai-model-config">
+        <h2>🧠 AI Model Configuration</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#intended-users')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#canvas-sync')">⬆️</span>
+            <p>TabNeuron is backend-agnostic. Choose the engine that fits your privacy needs and hardware capabilities:</p>
+            <ul>
+                <li><strong>Local-First & Offline (Privacy):</strong> Connect to Ollama, Llama.cpp, or use the built-in portable model (~806MB). Analyze your tabs entirely offline so your browsing data never leaves your machine. <em>(Note: Running 8B+ models locally requires at least 16 GB RAM or 8 GB VRAM for smooth performance).</em></li>
+                <li><strong>Cloud-Scale (Performance):</strong> Connect your API keys for OpenAI, Mistral, Lemonade, or others. Recommended for complex, multi-tab reasoning tasks, highly accurate agent pipelines, and bypassing local hardware limits.</li>
+            </ul>
+
+            <figure class="model-manager-figure">
+                <img src="modelmanager.png" alt="TabNeuron Model Manager Interface" class="model-manager-screenshot">
+                <figcaption class="image-caption">Model Manager - Activate and manage AI models</figcaption>
+            </figure>
+        </div>
+    </section>
+            <p><strong>Note:</strong> Cloud models provide the best performance for tab analysis and chat. Local models work offline but may have reduced accuracy for complex tasks.</p>
+        </div>
+    </section>
+
+    <!-- Browser Extension Setup Section -->
+    <section class="extension-section" id="browser-extension">
+        <h2>📦 Browser Extension Setup</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#system-requirements')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ai-model-config')">⬆️</span>
+            <p>Because TabNeuron is a native desktop app, it uses a lightweight extension merely as a bridge to communicate with your browser via a local polling API.</p>
+            <h3>Configuration Bridge:</h3>
+            <ul>
+                <li><strong>Host:</strong> localhost</li>
+                <li><strong>Port:</strong> 5555</li>
+                <li><strong>Sync:</strong> Polling API (default 2s interval)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="requirements-section" id="system-requirements">
+        <h2>System Requirements</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#final-download')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#chrome-extension')">⬆️</span>
+            <table class="req-table">
+            <tr><th>Component</th><th>Minimum</th></tr>
+            <tr><td>OS</td><td>Windows 11 (64-bit)</td></tr>
+            <tr><td>🌐 Browser</td><td>Google Chrome (required for extension)</td></tr>
+            <tr><td>🧠 AI Support</td><td>Built-in models or on-prem/cloud AI services</td></tr>
+            <tr><td>💾 RAM</td><td>&ge; 4 GB</td></tr>
+            <tr><td>💽 Storage</td><td>Minimum 2 GB (app + model)</td></tr>
+            <tr><td>⚡ Rights</td><td>Standard user</td></tr>
+        </table>
+    </section>
+
+    <!-- Final Download Section -->
+    <section class="final-download-section">
+        <div class="cta-box" id="final-download">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#support-donations')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#system-requirements')">⬆️</span>
+            <h3>Get TabNeuron</h3>
+            <p>Download and install the application.</p>
+
+            <div class="download-buttons">
+                <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary btn-large">Download (Portable)</a>
+                <a href="chrome-extension.crx" class="btn btn-secondary">Chrome Extension</a>
+                <a href="README.txt" class="btn btn-primary">Readme</a>
+            </div>
+
+            <pre class="code-block-md5-highlight">
+            <code>
+        $ md5sum.exe TabNeuron.exe v1.0.7 52553cdbe714054f7a442a391d585553
+        </code></pre>
+
+            <a href="https://apps.microsoft.com/store/detail/9N8C43PZC1RN" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="50%" /></a>
+        </div>
+    </section>
+
+    <section class="support-section" id="support-donations">
+        <h2>Support & Donations</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#other-products')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#final-download')">⬆️</span>
+            <p>Support TabNeuron development.</p>
+        </div>
+
+        <div class="cta-box" id="discord-community">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#review-project')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#support-donations')">⬆️</span>
+            <h3>Join our Discord community</h3>
+            <div class="external-links">
+                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">TabNeuron Discord</a>
+            </div>
+        </div>
+
+        <div class="cta-box" id="review-project">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#paypal-bch')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#discord-community')">⬆️</span>
+            <h3>Leave a review or star the project</h3>
+            <a href="https://alternativeto.net/software/tabneuron/" target="_blank"><img src="AlternativeTo.png" width="20%" alt="The Visual AI Web Workspace" /></a>
+        </div>
+
+        <div class="cta-box" id="paypal-bch">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#featured-alternative')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#review-project')">⬆️</span>
+            <h3>Support via PayPal or Bitcoin Cash</h3>
+            <div class="payment-options">
+                <div class="paypal-option">
+                    <h4>PayPal</h4>
+                    <p><a href="paypal.me/Gigamegs">paypal.me/Gigamegs</a></p>
+                    <figure class="qr-figure">
+                        <img src="qrcode.png" alt="PayPal QR Code" class="qr-code">
+                    </figure>
+                </div>
+
+                <div class="bch-option">
+                    <h4>Bitcoin Cash (BCH)</h4>
+                    <p>bitcoincash:
+                    qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv</p>
+                    <figure class="qr-figure">
+                        <img src="bch_qrcode.png" alt="Bitcoin Cash QR Code" class="qr-code">
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-box" id="featured-alternative">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#other-products')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#paypal-bch')">⬆️</span>
+            <h3>Featured on AlternativeTo</h3>
+            <a href="https://alternativeto.net/software/tabneuron/about/" title="TabNeuron provides a visual AI web workspace with chat, agents, and browser sync." target="_blank">
+                <img src="AlternativeTo.png" width="20%" alt="The Visual AI Web Workspace" />
+            </a>
+        </div>
+    </section>
+
+    <section class="other-products-section" id="other-products">
+        <h2>Discover our other tools and games:</h2>
+        <div class="cta-box" id="other-products-intro">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-intro')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#featured-alternative')">⬆️</span>
+            <p>Check out our other products and tools:</p>
+        </div>
+
+        <div class="cta-box" id="spaceship-intro">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-website')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#other-products-intro')">⬆️</span>
+            <h3>New Spaceship - Retro Mini Game</h3>
+            <p>Retro Arcade 2d side-scroller bullet-hell shmup game</p>
+        </div>
+
+        <div class="cta-box" id="spaceship-website">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-itch')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-intro')">⬆️</span>
+            <h4>Website</h4>
+            <figure class="product-fig">
+                <a href="http://tetramatrix.github.io/spaceship" target="_blank">
+                    <img src="start.jpg" title="Retro Arcade 2d side-scroller bullet-hell shmup game" alt="Spaceship" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="spaceship-itch">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-indiedb')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-website')">⬆️</span>
+            <h4>Featured on itch.io</h4>
+            <figure class="product-fig">
+                <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship">
+                    <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship - Retro Mini Game" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="spaceship-indiedb">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#ryzenzpilot-intro')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-itch')">⬆️</span>
+            <h4>Featured on IndieDB</h4>
+            <figure class="product-fig">
+                <a href="https://www.indiedb.com/games/new-spaceship" title="View New Spaceship on IndieDB" target="_blank">
+                    <img src="https://button.indiedb.com/popularity/medium/games/86877.png" alt="New Spaceship" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="ryzenzpilot-intro">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#ryzenzpilot-website')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-indiedb')">⬆️</span>
+            <h3>RyzenZPilot - AMD Ryzen Power Management Tool</h3>
+            <p>RyzenZPilot is a powerful tool for managing AMD Ryzen processor power settings on Windows.
+            It allows users to adjust CPU performance, power limits, and thermal configurations
+            for optimal performance and efficiency.</p>
+        </div>
+
+        <div class="cta-box" id="ryzenzpilot-website">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-intro')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ryzenzpilot-intro')">⬆️</span>
+            <h4>Website</h4>
+            <figure class="product-fig">
+                <a href="http://tetramatrix.github.io/RyzenZPilot" target="_blank">
+                    <img src="RyzenZPilot_3.1.3.png" title="AMD Ryzen Power Management Tool" alt="RyzenZPilot" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="aicono-intro">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-website')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ryzenzpilot-website')">⬆️</span>
+            <h3>Aicono - AI Intelligent Desktop Icon Autopilot</h3>
+            <p>Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!</p>
+        </div>
+
+        <div class="cta-box" id="aicono-website">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-microsoft')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-intro')">⬆️</span>
+            <h4>Website</h4>
+            <figure class="product-fig">
+                <a href="http://tetramatrix.github.io/Aicono" target="_blank">
+                    <img src="main.png" title="AI Intelligent Desktop Icon Autopilot" alt="Aicono" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="aicono-microsoft">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-software')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-website')">⬆️</span>
+            <h3>Featured on Microsoft Store</h3>
+            <figure class="store-fig">
+                <a href="https://apps.microsoft.com/store/detail/XP8LNKJ7H4B1WS" target="_blank">
+                    <img src="ms-store.svg" width="50%" height="50%" alt="Get it from Microsoft" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="aicono-software">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-alternative')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-microsoft')">⬆️</span>
+            <h3>Featured on Softpedia</h3>
+            <figure class="store-fig">
+                <a href="https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml" target="_blank">
+                    <img src="softpedia.png" width="40%" height="40%" alt="Get it from Softpedia" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="aicono-alternative">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-product')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-software')">⬆️</span>
+            <h4>Featured on AlternativeTo</h4>
+            <figure class="store-fig">
+                <a href="https://alternativeto.net/software/aicono" title="Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!" target="_blank">
+                    <img src="AlternativeTo.png" width="20%" alt="Aicono - AI Intelligent Desktop Icon Autopilot" />
+                </a>
+            </figure>
+        </div>
+
+        <div class="cta-box" id="aicono-product">
+            <span class="nav-arrow-down" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-alternative')">⬆️</span>
+            <h4>Featured on Product Hunt</h4>
+            <figure class="store-fig">
+                <a href="https://www.producthunt.com/products/aicono?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-aicono" target="_blank">
+                    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1018479&theme=dark&t=1758526753475" alt="Aicono - The AI intelligent desktop icon autopilot for Windows | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+                </a>
+            </figure>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p class="footer-text">
+            Developed by <b>Tetramatrix</b> | Available for digital workspaces | Free for everyone
+        </p>
+    </footer>
+
+</main>
+
+<!-- Google Analytics (optional) -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+-->
+
+<script>
+function scrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        // Überprüfe, ob das Element bereits sichtbar ist
+        const rect = targetElement.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+        // Wenn das Element sichtbar ist, aber am oberen Rand, scrollen wir so, dass es in der Mitte ist
+        if (isVisible && rect.top < window.innerHeight * 0.1) {
+            // Scrollen, sodass das Element in der Mitte des Viewports ist
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            // Ansonsten normales Scrollen
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+
+// Alternative Funktion, die immer zentriert, wenn das Element bereits sichtbar ist
+function smartScrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isInViewport) {
+            // Wenn das Element bereits sichtbar ist, zentriere es
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            // Ansonsten scroll zum Anfang des Elements
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+</script>
+
+</body>
+</html>
