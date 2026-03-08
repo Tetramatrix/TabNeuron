@@ -43,7 +43,7 @@ TabNeuron is backend-agnostic. You can use local models for privacy or cloud mod
 * Operating System: Windows 10/11 (64-bit)
 * Browser: Google Chrome (required for Extension)
 * RAM: Minimum 4 GB (8 GB+ recommended)
-* Storage: Minimum 500 MB (application + cache)
+* Storage: Minimum 1 GB (application + model)
 
 📦 Browser Extension Installation
 TabNeuron requires a lightweight bridge extension to communicate with Chrome.
@@ -52,7 +52,6 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 3. Click "Load unpacked" and select the chrome-extension/ folder
 4. Click the extension icon and configure Host to "localhost" and Port to "5555"
 5. Click "▶️ Start" to begin the 2s polling API
-* Note: The extension must be reloaded after a Chrome restart!
 
 ⚙️ Installation & Setup ⚙️
 
@@ -186,7 +185,7 @@ To connect agents in TabNeuron:
 
 🔹 Latest version: TabNeuron.exe v1.0.0
 🔹 Chrome Extension: chrome-extension.crx
-🔢 MD5 Checksum (.exe): [UPDATE WITH ACTUAL MD5]
+🔢 MD5 Checksum (.exe): v1.0.0 07d4ba361a3a7ee9aa9859544bdf9c11
 🌐 Download: http://tetramatrix.github.io/TabNeuron
 
 
