@@ -245,6 +245,7 @@ It allows users to adjust CPU performance, power limits, and thermal configurati
 for optimal performance and efficiency.
 
 🌐 Website: http://tetramatrix.github.io/RyzenZPilot
+💬 Discord: https://discord.gg/4QkQSfSATF
 
 🖥️ Discover our Aicono - AI intelligent desktop icon autopilot 🖥️
 
@@ -254,3 +255,12 @@ Aicono organizes a cluttered Windows desktop automatically by grouping icons wit
 📰 Softpedia: https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml
 🏪 Microsoft Store: https://apps.microsoft.com/detail/xp8lnkj7h4b1ws
 💻 Chip: https://www.chip.de/downloads/Aicono_186527264.html
+💬 Discord: https://discord.gg/4QkQSfSATF
+
+# 🚀 Sorana - Visual AI Workspace
+
+🧠 Sorana is an AI-powered visual workspace that transforms how you organize and interact with digital files. Using semantic AI analysis, it automatically groups related files and folders onto a spatial 2D canvas, replacing traditional hierarchies with intuitive visual layouts. Build drag-and-drop workspaces and no-code agent pipelines, connect to on-prem or cloud AI backends (OpenAI, Mistral, LLamacpp, Lemonade, Ollama), and keep your data under your control.
+
+🌐 Website: https://tetramatrix.github.io/Sorana/
+📰 Softpedia: https://www.softpedia.com/get/System/File-Management/Sorana.shtml
+💬 Discord: https://discord.gg/4QkQSfSATF
