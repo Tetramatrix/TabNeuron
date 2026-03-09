@@ -96,6 +96,7 @@ function smartScrollToSection(targetId) {
         <ul>
             <li><a href="#inspiration">Inspiration</a></li>
             <li><a href="#what-is-tabneuron">What is TabNeuron?</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#core-capabilities">Core Capabilities</a></li>
             <li><a href="#chat-websites">Chat with Websites</a></li>
             <li><a href="#ai-agents">AI Research Agents</a></li>
@@ -124,7 +125,7 @@ function smartScrollToSection(targetId) {
             <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#inspiration')">⬆️</span>
             <p>TabNeuron is a standalone desktop application that connects to your browser via a lightweight extension. It maps your active browsing session onto an infinite visual canvas. You can organize tabs spatially, chat with the extracted page content using local or cloud AI, and build agent pipelines to automate web research.</p>
-<p><em><strong>Beta Notice:</strong>Beta Notice: TabNeuron v1.0.0 is our initial public release, feature-complete and actively evolving. While core capabilities including canvas sync, multi-tab chat, AI agents, and the MCP server are fully functional, early adopters may encounter edge cases as we continue to harden the experience. We're building for power users who want full control over their data, and your feedback directly shapes what comes next.
+<p><em><strong>Beta Notice:</strong> TabNeuron v1.0.0 is our initial public release, feature-complete and actively evolving. While core capabilities including canvas sync, multi-tab chat, AI agents, and the MCP server are fully functional, early adopters may encounter edge cases as we continue to harden the experience. We're building for power users who want full control over their data, and your feedback directly shapes what comes next.
 The Chrome extension is currently pending Chrome Web Store approval. In the meantime, it can be loaded in seconds via Chrome's Developer Mode. See the installation guide below.</em></p>
         </div>
 
@@ -170,6 +171,42 @@ The Chrome extension is currently pending Chrome Web Store approval. In the mean
         </code></pre>
 
                 <a href="https://apps.microsoft.com/store/detail/9N8C43PZC1RN" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="50%"/></a>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section class="installation-section" id="installation">
+            <h2>🚀 Installation</h2>
+            <div class="cta-box">
+                <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
+                <span class="nav-arrow-up" onclick="smartScrollToSection('#download-section')">⬆️</span>
+                
+                <h3>Desktop App (Portable)</h3>
+                <p>The app is portable - no installation required!</p>
+                <ol>
+                    <li>Download <code>TabNeuron.exe</code></li>
+                    <li>Run it directly - that's it!</li>
+                </ol>
+                 
+                <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
+                
+                <h3>Browser Extension</h3>
+                
+                <p><em><strong>Beta Notice:</strong>The Chrome extension is currently pending Chrome Web Store approval. In the meantime, it can be loaded in seconds via Chrome's Developer Mode. See the installation guide below.</em></p>
+
+                <p>Install the Chrome extension to connect your browser with TabNeuron.</p>
+                <ol>
+                    <li>Download the Chrome Extension (.crx)</a></li>
+                    <li>Open Chrome and go to <code>chrome://extensions/</code></li>
+                    <li>Enable <strong>Developer mode</strong> (toggle in top-right)</li>
+                    <li>Drag & drop the <code>.crx</code> file onto the extensions page</li>
+                </ol>
+                  
+                <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
+                    <p><strong>After installation:</strong> Launch TabNeuron, then click the extension icon in Chrome to connect. The extension connects to <code>localhost:5555</code>.</p>
+                </div>
+
+
             </div>
         </section>
 
