@@ -181,9 +181,9 @@ To connect agents in TabNeuron:
 
 🔹 Latest version: TabNeuron.exe v1.0.0
 🔹 Chrome Extension: chrome-extension.crx
-🔢 MD5 Checksum (.exe): v1.0.0 07d4ba361a3a7ee9aa9859544bdf9c11
 🌐 Download: http://tetramatrix.github.io/TabNeuron
-
+🌐 Website: http://tetramatrix.github.io/TabNeuron
+💬 Discord: https://discord.gg/4QkQSfSATF
 
 📋 Changelog 📋
 
