@@ -186,7 +186,15 @@ The Chrome extension is currently pending Chrome Web Store approval. In the mean
                     <li><strong>Visual Previews & Metadata:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags are extracted for every tab, giving you instant visual context without switching windows.</li>
                     <li><strong>Multi-Tab Chat:</strong> Select multiple tabs on the canvas and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
                     <li><strong>AI Agent Pipelines:</strong> Build no-code automated workflows where the output of one agent (e.g., extracting specs) becomes the input for the next (e.g., formatting a comparison table).</li>
-                    <li><strong>Built-in MCP Server:</strong> Native Model Context Protocol server giving your AI direct web access. Included tools: <code>web_fetch_content</code>, <code>web_scrape_page</code>, <code>web_extract_links</code>, <code>web_search</code>, <code>web_get_metadata</code>, and <code>web_save_snapshot</code>.</li>
+                    <li><strong>Built-in MCP web content tools:</strong> Native Model Context Protocol server giving your AI direct web access. Included tools: <code>web_fetch_content</code>, <code>web_scrape_page</code>, <code>web_extract_links</code>, <code>web_search</code>, <code>web_get_metadata</code>, and <code>web_save_snapshot</code>.</li>
+                    Talk directly to internet.
+                    <ul>
+                        <li>"What's the weather in Berlin?"</li>
+                        <li>"Find best wireless earbuds under 100"</li>
+                        <li>"Compare iPhone 16 vs Samsung S25"</li>
+                        <li>"Check if website is down"</li>
+                        <li>"Extract all product links from Amazon search"</li>
+                    </ul>
                 </ul>
             </div>
 
@@ -219,22 +227,17 @@ The Chrome extension is currently pending Chrome Web Store approval. In the mean
             <p>Talk directly to your open tabs. TabNeuron extracts the DOM content and metadata from your selected tabs and feeds it into your chosen LLM context.</p>
             <h3>How it Works:</h3>
             <ol>
-                <li>Select one or multiple tabs on the desktop canvas.</li>
-                <li>Open the context menu and select "Chat with Page(s)".</li>
+                <li>Create an agent.</li>
+                <li>Add add any tabs to the agents group.</li>
+                <li>Open the context menu and select "Chat".</li>
                 <li>Ask natural language questions to synthesize data across all selected sources.</li>
             </ol>
-            <h3>Multi-Tab Use Cases:</h3>
+            <h3>Use Cases:</h3>
             <ul>
                 <li>"Compare the technical specifications across these 4 review tabs."</li>
                 <li>"Extract all Python code blocks from this tutorial and format them."</li>
                 <li>"Read these 5 news articles and summarize the overarching timeline."</li>
-                <li>"What's the weather in Berlin?"</li>
-                <li>"Find best wireless earbuds under 100"</li>
-                <li>"Get latest Python release"</li>
-                <li>"Compare iPhone 16 vs Samsung S25"</li>
-                <li>"Summarize this article"</li>
-                <li>"Extract all product links from Amazon search"</li>
-                <li>"Check if website is down"</li>
+                <li>"Summarize this article"</li>                
             </ul>
         </div>
     </section>
