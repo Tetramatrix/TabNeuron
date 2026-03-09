@@ -2,7 +2,7 @@
 
 TabNeuron is an AI-powered desktop workspace that transforms browser tabs into an interactive research environment. It breaks your tabs out of the browser and maps them onto an infinite 2D spatial canvas.
 
-You can chat with websites, deploy AI agents for automated research, and sync your visual layouts bidirectionally with your browser.
+You can chat with websites and the internet, deploy AI agents for automated research, and sync your visual layouts bidirectionally with your browser.
 
 ✨ The Desktop Advantage ✨
 We live in our browsers, but traditional tabs are dead ends. They don't talk to each other. TabNeuron provides a native desktop canvas that transforms passive tabs into an active research workspace. The application is portable and keeps data strictly under user control.
@@ -14,8 +14,13 @@ We live in our browsers, but traditional tabs are dead ends. They don't talk to 
 * Tab Screenshots: Automatic screenshots provide a scaled preview on the canvas.
 * Deep Metadata: Extracts title, URL, description, and Open Graph tags for semantic analysis.
 * Configurable Extraction: Pulls between 500 and 10000 characters of main content, stripping ads.
-* Multi-Tab Chat: Natural language interface to ask questions across multiple selected pages simultaneously.
-  Examples: "What's the weather in Berlin?", "Find best wireless earbuds under 100", "Get latest Python release", "Compare iPhone 16 vs Samsung S25", "Summarize this article", "Extract all product links from Amazon search", "Check if website is down"
+* Internet chat: Talk directly to the internet. 
+  Examples: "What's the weather in Berlin?", "Compare iPhone 16 vs Samsung S25", "Find best wireless earbuds under 100", 
+            "Extract all product links from Amazon search", "Check if website is down"
+* Tab Chat: Natural language interface to ask questions across single or multiple selected pages simultaneously.
+  Examples: "Summarize this article", "Compare the technical specifications across these 4 review tabs.", 
+            "Extract all Python code blocks from this tutorial and format them.", 
+            "Read these 5 news articles and summarize the overarching timeline."
 * Data Persistence: Layouts automatically save to a local .sorana_browser.json file on close.
 
 🤖 AI Agents & Pipeline Builder
@@ -23,14 +28,6 @@ TabNeuron features a no-code agent builder for automated research workflows.
 * Connect agents by holding CTRL+ALT and clicking an Agent title to get a green arrow.
 * Point the green arrow to a parent agent to establish a connection.
 * In the child Agent configuration, enable 'Auto' and 'Passthrough' to create a collaborative pipeline.
-
-🔧 Built-in MCP Server
-The application includes a Model Context Protocol server for direct browser control:
-* navigate_to: Open URLs in new tabs
-* close_tab: Close specific tabs
-* create_group: Create Chrome Tab Groups
-* get_tab_content: Extract page content
-* sync_layout: Send canvas layout to browser
 
 🧠 AI Model Configuration & Hardware Requirements
 TabNeuron is backend-agnostic. You can use local models for privacy or cloud models for performance.
@@ -63,13 +60,12 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 1. Download TabNeuron.exe and run it
 2. Load Chrome Extension (see Installation section below)
 3. Configure AI backend (built-in model or connect your own)
-4. Click "🌐 Organize Tabs" to load tabs with screenshots
+4. Click "🌐 Organize Tabs" in the app to load tabs
 5. AI automatically groups tabs by content
-6. Try "Chat with Page" (right-click tab) to ask questions
-7. Deploy Research Agent for multi-tab analysis
-8. Organize tabs on canvas, click "Sync to Browser"
-9. Chrome Tab Groups update automatically
-10. Layout auto-saved on close
+6. Create an agent. Add a tab to the agent. Try "Chat" (right-click agent) to ask questions
+8. Organize tabs on canvas, click Apply to sync to browser
+9. Browser Tab Groups update automatically
+10. Click save to backup all the groups and tabs.
 
 💡 Use Cases 💡
 
