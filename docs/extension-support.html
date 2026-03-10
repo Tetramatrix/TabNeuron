@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>TabNeuron Connector - Chrome Extension Support</title>
+    <meta name="description" content="TabNeuron Connector Chrome Extension - Lightweight bridge for bidirectional sync between Chrome tabs and TabNeuron desktop workspace.">
+    <meta name="author" content="Tetramatrix">
+    <meta property="og:title" content="TabNeuron Connector - Chrome Extension Support">
+    <meta property="og:description" content="Lightweight bridge for bidirectional sync between Chrome and TabNeuron desktop application.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="tabneuron_ScrollTile_crx_1400x560_en_scaled.png">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+<script>
+function scrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+        if (isVisible && rect.top < window.innerHeight * 0.1) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+
+function smartScrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isInViewport) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+</script>
+</body>
+    <aside class="left">
+        <nav class="fixed-nav">
+        </nav>
+    </aside>
+
+    <aside class="right">
+    </aside>
+
+    <main class="wikidoc">
+        <header class="page-header">
+            <h1>TabNeuron Connector</h1>
+            <h3>Chrome Extension Support</h3>
+            <figure class="logo-container">
+                <img src="logo_small.png" alt="TabNeuron Logo" class="logo">
+            </figure>
+        </header>
+
+    <nav class="horizontal-toc-nav">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+            <li><a href="#permissions">Permissions</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+
+    <section class="extension-section" id="overview">
+        <h2>Overview</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#how-it-works')">⬇️</span>
+            <p>TabNeuron Connector is a lightweight Chrome extension that serves as a bridge between your browser and the TabNeuron desktop application. It enables bidirectional communication via localhost, allowing your browser tabs to sync with an infinite 2D spatial canvas workspace.</p>
+            <p><strong>Key Benefits:</strong></p>
+            <ul>
+                <li>🔄 <strong>Bidirectional Sync:</strong> Changes in Chrome reflect on the canvas and vice versa</li>
+                <li>📸 <strong>Tab Previews:</strong> Automatic screenshots and metadata extraction</li>
+                <li>🧠 <strong>AI-Powered:</strong> Enables AI analysis of tab content across multiple pages</li>
+                <li>🔒 <strong>Local-First:</strong> All data stays on your device, no external servers</li>
+                <li>⚡ <strong>Lightweight:</strong> Minimal resource usage with 2-second polling interval</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="extension-section" id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#screenshots')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#overview')">⬆️</span>
+            <p>The TabNeuron Connector extension reads tab URLs, titles, and page content from your Chrome browser and forwards them to the TabNeuron desktop application running locally on your machine via <code>localhost:5555</code>.</p>
+            <h3>Why This Extension is Needed:</h3>
+            <p>Chrome extensions are the only way to access browser tab data programmatically. TabNeuron uses this bridge to:</p>
+            <ul>
+                <li><strong>Extract Tab Metadata:</strong> Titles, URLs, favicons, and Open Graph tags</li>
+                <li><strong>Capture Visual Previews:</strong> Automatic screenshots for spatial organization</li>
+                <li><strong>Read Page Content:</strong> Main content extraction (500-10000 characters, ads stripped)</li>
+                <li><strong>Sync Tab Groups:</strong> Bidirectional sync with Chrome's native tab groups</li>
+            </ul>
+            <p><em>All data processing happens locally. The extension does not collect, store, or transmit any data to external servers.</em></p>
+        </div>
+    </section>
+
+    <section class="extension-section" id="screenshots">
+        <h2>Screenshots</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#installation')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#how-it-works')">⬆️</span>
+            
+            <h3>Promotional Tiles</h3>
+            
+            <figure class="product-fig">
+                <img src="tabneuron_ScrollTile_crx_1400x560_en_scaled.png" alt="TabNeuron Connector - Scroll Tile Banner" class="screenshot">
+                <figcaption class="image-caption">TabNeuron Connector - Chrome Web Store Feature Banner</figcaption>
+            </figure>
+
+            <figure class="product-fig">
+                <img src="tabneuron_AdsTile_crx_440x280_en_scaled.png" alt="TabNeuron Connector - Ads Tile" class="screenshot">
+                <figcaption class="image-caption">TabNeuron Connector - Promotional Tile</figcaption>
+            </figure>
+
+            <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
+
+            <h3>Extension Interface</h3>
+
+            <figure class="product-fig">
+                <img src="connector_status.png" alt="TabNeuron Connector - Status Panel" class="screenshot">
+                <figcaption class="image-caption">Connector Status Panel - View connection status and polling activity</figcaption>
+            </figure>
+
+            <figure class="product-fig">
+                <img src="connector_status_send_options.png" alt="TabNeuron Connector - Send Options" class="screenshot">
+                <figcaption class="image-caption">Send Options - Configure what data is transmitted to TabNeuron</figcaption>
+            </figure>
+
+            <figure class="product-fig">
+                <img src="connector_settings.png" alt="TabNeuron Connector - Main Settings" class="screenshot">
+                <figcaption class="image-caption">Main Settings - Configure host, port, and polling interval</figcaption>
+            </figure>
+
+            <figure class="product-fig">
+                <img src="connector_settings_content_options.png" alt="TabNeuron Connector - Content Extraction Options" class="screenshot">
+                <figcaption class="image-caption">Content Extraction Options - Customize how page content is extracted</figcaption>
+            </figure>
+
+            <figure class="product-fig">
+                <img src="connector_settings_tab_options.png" alt="TabNeuron Connector - Tab Options" class="screenshot">
+                <figcaption class="image-caption">Tab Options - Configure tab group synchronization settings</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="extension-section" id="installation">
+        <h2>Installation</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#configuration')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#screenshots')">⬆️</span>
+            
+            <h3>Chrome Web Store (Pending Approval)</h3>
+            <p>The TabNeuron Connector is currently pending Chrome Web Store approval. Once approved, it will be available for one-click installation.</p>
+
+            <h3>Manual Installation (Developer Mode)</h3>
+            <p>Install the extension manually via Chrome's Developer Mode:</p>
+            <ol>
+                <li>Download the <code>chrome-extension.crx</code> file</li>
+                <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+                <li>Enable <strong>Developer mode</strong> (toggle in top-right corner)</li>
+                <li>Drag & drop the <code>.crx</code> file onto the extensions page</li>
+                <li>Click <strong>"Add extension"</strong> when prompted</li>
+                <li>Click the extension icon in the toolbar to open the popup</li>
+            </ol>
+
+            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
+                <p><strong>✓ Installation Complete!</strong> The extension icon should now appear in your Chrome toolbar. Click it to configure the connection.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="extension-section" id="configuration">
+        <h2>Configuration</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#permissions')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#installation')">⬆️</span>
+            
+            <h3>Connection Settings</h3>
+            <p>After installation, configure the extension to connect to TabNeuron:</p>
+            <ol>
+                <li>Click the TabNeuron Connector icon in Chrome's toolbar</li>
+                <li>In the popup, navigate to <strong>Settings</strong></li>
+                <li>Set <strong>Host</strong> to: <code>localhost</code></li>
+                <li>Set <strong>Port</strong> to: <code>5555</code></li>
+                <li>Leave <strong>Polling Interval</strong> at default (2 seconds)</li>
+                <li>Click <strong>"▶️ Start"</strong> to begin synchronization</li>
+            </ol>
+
+            <h3>Content Extraction Options</h3>
+            <ul>
+                <li><strong>Content Length:</strong> Choose between 500-10000 characters per page</li>
+                <li><strong>Strip Ads:</strong> Automatically remove advertising content</li>
+                <li><strong>Extract Metadata:</strong> Enable Open Graph tags and descriptions</li>
+            </ul>
+
+            <h3>Tab Sync Options</h3>
+            <ul>
+                <li><strong>Sync Tab Groups:</strong> Mirror Chrome's native tab groups</li>
+                <li><strong>Auto-Sync:</strong> Automatically detect and sync new tabs</li>
+                <li><strong>Screenshots:</strong> Enable/disable automatic tab screenshots</li>
+            </ul>
+
+            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #2196F3; margin-top: 1rem;">
+                <p><strong>💡 Tip:</strong> Launch the TabNeuron desktop application before clicking "Start" in the extension. The status indicator will turn green when connected successfully.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="extension-section" id="permissions">
+        <h2>Permissions</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#privacy')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#configuration')">⬆️</span>
+            
+            <p>The TabNeuron Connector requests the following permissions, all used solely for local communication with the desktop application:</p>
+            
+            <table class="feature-table">
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>tabs</code></td>
+                        <td>Read tab URLs, titles, and favicons for display on the canvas</td>
+                    </tr>
+                    <tr>
+                        <td><code>tabGroups</code></td>
+                        <td>Sync with Chrome's native tab groups for bidirectional organization</td>
+                    </tr>
+                    <tr>
+                        <td><code>scripting</code></td>
+                        <td>Inject content extraction scripts to read page metadata and main content</td>
+                    </tr>
+                    <tr>
+                        <td><code>storage</code></td>
+                        <td>Store connection settings (host, port, polling interval) locally</td>
+                    </tr>
+                    <tr>
+                        <td><code>activeTab</code></td>
+                        <td>Access the currently active tab for quick operations and screenshots</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><em>No permissions are used to collect, log, or transmit data to external servers or third parties.</em></p>
+        </div>
+    </section>
+
+    <section class="extension-section" id="privacy">
+        <h2>Privacy & Data Handling</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#support')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#permissions')">⬆️</span>
+            
+            <p><strong>TabNeuron Connector is designed with privacy-first principles:</strong></p>
+            
+            <ul>
+                <li><strong>🔒 No External Servers:</strong> All data stays on your local machine</li>
+                <li><strong>🏠 Localhost Only:</strong> Communication happens exclusively via <code>localhost:5555</code></li>
+                <li><strong>📵 No Telemetry:</strong> No analytics, tracking, or usage data collection</li>
+                <li><strong>💾 Local Storage:</strong> Settings stored in Chrome's local storage only</li>
+                <li><strong>🔐 No Remote Logging:</strong> Tab data is never logged or stored remotely</li>
+            </ul>
+
+            <p>For detailed information, see our <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>.</p>
+        </div>
+    </section>
+
+    <section class="extension-section" id="support">
+        <h2>Support & Resources</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#privacy')">⬆️</span>
+            
+            <p>Need help or have questions about TabNeuron Connector?</p>
+            
+            <div class="external-links">
+                <a href="index.html" class="btn btn-primary">TabNeuron Website</a>
+                <a href="https://github.com/tetramatrix" target="_blank" class="btn btn-primary">GitHub</a>
+                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">Discord Community</a>
+                <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>
+            </div>
+
+            <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
+
+            <h3>Report Issues</h3>
+            <p>Found a bug or have a feature request? Please report it on our GitHub repository or join the discussion on Discord.</p>
+
+            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #64b5f6; margin-top: 1rem;">
+                <p><strong>📧 Contact:</strong> For direct support, join our Discord server for real-time assistance from the development team.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="extension-section" id="back-to-main">
+        <div class="cta-box">
+            <h3>Get Started with TabNeuron</h3>
+            <p>Download the TabNeuron desktop application and start organizing your browser tabs with AI.</p>
+            <div class="download-buttons">
+                <a href="index.html" class="btn btn-primary btn-large">Back to TabNeuron</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+</body>
+</html>
