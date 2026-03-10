@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Privacy Policy – Tetramatrix Connector | TabNeuron</title>
+    <meta name="description" content="Privacy Policy for Tetramatrix Connector - Learn how TabNeuron handles your data with complete transparency and local-first processing.">
+    <meta name="author" content="Tetramatrix">
+    <meta property="og:title" content="Privacy Policy – Tetramatrix Connector | TabNeuron">
+    <meta property="og:description" content="Privacy Policy for Tetramatrix Connector - Complete transparency on data handling and local processing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="main.png">
+
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+<script>
+function scrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+        if (isVisible && rect.top < window.innerHeight * 0.1) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+
+function smartScrollToSection(targetId) {
+    const targetElement = document.getElementById(targetId.replace('#', ''));
+    if (targetElement) {
+        const rect = targetElement.getBoundingClientRect();
+        const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        if (isInViewport) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+</script>
+</body>
+    <aside class="left">
+        <nav class="fixed-nav">
+        </nav>
+    </aside>
+
+    <aside class="right">
+    </aside>
+
+    <main class="wikidoc">
+        <header class="page-header">
+            <h1>Privacy Policy</h1>
+            <h3>Tetramatrix Connector</h3>
+            <figure class="logo-container">
+                <img src="logo_small.png" alt="TabNeuron Logo" class="logo">
+            </figure>
+        </header>
+
+    <section class="privacy-section" id="last-updated">
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#data-collection')">⬇️</span>
+            <p><strong>Last updated: March 2026</strong></p>
+        </div>
+    </section>
+
+    <section class="privacy-section" id="data-collection">
+        <h2>Privacy Policy – Tetramatrix Connector</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#local-data-processing')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#last-updated')">⬆️</span>
+            <h4>Data Collection</h4>
+            <p>
+Tetramatrix Connector does not collect, store, or transmit any 
+personal user data to external servers or third parties.
+</p>
+<h4>Local Data Processing</h4>
+            <p>
+The extension reads tab URLs, titles, and page content exclusively 
+to forward them to the Tetramatrix desktop application (TabNeuron) 
+running locally on the user's own machine via localhost. 
+This data never leaves the user's device.
+
+</p>
+<h4>Permissions</h4>
+            <p>
+Permissions (tabs, tabGroups, scripting, storage, activeTab) are 
+used solely to enable communication between Chrome and local 
+Tetramatrix applications. No data is logged or stored remotely.
+</p>
+        </div>
+    </section>
+
+    
+
+    <section class="privacy-section" id="contact">
+        <h2>Contact</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#permissions')">⬆️</span>
+            <p>For questions, contact us via:</p>
+            <div class="external-links">
+                <a href="https://github.com/tetramatrix" target="_blank" class="btn btn-primary">GitHub</a>
+                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy-section" id="back-to-main">
+        <div class="cta-box">
+            <h3>Return to TabNeuron</h3>
+            <p>Learn more about TabNeuron and its features.</p>
+            <div class="download-buttons">
+                <a href="index.html" class="btn btn-primary btn-large">Back to TabNeuron</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+</body>
+</html>
