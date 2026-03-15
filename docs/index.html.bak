@@ -167,7 +167,7 @@ The Chrome extension is currently pending Chrome Web Store approval. In the mean
                 </div>
 
                 <pre class="code-block-md5"><code>
-        					$ md5sum.exe TabNeuron.exe v1.0.1 05e49fd33ef195a1415f018c1c1525b4
+        					$ md5sum.exe TabNeuron.exe v1.0.1 108de31745fbd2adf433c06daac99ab1
         				</code></pre>
         
                 <a href="https://apps.microsoft.com/store/detail/9N8C43PZC1RN" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="50%"/></a>
