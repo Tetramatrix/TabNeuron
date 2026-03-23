@@ -719,22 +719,6 @@ iframe:hover, embed:hover, object:hover {
   background: #3182ce;
 }
 
-/* External Partner Buttons (Lemonade, FastFlowLM) */
-.btn-partner,
-.btn-partner-fastflow {
-  padding: 4px 8px !important;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 19px !important;
-  text-decoration: none !important;
-  display: inline-block;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  width: 190px;
-  text-align: center;
-}
-
-
 /* Download buttons container */
 .download-buttons {
   display: flex;

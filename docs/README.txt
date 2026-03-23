@@ -237,29 +237,17 @@ Changelog:
 
 
 
-
-
-
-
-
-
-
-
-
-
 ❤️ Support the Development ❤️
 
 If you find TabNeuron useful, please consider donating to support ongoing development!
+☕ Buy us a coffee or support via PayPal or Bitcoin Cash!
 
-💰 Bitcoin Cash (BCH):
-bitcoincash:qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv
+💰 Bitcoin Cash (BCH): bitcoincash:qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv
 
-💳 PayPal:
-paypal.me/Gigamegs
+💳 PayPal: paypal.me/Gigamegs
 
 Thank you for your support!
 
-☕ Buy us a coffee or support via PayPal or Bitcoin Cash!
 
 🚀 Discover our Spaceship! 🚀
 
