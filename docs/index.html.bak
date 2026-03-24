@@ -460,7 +460,7 @@ function smartScrollToSection(targetId) {
 
     <!-- AI Model Configuration Section -->
     <section class="config-section" id="ai-model-config">
-        <h2>🧠 AI Model Configuration</h2>
+        <h2>🧠 AI Model Manager</h2>
         <div class="cta-box">
             <span class="nav-arrow-down" onclick="smartScrollToSection('#browser-extension')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#intended-users')">⬆️</span>
