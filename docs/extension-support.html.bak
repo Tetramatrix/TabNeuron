@@ -309,6 +309,7 @@ function smartScrollToSection(targetId) {
             
             <div class="external-links">
                 <a href="index.html" class="btn btn-primary">TabNeuron Website</a>
+                <a href="https://github.com/tetramatrix" target="_blank" class="btn btn-primary">GitHub</a>
                 <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">Discord Community</a>
                 <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>
             </div>

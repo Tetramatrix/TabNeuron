@@ -14,14 +14,23 @@ We live in our browsers, but traditional tabs are dead ends. They don't talk to 
 * Tab Screenshots: Automatic screenshots provide a scaled preview on the canvas.
 * Deep Metadata: Extracts title, URL, description, and Open Graph tags for semantic analysis.
 * Configurable Extraction: Pulls between 500 and 10000 characters of main content, stripping ads.
-* Internet chat: Talk directly to the internet. 
-  Examples: "What's the weather in Berlin?", "Compare iPhone 16 vs Samsung S25", "Find best wireless earbuds under 100", 
+* Internet chat: Talk directly to the internet.
+  Examples: "What's the weather in Berlin?", "Compare iPhone 16 vs Samsung S25", "Find best wireless earbuds under 100",
             "Extract all product links from Amazon search", "Check if website is down"
 * Tab Chat: Natural language interface to ask questions across single or multiple selected pages simultaneously.
-  Examples: "Summarize this article", "Compare the technical specifications across these 4 review tabs.", 
-            "Extract all Python code blocks from this tutorial and format them.", 
+  Examples: "Summarize this article", "Compare the technical specifications across these 4 review tabs.",
+            "Extract all Python code blocks from this tutorial and format them.",
             "Read these 5 news articles and summarize the overarching timeline."
 * Data Persistence: Layouts automatically save to a local .sorana_browser.json file on close.
+* Built-in MCP Server: Native Model Context Protocol server for file and web operations:
+  • File Operations: read_file, read_file_from_line, write_file, list_directory, create_directory, move_file, search_files, get_file_info, edit_file, get_filesystem_info
+  • Web Content Tools: web_fetch_content, web_scrape_page, web_extract_links, web_search, web_get_metadata, web_save_snapshot
+* 4-Tier AI Memory System: Short-term memory, conversation summaries, long-term memory (personas, facts, preferences), and document search.
+* 40x Faster RAG Retrieval: Optimized startup from 4s to under 0.1s. Token-efficient, targeted answers.
+* Chat History: All past conversations stored in a sidebar. Search, reload, delete — nothing gets lost.
+* Document OCR: Extract text from PDFs, images, and web pages. Tesseract OCR support for scanned content.
+* Google Gemini Support: Add your API key and use Gemini models including free tier options.
+* Centralized Data Storage: All data stored in a single .sorana/ folder.
 
 🤖 AI Agents & Pipeline Builder
 TabNeuron features a no-code agent builder for automated research workflows.
@@ -29,13 +38,72 @@ TabNeuron features a no-code agent builder for automated research workflows.
 * Point the green arrow to a parent agent to establish a connection.
 * In the child Agent configuration, enable 'Auto' and 'Passthrough' to create a collaborative pipeline.
 
+🔌 MCP Server Usage Guide
+TabNeuron includes a built-in MCP server for advanced file and web operations through AI agents.
+
+To use:
+1. Create an agent in the workspace
+2. Right-click on the agent title and select "Chat"
+3. Interact directly with files, folders, and web content
+
+File Operations Examples:
+• "List the first 10 files in the current directory" (list_directory)
+• "Read document.txt and summarize" (read_file)
+• "Move report.docx to archive/" (move_file)
+• "Write the summary to output.txt" (write_file)
+
+Web Content Tools Examples:
+• "What's the weather in Berlin?" (web_fetch_content)
+• "Find best wireless earbuds under 100€" (web_search)
+• "Extract all links from this page" (web_extract_links)
+• "Fetch product specs and save to file" (combined workflow)
+
+🤖 Connecting Agents 🤖
+
+To connect agents in TabNeuron:
+🔘 Hold CTRL+ALT and click on an Agent title to get a green arrow
+🔗 Point the green arrow to the parent agent to establish the connection
+⚙️ In the child Agent configuration, enable 'Auto' (puts agent in orchestration mode to receive instructions from parent agent) and 'Passthrough' (allows the agent to also pass documents).
+🤝 This creates a pipeline where agents can pass insights and collaborate on complex tasks
+
+
 🧠 AI Model Configuration & Hardware Requirements
 TabNeuron is backend-agnostic. You can use local models for privacy or cloud models for performance.
 * Built-in Model: A lightweight 806MB model downloads on the first run and works fully offline.
 * Cloud Services: Connect to OpenAI, Mistral, Lemonade, and others without local hardware limits.
-* Local On-Prem: Connect to Ollama or Llama.cpp.
-* IMPORTANT HARDWARE NOTE: Running 8B parameter models locally requires at least 16 GB RAM or 8 GB VRAM for smooth operation.
+* Local & On-Prem: Connect to Lemonade, LM Studio, Ollama or Llama.cpp. Download and run models locally (only Llama.cpp)
+* The Model Manager is a powerful tool that allows you to manage AI models for TabNeuron. 
+  It provides a centralized interface for activating, deactivating, and configuring both local and cloud-based AI models.
+• Cloud Model Integration: Connect to OpenAI, Mistral, Gemini and other cloud services
 
+* IMPORTANT HARDWARE NOTE: Running 8B parameter models locally requires at least 8 GB RAM or 8 GB VRAM for smooth operation.
+
+💡 Tips for Model Selection:
+
+For Quick Tasks:
+• Use smaller models (1B-3B parameters)
+• Fast responses for simple tab organization
+• Lower RAM requirements
+
+For Complex Analysis:
+• Larger models (8B+ parameters)
+• Better accuracy for tab content analysis
+• Recommended: Llama 3.1 8B Instruct or higher
+
+For Privacy:
+• Local models (Lemonade, Ollama, Llama.cpp)
+• Your data stays on your machine
+• No internet connection required
+
+For Best Quality:
+• Cloud models (OpenAI, Mistral, Claude)
+• State-of-the-art performance
+• Requires API key and internet
+
+Optimization Strategies:
+
+• Shorter content (500-2K chars) = faster processing
+  
 💻 System Requirements
 * Operating System: Windows 10/11 (64-bit)
 * Browser: Google Chrome (required for Extension)
@@ -50,11 +118,6 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 4. Click the extension icon and configure Host to "localhost" and Port to "5555"
 5. Click "▶️ Start" to begin the 2s polling API
 
-⚙️ Installation & Setup ⚙️
-
-🌐 Website: http://tetramatrix.github.io/TabNeuron
-💬 Discord: https://discord.gg/4QkQSfSATF
-
 🚀 Quick Start 🚀
 
 1. Download TabNeuron.exe and run it
@@ -67,33 +130,6 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 9. Browser Tab Groups update automatically
 10. Click save to backup all the groups and tabs.
 
-💡 Use Cases 💡
-
-📚 Academic Research:
-  • Open 20+ research papers
-  • AI extracts key findings from each
-  • Research Agent compares methodologies
-  • Chat: "What are common limitations?"
-  • Save organized layout for later
-
-🛒 Product Research:
-  • Open review sites, shops, forums
-  • Comparison Agent extracts features/prices
-  • Chat: "Best value under $500?"
-  • Sync organized groups to Chrome
-
-💻 Code Learning:
-  • Open tutorial tabs with code examples
-  • Code Agent extracts snippets
-  • Chat: "Explain this pattern"
-  • Save as "Learned Patterns" group
-
-📰 News Analysis:
-  • Open news articles on same topic
-  • Fact-Check Agent verifies claims
-  • Chat: "Different perspectives?"
-  • Mindmap shows bias patterns
-
 🤖 AI Model Hardware Requirements:
   • Built-in Models: Range from 1B parameter (806MB) to 20B parameter (12-16GB)
   • Recommended 8B Models (e.g., Llama 3.1 8b Instruct): Minimum 12 GB RAM or 8 GB VRAM for smooth operation
@@ -102,93 +138,26 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 
 ⚠️ IMPORTANT HARDWARE NOTE: Running larger 8B parameter models locally requires sufficient hardware - ideally 16 GB RAM or 8 GB VRAM - to function smoothly. If hardware is limited, the app includes a smaller portable model (which works fully offline but may classify complex files as "Miscellaneous") or allows connection to cloud-based LLMs for high accuracy without the local hardware cost.
 
-🧠 Model Manager 🧠
-
-The Model Manager is a powerful tool that allows you to manage AI models for TabNeuron. It provides a centralized interface for activating, deactivating, and configuring both local and cloud-based AI models.
-
-Key Features:
-  • Model Activation/Deactivation: Easily enable or disable models as needed
-  • Local Model Support: Download and run models locally (Ollama, Llama.cpp, Lemonade)
-  • Cloud Model Integration: Connect to OpenAI, Mistral, and other cloud services
-  • Model Information: View model details including size, type, and capabilities
-  • Quick Activation: One-click model activation for immediate use
-  • Model Status: Real-time status indicators showing active/inactive models
-
-💡 Tips for Model Selection:
-
-  For Quick Tasks:
-  • Use smaller models (1B-3B parameters)
-  • Fast responses for simple tab organization
-  • Lower RAM requirements
-
-  For Complex Analysis:
-  • Larger models (8B+ parameters)
-  • Better accuracy for tab content analysis
-  • Recommended: Llama 3.1 8B Instruct or higher
-
-  For Privacy:
-  • Local models (Ollama, Llama.cpp)
-  • Your data stays on your machine
-  • No internet connection required
-
-  For Best Quality:
-  • Cloud models (OpenAI, Mistral, Claude)
-  • State-of-the-art performance
-  • Requires API key and internet
-
-⚡ Performance Tips:
-
-  Hardware Requirements:
-  • 8B models: ~12-16GB RAM for smooth operation
-  • GPU with 8GB+ VRAM significantly speeds up local models
-  • More VRAM = better performance for large models
-
-  Optimization Strategies:
-  • Process multiple tabs in parallel for better throughput
-  • Shorter content (500-2K chars) = faster processing
-  • Use built-in model for quick tasks, cloud for complex analysis
-  • Batch similar tabs together for efficient processing
-
-🔗 Multi-Service AI Integration 🔗
-
-TabNeuron supports seamless connection to both on-prem and cloud-based AI services:
-
-On-Prem Services:
-  • Ollama: Self-hosted LLM runner
-  • Llama.cpp: Lightweight C++ implementation
-  • Other self-hosted LLM solutions
-
-Cloud Services:
-  • OpenAI: GPT models via API
-  • Mistral: Mistral AI models
-  • Lemonade: Cloud LLM service
-  • Other cloud-based AI platforms
-
-Flexible Configuration:
-  • Easily switch between different AI backends
-  • Choose based on privacy requirements
-  • Optimize for performance or cost
-
-🤖 Connecting Agents 🤖
-
-To connect agents in TabNeuron:
-🔘 Hold CTRL+ALT and click on an Agent title to get a green arrow
-🔗 Point the green arrow to the parent agent to establish the connection
-⚙️ In the child Agent configuration, enable 'Auto' (puts agent in orchestration mode to receive instructions from parent agent) and 'Passthrough' (allows the agent to also pass documents).
-🤝 This creates a pipeline where agents can pass insights and collaborate on complex tasks
-
 📥 Downloads 📥
 
-🔹 Latest version: TabNeuron.exe v1.0.1
-🔢 MD5 Checksum (.exe): 
+🔹 Latest version: TabNeuron.exe v1.0.3
+🔢 MD5 Checksum (.exe): a6f1907331dea10fe9da8ac59b071269
 🔹 Chrome Extension: chrome-extension.crx
-🌐 Download: http://tetramatrix.github.io/TabNeuron
 🌐 Website: http://tetramatrix.github.io/TabNeuron
 💬 Discord: https://discord.gg/4QkQSfSATF
 
+
+
 📋 Changelog 📋
 
-Changelog: 
+📅 March 15, 2026 — Version 1.0.2 - 1.0.3
+
+💬 Chat History — all your past conversations in a sidebar. Search, reload, delete. Nothing gets lost.
+🧠 Memory that stacks — short-term, summaries, long-term (personas, facts, preferences), and document search. Each layer builds on the last.
+☁️ Google Gemini support — add your API key and it works, including free tier models.
+🔍 Works without AI hardware — document search falls back to text-based retrieval if no NPU is available. 15 languages supported, auto-detected.
+⚡ RAG opens 40x faster — startup went from 4s to under 0.1s.
+🗃️ All data stored in a single .sorana/ folder. Existing installs migrate automatically.
 
 
 📅 March 15, 2026 — Version 1.0.1
@@ -221,18 +190,6 @@ Changelog:
 • Layout save/load to .sorana_browser.json
 • Mindmap generation
 • No-code agent orchestration
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

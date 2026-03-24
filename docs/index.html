@@ -100,11 +100,15 @@ function smartScrollToSection(targetId) {
             <li><a href="#core-capabilities">Core Capabilities</a></li>
             <li><a href="#chat-websites">Chat with Websites</a></li>
             <li><a href="#ai-agents">AI Research Agents</a></li>
+            <li><a href="#mcp-section">MCP Server</a></li>
+            <li><a href="#ai-memory-rag">AI Memory & RAG</a></li>
+            <li><a href="#ocr-section">Document OCR</a></li>
             <li><a href="#canvas-sync">Canvas & Sync</a></li>
             <li><a href="#intended-users">Intended Users</a></li>
             <li><a href="#ai-model-config">AI Model Configuration</a></li>
             <li><a href="#browser-extension">Browser Extension</a></li>
             <li><a href="#system-requirements">System Requirements</a></li>
+            <li><a href="#support-donations">Support & Donations</a></li>
             <li><a href="#other-products">Other Products</a></li>
         </ul>
     </nav>
@@ -126,8 +130,6 @@ function smartScrollToSection(targetId) {
             <span class="nav-arrow-up" onclick="smartScrollToSection('#inspiration')">⬆️</span>
             <p>TabNeuron is a standalone desktop application that connects to your browser via a lightweight extension. It maps your active browsing session onto an infinite visual canvas. You can organize tabs spatially, chat with the extracted page content using local or cloud AI, and build agent pipelines to automate web research.</p>
 
-            <p>🚀 TabNeuron (Tetramatrix Connector) Chrome Extension is <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn-partner">LIVE</a> in Chrome Web Store!<br/>
-            The Chrome extension has successfully passed review and is now available for all users!</p>
 <!--<p><em><strong>Beta Notice:</strong> TabNeuron v1.0.0 is our initial public release, feature-complete and actively evolving. While core capabilities including canvas sync, multi-tab chat, AI agents, and the MCP server are fully functional, early adopters may encounter edge cases as we continue to harden the experience. We're building for power users who want full control over their data, and your feedback directly shapes what comes next.</em></p>-->
         </div>
 
@@ -153,6 +155,8 @@ function smartScrollToSection(targetId) {
         -->
 
         <!-- Download Section -->
+        <!--
+
         <section class="download-section" id="download-section">
             <div class="cta-box">
                 <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
@@ -174,9 +178,10 @@ function smartScrollToSection(targetId) {
         					$ md5sum.exe TabNeuron.exe v1.0.1 05e49fd33ef195a1415f018c1c1525b4
         				</code></pre>
         
-                <!--<a href="https://apps.microsoft.com/store/detail/9N8C43PZC1RN" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="50%"/></a>-->
+                <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%"/></a>
             </div>
         </section>
+-->
 
         <!-- Installation Section -->
         <section class="installation-section" id="installation">
@@ -196,19 +201,14 @@ function smartScrollToSection(targetId) {
                 
                 <h3>Browser Extension</h3>
             
-                <p>🚀 TabNeuron (Tetramatrix Connector) Chrome Extension is <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de">LIVE</a> in Chrome Web Store!<br/>
-                The Chrome extension has successfully passed review and is now available for all users!</p>
-
                 <p>Install the Chrome extension to connect your browser with TabNeuron.</p>
-                <ol>
-                    <li>Download the Chrome Extension (.crx)</a></li>
-                    <li>Open Chrome and go to <code>chrome://extensions/</code></li>
-                    <li>Enable <strong>Developer mode</strong> (toggle in top-right)</li>
-                    <li>Drag & drop the <code>.crx</code> file onto the extensions page</li>
-                </ol>
-                  
+
+                <p>🚀 TabNeuron (Tetramatrix Connector) Chrome Extension is now in Chrome Web Store!</p>
+
+                <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn-partner">Chrome Web Store: Tetramatrix Connector</a>
+
                 <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
-                    <p><strong>After installation:</strong> Launch TabNeuron, then click the extension icon in Chrome to connect. The extension connects to <code>localhost:5555</code>.</p>
+                    <p><strong>After installation:</strong> Launch TabNeuron, then click the extension icon in Chrome to connect. The extension connects to <code>localhost:5555</code> (default port).</p>
                 </div>
 
 
@@ -219,7 +219,7 @@ function smartScrollToSection(targetId) {
             <h2>Core Capabilities</h2>
             <div class="cta-box">
                 <span class="nav-arrow-down" onclick="smartScrollToSection('#chat-websites')">⬇️</span>
-                <span class="nav-arrow-up" onclick="smartScrollToSection('#download-section')">⬆️</span>
+                <span class="nav-arrow-up" onclick="smartScrollToSection('#installation')">⬆️</span>
                 <ul>
                     <li><strong>Native Desktop Workspace:</strong> Break out of the browser UI. Manage tabs on an infinite 2D spatial canvas with drag, drop, and WYSIWYG grouping tools.</li>
                     <li><strong>Data Ownership & Backups:</strong> Save your visual workspace states locally to disk. Close your browser, and your research session remains safely backed up and restorable.</li>
@@ -228,15 +228,15 @@ function smartScrollToSection(targetId) {
                     <li><strong>Visual Previews & Metadata:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags are extracted for every tab, giving you instant visual context without switching windows.</li>
                     <li><strong>Multi-Tab Chat:</strong> Select multiple tabs on the canvas and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
                     <li><strong>AI Agent Pipelines:</strong> Build no-code automated workflows where the output of one agent (e.g., extracting specs) becomes the input for the next (e.g., formatting a comparison table).</li>
-                    <li><strong>Built-in MCP web content tools:</strong> Native Model Context Protocol server giving your AI direct web access. Included tools: <code>web_fetch_content</code>, <code>web_scrape_page</code>, <code>web_extract_links</code>, <code>web_search</code>, <code>web_get_metadata</code>, and <code>web_save_snapshot</code>.</li>
-                    Talk directly to the internet.
-                    <ul>
-                        <li>"What's the weather in Berlin?"</li>
-                        <li>"Find best wireless earbuds under 100"</li>
-                        <li>"Compare iPhone 16 vs Samsung S25"</li>
-                        <li>"Check if website is down"</li>
-                        <li>"Extract all product links from Amazon search"</li>
-                    </ul>
+                    <li><strong>Built-in MCP Server:</strong> Native Model Context Protocol server giving your AI direct file system and web access:
+                        <ul>
+                            <li><strong>File Operations:</strong> read_file, read_file_from_line, write_file, list_directory, create_directory, move_file, search_files, get_file_info, edit_file, get_filesystem_info</li>
+                            <li><strong>Web Content Tools:</strong> web_fetch_content, web_scrape_page, web_extract_links, web_search, web_get_metadata, web_save_snapshot</li>
+                        </ul>
+                    </li>
+                    <li><strong>4-Tier AI Memory System:</strong> Advanced memory architecture with short-term memory, conversation summaries, long-term memory (personas, facts, preferences), and document search. Each layer builds on the last for intelligent, context-aware responses.</li>
+                    <li><strong>40x Faster RAG Retrieval:</strong> Optimized startup from 4s to under 0.1s. Token-efficient, targeted answers with full user control over stored data.</li>
+                    <li><strong>Document OCR & Context:</strong> Extract text from PDFs, images, and web pages. Enhance agent knowledge with OCR-processed documents.</li>
                 </ul>
             </div>
 
@@ -244,21 +244,6 @@ function smartScrollToSection(targetId) {
                 <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
             </figure>
         </section>
-
-    <section class="users-section" id="intended-users">
-        <h2>Intended Users</h2>
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#chat-websites')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#core-capabilities')">⬆️</span>
-            <p>TabNeuron is designed for users who need to organize and analyze web content:</p>
-            <ul>
-                <li><strong>Researchers:</strong> Manage research tabs, compare sources, and synthesize information across multiple websites.</li>
-                <li><strong>Students:</strong> Organize study materials, extract key points from articles, and create structured notes.</li>
-                <li><strong>Professionals:</strong> Track competitors, monitor industry news, and automate information gathering.</li>
-                <li><strong>Developers:</strong> Extract code examples, compare documentation, and build research workflows.</li>
-            </ul>
-        </div>
-    </section>
 
     <!-- Chat with Websites Section -->
     <section class="chat-section" id="chat-websites">
@@ -288,7 +273,7 @@ function smartScrollToSection(targetId) {
     <section class="agents-section" id="ai-agents">
         <h2>🤖 AI Agents Pipeline</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#canvas-sync')">⬇️</span>
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#mcp-section')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#chat-websites')">⬆️</span>
             <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
             <h3>Example Pipeline:</h3>
@@ -300,12 +285,189 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <!-- MCP Server Section -->
+    <section class="mcp-section" id="mcp-section">
+        <h3>🔌 MCP Server Usage Guide</h3>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#ai-memory-rag')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ai-agents')">⬆️</span>
+            <p>TabNeuron includes a built-in MCP (Model Context Protocol) server that enables advanced file operations and web content access through AI agents. To use these capabilities:</p>
+            <ol>
+                <li>Create an agent in the workspace</li>
+                <li>Right-click on the agent title and select "Chat"</li>
+                <li>Interact directly with all files, folders, and web content</li>
+            </ol>
+
+            <h4>File Operations</h4>
+            <p>Common file operations you can perform in the agent chat:</p>
+            <ul>
+                <li>"List the first 10 files in the current directory" (uses list_directory)</li>
+                <li>"Search all text files in the workspace" (uses search_files)</li>
+                <li>"Read the content of document.txt to summarize its contents" (uses read_file)</li>
+                <li>"Read lines 10-20 of large_log.txt to check for errors" (uses read_file_from_line)</li>
+                <li>"Move file report.docx to archive/report_backup.docx" (uses move_file)</li>
+                <li>"Get size and creation date of config.json" (uses get_file_info)</li>
+                <li>"Edit the third paragraph of essay.txt to improve clarity" (uses edit_file)</li>
+                <li>"Write the generated report to monthly_report.txt" (uses write_file)</li>
+                <li>"Create a new folder called 'Project_X' in the workspace" (uses create_directory)</li>
+                <li>"Show available storage space and supported operations" (uses get_filesystem_info)</li>
+                <li>"Summarize document.txt and create a markdown summary document" (uses read_file + write_file)</li>
+            </ul>
+
+            <h4>Web Content Tools</h4>
+            <p>Built-in MCP web content tools give your AI direct web access. Combine file operations with web content for even more powerful agents:</p>
+            <ul>
+                <li><strong>web_fetch_content:</strong> Fetch and read content from any URL</li>
+                <li><strong>web_scrape_page:</strong> Scrape full webpage content</li>
+                <li><strong>web_extract_links:</strong> Extract all links from a webpage</li>
+                <li><strong>web_search:</strong> Search the web for information</li>
+                <li><strong>web_get_metadata:</strong> Get page metadata and SEO info</li>
+                <li><strong>web_save_snapshot:</strong> Save webpage snapshots for later reference</li>
+            </ul>
+
+            <p><strong>Example queries:</strong></p>
+            <ul>
+                <li>"What's the weather in Berlin?"</li>
+                <li>"Find best wireless earbuds under 100€"</li>
+                <li>"Compare iPhone 16 vs Samsung S25"</li>
+                <li>"Check if website is down"</li>
+                <li>"Extract all product links from Amazon search"</li>
+                <li>"Fetch the latest news about AI and summarize"</li>
+                <li>"Compare prices from multiple online shops"</li>
+            </ul>
+
+            <p><strong>Combined workflows:</strong></p>
+            <ul>
+                <li>"Fetch product specs from the manufacturer website and save to a local file"</li>
+                <li>"Search for documentation, download PDFs, and organize into folders"</li>
+                <li>"Extract data from web sources, analyze with local files, and generate a report"</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AI Memory & RAG Section -->
+    <section class="ai-memory-rag-section" id="ai-memory-rag">
+        <h2>🧠 Advanced AI Memory & RAG System</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#ocr-section')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#mcp-section')">⬆️</span>
+            <p>TabNeuron introduces a 4-tier memory architecture combined with 4-tier RAG (Retrieval-Augmented Generation) for intelligent, context-aware responses that save tokens and deliver faster, targeted answers — with full user control.</p>
+
+            <h3>4-Tier AI Memory System</h3>
+            <p>Each memory layer builds on the last, creating a comprehensive memory system that makes your AI agents more intelligent over time:</p>
+            <ul>
+                <li><strong>Short-Term Memory:</strong> Active conversation context within the current chat session</li>
+                <li><strong>Summaries:</strong> Automatic conversation compression to preserve key insights without token bloat</li>
+                <li><strong>Long-Term Memory:</strong> Persistent storage for user personas, facts, preferences, and skills — automatically extracted from conversations</li>
+                <li><strong>Document Search:</strong> RAG-based retrieval from uploaded documents and web pages for precise, context-rich answers</li>
+            </ul>
+
+            <figure class="screenshot-figure">
+                <img src="Longterm_person_memory.png" alt="Long-Term Person Memory Management Interface" class="sorana-screenshot">
+                <figcaption>Long-Term Memory: Automatically extracted user facts, preferences, and persona data</figcaption>
+            </figure>
+
+            <h3>Chat History & Conversation Management</h3>
+            <p>All your past conversations are stored in a sidebar for easy access. Search, reload, and delete chats — nothing gets lost.</p>
+
+            <figure class="screenshot-figure">
+                <img src="chat_history.png" alt="Chat History Sidebar Interface" class="sorana-screenshot">
+                <figcaption>Chat History Sidebar: Access all past conversations instantly</figcaption>
+            </figure>
+
+            <figure class="screenshot-figure">
+                <img src="chat_manager.png" alt="Chat Manager Interface" class="sorana-screenshot">
+                <figcaption>Chat Manager: View, search, and manage conversation history</figcaption>
+            </figure>
+
+            <h3>40x Faster RAG Retrieval</h3>
+            <p>Optimized RAG startup from 4s to under 0.1s. The 4-tier RAG system ensures token-efficient, targeted answers:</p>
+            <ul>
+                <li><strong>Tier 1:</strong> Immediate context from active conversation</li>
+                <li><strong>Tier 2:</strong> Compressed summaries for efficient recall</li>
+                <li><strong>Tier 3:</strong> Long-term memory facts and personas</li>
+                <li><strong>Tier 4:</strong> Full document chunk retrieval for deep context</li>
+            </ul>
+
+            <figure class="screenshot-figure">
+                <img src="rag.png" alt="RAG Document Manager Interface" class="sorana-screenshot">
+                <figcaption>RAG Document Manager: Upload, view, and manage documents for AI context retrieval</figcaption>
+            </figure>
+
+            <h3>Key Benefits</h3>
+            <ul>
+                <li><strong>Token Efficiency:</strong> Smart memory layering reduces token usage by serving only relevant context</li>
+                <li><strong>Faster Responses:</strong> 40x speedup in RAG retrieval means near-instant answers</li>
+                <li><strong>Full User Control:</strong> All data stored locally — you control what's remembered</li>
+                <li><strong>NPU Acceleration:</strong> Uses 🍋 Lemonade backend with integrated FastFlowLM NPU for Windows Ryzen. 🍋 Lemonade is AMD's high-performance AI server (C++ based) integrating multiple backends including FastFlowLM for native NPU acceleration. Falls back to text-based retrieval if no NPU is available.</li>
+                <li><strong>Multi-Language:</strong> 15 languages supported with auto-detection</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Document OCR Section -->
+    <section class="ocr-section" id="ocr-section">
+        <h3>📄 Document OCR and Context Enhancement</h3>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#canvas-sync')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ai-memory-rag')">⬆️</span>
+            <p>
+                Document OCR and Context Enhancement allows users to enrich agents with specific knowledge by dragging and dropping documents directly onto agents. After organizing tabs spatially, users can make documents accessible to agents by processing them through OCR, converting them into contextual information. This is accomplished via the context menu options 'Document Overview' and 'Process Documents,' which is particularly valuable for PDFs and image-based documents.
+            </p>
+            <p>
+                It's important to distinguish this from MCP server functionality. While the MCP server allows file interaction during chats, it currently lacks OCR capabilities and can only access text-based file content.
+            </p>
+
+            <h4>Document OCR Capabilities</h4>
+            <p>
+                TabNeuron includes powerful Optical Character Recognition (OCR) capabilities for processing various document types with support for common character encodings:
+            </p>
+            <ul>
+                <li><strong>Text PDFs:</strong> Extract text from PDF documents (supports embedded text and OCR for scanned content)</li>
+                <li><strong>Plain Text Files:</strong> Process .txt files with support for:
+                    <ul>
+                        <li>UTF-8 (recommended for full Unicode support)</li>
+                        <li>Latin-1 (ISO-8859-1) as fallback encoding</li>
+                    </ul>
+                </li>
+                <li><strong>Code Files:</strong> OCR support for source code files including:
+                    <ul>
+                        <li>Python (.py), C++ (.cpp), JavaScript (.js), Java (.java)</li>
+                        <li>C# (.cs), PHP (.php), Ruby (.rb), Go (.go)</li>
+                        <li>TypeScript (.ts), Swift (.swift), Kotlin (.kt)</li>
+                        <li>And other common programming language files in UTF-8 or Latin-1 encoding</li>
+                    </ul>
+                </li>
+                <li><strong>PDFs with Images:</strong> Built-in method for OCR processing of PDFs containing images</li>
+            </ul>
+
+            <article class="ocr-requirements">
+                <h4>Requirements for PDF Image OCR</h4>
+                <p>
+                    To enable OCR for PDFs with images, you need to install the official Tesseract OCR engine with default settings and ensure it's available in your system PATH. Tesseract is an open-source OCR engine that provides high-quality text extraction from images.
+                </p>
+                <p>Download Tesseract from:</p>
+                <div class="external-links">
+                    <a href="https://github.com/tesseract-ocr/tesseract" target="_blank" class="btn btn-primary">Tesseract OCR GitHub</a>
+                </div>
+            </article>
+
+            <article class="encoding-notes">
+                <h4>Encoding Support Notes</h4>
+                <p>
+                    The application primarily uses UTF-8 encoding for document processing and falls back to Latin-1 (ISO-8859-1) when UTF-8 decoding fails. For optimal results, we recommend using UTF-8 encoding for your documents. This ensures the best compatibility with international characters and special symbols.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
     <!-- Canvas & Sync Section -->
     <section class="sync-section" id="canvas-sync">
         <h2>🔄 Canvas ↔ Browser Sync</h2>
         <div class="cta-box">
             <span class="nav-arrow-down" onclick="smartScrollToSection('#intended-users')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#ai-agents')">⬆️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ocr-section')">⬆️</span>
             <p>Your desktop canvas and your browser stay aligned through a controlled bidirectional sync.</p>
             <h3>Canvas → Browser:</h3>
             <ul>
@@ -328,12 +490,28 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <!-- Intended Users Section -->
+    <section class="users-section" id="intended-users">
+        <h2>Intended Users</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#ai-model-config')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#canvas-sync')">⬆️</span>
+            <p>TabNeuron is designed for users who need to organize and analyze web content:</p>
+            <ul>
+                <li><strong>Researchers:</strong> Manage research tabs, compare sources, and synthesize information across multiple websites.</li>
+                <li><strong>Students:</strong> Organize study materials, extract key points from articles, and create structured notes.</li>
+                <li><strong>Professionals:</strong> Track competitors, monitor industry news, and automate information gathering.</li>
+                <li><strong>Developers:</strong> Extract code examples, compare documentation, and build research workflows.</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- AI Model Configuration Section -->
     <section class="config-section" id="ai-model-config">
         <h2>🧠 AI Model Configuration</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#intended-users')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#canvas-sync')">⬆️</span>
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#browser-extension')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#intended-users')">⬆️</span>
             <p>TabNeuron is backend-agnostic. Choose the engine that fits your privacy needs and hardware capabilities:</p>
             <ul>
                 <li><strong>Local-First & Offline (Privacy):</strong> Connect to Ollama, Llama.cpp, or use the built-in portable model (~806MB). Analyze your tabs entirely offline so your browsing data never leaves your machine. <em>(Note: Running 8B+ models locally requires at least 16 GB RAM or 8 GB VRAM for smooth performance).</em></li>
@@ -402,10 +580,10 @@ function smartScrollToSection(targetId) {
             </div>
 
                 <pre class="code-block-md5"><code>
-        					$ md5sum.exe TabNeuron.exe v1.0.1 05e49fd33ef195a1415f018c1c1525b4
+        					$ md5sum.exe TabNeuron.exe v1.0.3 a6f1907331dea10fe9da8ac59b071269
         				</code></pre>
         				
-            <!--<a href="https://apps.microsoft.com/store/detail/9N8C43PZC1RN" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="50%" /></a>-->
+            <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%" /></a>
         </div>
     </section>
 
@@ -413,24 +591,16 @@ function smartScrollToSection(targetId) {
         <h2>Support & Donations</h2>
 
         <div class="cta-box" id="discord-community">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#review-project')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#support-donations')">⬆️</span>
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#other-products')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#final-download')">⬆️</span>
             <h3>Join our Discord community</h3>
             <div class="external-links">
                 <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">TabNeuron Discord</a>
             </div>
-        </div>
 
-        <div class="cta-box" id="review-project">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#paypal-bch')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#discord-community')">⬆️</span>
             <h3>Leave a review or star the project</h3>
             <a href="https://alternativeto.net/software/tabneuron/" target="_blank"><img src="AlternativeTo.png" width="20%" alt="The Visual AI Web Workspace" /></a>
-        </div>
 
-        <div class="cta-box" id="paypal-bch">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#featured-alternative')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#review-project')">⬆️</span>
             <h3>Support via PayPal or Bitcoin Cash</h3>
             <div class="payment-options">
                 <div class="paypal-option">
@@ -443,7 +613,7 @@ function smartScrollToSection(targetId) {
 
                 <div class="bch-option">
                     <h4>Bitcoin Cash (BCH)</h4>
-                    <p>bitcoincash:
+                    <p>bitcoincash:<br/>
                     qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv</p>
                     <figure class="qr-figure">
                         <img src="bch_qrcode.png" alt="Bitcoin Cash QR Code" class="qr-code">
@@ -451,60 +621,51 @@ function smartScrollToSection(targetId) {
                 </div>
             </div>
         </div>
-
-        <div class="cta-box" id="featured-alternative">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#other-products')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#paypal-bch')">⬆️</span>
-            <h3>Featured on AlternativeTo</h3>
-            <a href="https://alternativeto.net/software/tabneuron/about/" title="TabNeuron provides a visual AI web workspace with chat, agents, and browser sync." target="_blank">
-                <img src="AlternativeTo.png" width="20%" alt="The Visual AI Web Workspace" />
-            </a>
-        </div>
     </section>
 
     <section class="other-products-section" id="other-products">
         <h2>Discover our other tools and games:</h2>
+
+            <div class="cta-box" id="other-products-list">
+            <p>Check out our other products and tools:</p>
+            <ul>
+                <li><strong>🚀 Spaceship</strong> - Retro Arcade Mini Game</li>
+                <li><strong>🧩 Sorana</strong> - Visual AI Workspace & Personal AI Agent</li>
+                <li><strong>⚡ RyzenZPilot</strong> - AMD Ryzen Power Management</li>
+                <li><strong>🤖 Aicono</strong> - AI Desktop Icon Organizer</li>
+            </ul>
+        </div>
 
         <div class="cta-box" id="spaceship-intro">
             <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-website')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#other-products-intro')">⬆️</span>
             <h3>New Spaceship - Retro Mini Game</h3>
             <p>Retro Arcade 2d side-scroller bullet-hell shmup game</p>
+
+                   <h4>Website</h4>
+        <figure class="product-fig">
+            <a href="http://tetramatrix.github.io/spaceship" target="_blank">
+                <img src="start.jpg" title="Retro Arcade 2d side-scroller bullet-hell shmup game" alt="Spaceship" />
+            </a>
+        </figure>
+
+        <h4>Featured on itch.io</h4>
+        <figure class="product-fig">
+            <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship">
+                <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship - Retro Mini Game" />
+            </a>
+        </figure>
+
+        <h4>Featured on IndieDB</h4>
+        <figure class="product-fig">
+            <a href="https://www.indiedb.com/games/new-spaceship" title="View New Spaceship on IndieDB" target="_blank">
+                <img src="https://button.indiedb.com/popularity/medium/games/86877.png" alt="New Spaceship" />
+            </a>
+        </figure>
+
         </div>
 
-        <div class="cta-box" id="spaceship-website">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-itch')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-intro')">⬆️</span>
-            <h4>Website</h4>
-            <figure class="product-fig">
-                <a href="http://tetramatrix.github.io/spaceship" target="_blank">
-                    <img src="start.jpg" title="Retro Arcade 2d side-scroller bullet-hell shmup game" alt="Spaceship" />
-                </a>
-            </figure>
-        </div>
-
-        <div class="cta-box" id="spaceship-itch">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#spaceship-indiedb')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-website')">⬆️</span>
-            <h4>Featured on itch.io</h4>
-            <figure class="product-fig">
-                <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship">
-                    <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship - Retro Mini Game" />
-                </a>
-            </figure>
-        </div>
-
-        <div class="cta-box" id="spaceship-indiedb">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#ryzenzpilot-intro')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-itch')">⬆️</span>
-            <h4>Featured on IndieDB</h4>
-            <figure class="product-fig">
-                <a href="https://www.indiedb.com/games/new-spaceship" title="View New Spaceship on IndieDB" target="_blank">
-                    <img src="https://button.indiedb.com/popularity/medium/games/86877.png" alt="New Spaceship" />
-                </a>
-            </figure>
-        </div>
-
+ 
         <div class="cta-box" id="ryzenzpilot-intro">
             <span class="nav-arrow-down" onclick="smartScrollToSection('#ryzenzpilot-website')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#spaceship-indiedb')">⬆️</span>
@@ -512,17 +673,14 @@ function smartScrollToSection(targetId) {
             <p>RyzenZPilot is a powerful tool for managing AMD Ryzen processor power settings on Windows.
             It allows users to adjust CPU performance, power limits, and thermal configurations
             for optimal performance and efficiency.</p>
-        </div>
 
-        <div class="cta-box" id="ryzenzpilot-website">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-intro')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#ryzenzpilot-intro')">⬆️</span>
-            <h4>Website</h4>
+                        <h4>Website</h4>
             <figure class="product-fig">
                 <a href="http://tetramatrix.github.io/RyzenZPilot" target="_blank">
                     <img src="RyzenZPilot_3.1.3.png" title="AMD Ryzen Power Management Tool" alt="RyzenZPilot" />
                 </a>
             </figure>
+
         </div>
 
         <div class="cta-box" id="aicono-intro">
@@ -530,45 +688,29 @@ function smartScrollToSection(targetId) {
             <span class="nav-arrow-up" onclick="smartScrollToSection('#ryzenzpilot-website')">⬆️</span>
             <h3>Aicono - AI Intelligent Desktop Icon Autopilot</h3>
             <p>Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!</p>
-        </div>
 
-        <div class="cta-box" id="aicono-website">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-microsoft')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-intro')">⬆️</span>
             <h4>Website</h4>
             <figure class="product-fig">
                 <a href="http://tetramatrix.github.io/Aicono" target="_blank">
                     <img src="main.png" title="AI Intelligent Desktop Icon Autopilot" alt="Aicono" />
                 </a>
             </figure>
-        </div>
 
-        <div class="cta-box" id="aicono-microsoft">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-software')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-website')">⬆️</span>
             <h3>Featured on Microsoft Store</h3>
             <figure class="store-fig">
                 <a href="https://apps.microsoft.com/store/detail/XP8LNKJ7H4B1WS" target="_blank">
-                    <img src="ms-store.svg" width="50%" height="50%" alt="Get it from Microsoft" />
+                    <img src="ms-store.svg" width="40%" height="40%" alt="Get it from Microsoft" />
                 </a>
             </figure>
-        </div>
 
-        <div class="cta-box" id="aicono-software">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-alternative')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-microsoft')">⬆️</span>
             <h3>Featured on Softpedia</h3>
             <figure class="store-fig">
                 <a href="https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml" target="_blank">
                     <img src="softpedia.png" width="40%" height="40%" alt="Get it from Softpedia" />
                 </a>
             </figure>
-        </div>
 
-        <div class="cta-box" id="aicono-alternative">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#aicono-product')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-software')">⬆️</span>
-            <h4>Featured on AlternativeTo</h4>
+           <h4>Featured on AlternativeTo</h4>
             <figure class="store-fig">
                 <a href="https://alternativeto.net/software/aicono" title="Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!" target="_blank">
                     <img src="AlternativeTo.png" width="20%" alt="Aicono - AI Intelligent Desktop Icon Autopilot" />
@@ -576,38 +718,27 @@ function smartScrollToSection(targetId) {
             </figure>
         </div>
 
-        <div class="cta-box" id="aicono-product">
-            <span class="nav-arrow-down" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#aicono-alternative')">⬆️</span>
-            <h4>Featured on Product Hunt</h4>
-            <figure class="store-fig">
-                <a href="https://www.producthunt.com/products/aicono?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-aicono" target="_blank">
-                    <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1018479&theme=dark&t=1758526753475" alt="Aicono - The AI intelligent desktop icon autopilot for Windows | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
-                </a>
-            </figure>
-        </div>
 
-        <h3>Sorana - The Visual AI Workspace:</h3>
-        <div class="cta-box" id="aicono-intro">
-            <span class="nav-arrow-down" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#ryzenzpilot-intro')">⬆️</span>
+
+        <div class="cta-box" id="sorana-intro">
+            <h3>🧩 Sorana - The Visual AI Workspace:</h3>
             <p>Sorana is an AI-powered visual workspace that transforms how you organize and interact with digital files. Using semantic AI analysis, it automatically groups related files and folders onto a spatial 2D canvas, replacing traditional hierarchies with intuitive visual layouts. Build drag-and-drop workspaces and no-code agent pipelines, connect to on-prem or cloud AI backends (OpenAI, Mistral, LLamacpp, Lemonade, Ollama), and keep your data under your control.</p>
 
             <h4>Homepage:</h4>
             <p>
                 <a href="https://tetramatrix.github.io/Sorana/" target="_blank">
-                	<img src="Sorana_main.png" width="400px" title="Sorana - The Visual AI Workspace" />                	
+                	<img src="Sorana_main.png" width="400px" title="Sorana - The Visual AI Workspace" />
                 </a>
             </p>
 
             <h4>Featured on Softpedia:</h4>
             <p>
-                <a href="https://www.softpedia.com/get/System/File-Management/Sorana.shtml" target="_blank"><img src="softpedia.png" width="200px" height="60px" alt="Get it from Softpedia" /></a>
+                <a href="https://www.softpedia.com/get/System/File-Management/Sorana.shtml" target="_blank"><img src="softpedia.png"  width="40%" height="40%"  alt="Get it from Softpedia" /></a>
             </p>
 
             <h4>Featured on Microsoft Store:</h4>
             <p>
-                <a href="https://apps.microsoft.com/detail/9n8c43pzc1rn" target="_blank"><img src="ms-store.svg" width="200px" height="60px" alt="Get it from Microsoft" /></a>
+                <a href="https://apps.microsoft.com/detail/9n8c43pzc1rn" target="_blank"><img src="ms-store.svg"  width="40%" height="40%"  alt="Get it from Microsoft" /></a>
             </p>
         </div>
 
