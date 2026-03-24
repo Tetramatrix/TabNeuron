@@ -96,16 +96,14 @@ function smartScrollToSection(targetId) {
         <ul>
             <li><a href="#inspiration">Inspiration</a></li>
             <li><a href="#what-is-tabneuron">What is TabNeuron?</a></li>
-            <li><a href="#installation">Installation</a></li>
             <li><a href="#core-capabilities">Core Capabilities</a></li>
+            <li><a href="#canvas-sync">Canvas & Sync</a></li>
             <li><a href="#chat-websites">Chat with Websites</a></li>
             <li><a href="#ai-agents">AI Research Agents</a></li>
             <li><a href="#mcp-section">MCP Server</a></li>
             <li><a href="#ai-memory-rag">AI Memory & RAG</a></li>
-            <li><a href="#ocr-section">Document OCR</a></li>
-            <li><a href="#canvas-sync">Canvas & Sync</a></li>
-            <li><a href="#intended-users">Intended Users</a></li>
-            <li><a href="#ai-model-config">AI Model Configuration</a></li>
+            <li><a href="#ocr-section">Document OCR</a></li>            
+            <li><a href="#ai-model-config">AI Model Manager</a></li>
             <li><a href="#browser-extension">Browser Extension</a></li>
             <li><a href="#system-requirements">System Requirements</a></li>
             <li><a href="#support-donations">Support & Donations</a></li>
@@ -183,38 +181,6 @@ function smartScrollToSection(targetId) {
         </section>
 -->
 
-        <!-- Installation Section -->
-        <section class="installation-section" id="installation">
-            <h2>🚀 Installation</h2>
-            <div class="cta-box">
-                <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
-                <span class="nav-arrow-up" onclick="smartScrollToSection('#download-section')">⬆️</span>
-                
-                <h3>Desktop App (Portable)</h3>
-                <p>The app is portable - no installation required!</p>
-                <ol>
-                    <li>Download <code>TabNeuron.exe</code></li>
-                    <li>Run it directly - that's it!</li>
-                </ol>
-                 
-                <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
-                
-                <h3>Browser Extension</h3>
-            
-                <p>Install the Chrome extension to connect your browser with TabNeuron.</p>
-
-                <p>🚀 TabNeuron (Tetramatrix Connector) Chrome Extension is now in Chrome Web Store!</p>
-
-                <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn-partner">Chrome Web Store: Tetramatrix Connector</a>
-
-                <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
-                    <p><strong>After installation:</strong> Launch TabNeuron, then click the extension icon in Chrome to connect. The extension connects to <code>localhost:5555</code> (default port).</p>
-                </div>
-
-
-            </div>
-        </section>
-
         <section class="capabilities-section" id="core-capabilities">
             <h2>Core Capabilities</h2>
             <div class="cta-box">
@@ -244,6 +210,36 @@ function smartScrollToSection(targetId) {
                 <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
             </figure>
         </section>
+        
+    <!-- Canvas & Sync Section -->
+    <section class="sync-section" id="canvas-sync">
+        <h2>🔄 Visual AI Workspace ↔ Browser Sync</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#intended-users')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#ocr-section')">⬆️</span>
+            <p>Your workspace and your browser stay aligned through a controlled bidirectional sync.</p>
+            <h3>Workspace → Browser:</h3>
+            <ul>
+                <li>Organize tabs spatially on the desktop canvas or let the AI cluster them semantically.</li>
+                <li>Review the layout and click "Apply".</li>
+                <li>Your browser's native tab groups are instantly updated to match your visual workspace.</li>
+            </ul>
+            <h3>Browser → Workspace:</h3>
+            <ul>
+                <li>Create groups or open new tabs directly in your browser.</li>
+                <li>TabNeuron's lightweight polling API detects the changes.</li>
+                <li>The new tabs and groups are automatically pulled onto your desktop canvas.</li>
+            </ul>
+            <p><em>Note: While our architecture is browser-agnostic, the current bridge extension only supports Chromium-based browsers
+            	    (Chrome, Edge, Brave, etc.).</em></p>
+            
+            <figure class="mindmap-figure">
+                <img src="mindmap.png" alt="TabNeuron Mindmap - Visual representation of tab groups" class="mindmap-screenshot">
+                <figcaption class="image-caption">Mindmap - Visual representation of tab groups and their relationships</figcaption>
+            </figure>
+        </div>
+    </section>
+
 
     <!-- Chat with Websites Section -->
     <section class="chat-section" id="chat-websites">
@@ -266,22 +262,6 @@ function smartScrollToSection(targetId) {
                 <li>"Read these 5 news articles and summarize the overarching timeline."</li>
                 <li>"Summarize this article"</li>                
             </ul>
-        </div>
-    </section>
-
-    <!-- AI Research Agents Section -->
-    <section class="agents-section" id="ai-agents">
-        <h2>🤖 AI Agents Pipeline</h2>
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#mcp-section')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#chat-websites')">⬆️</span>
-            <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
-            <h3>Example Pipeline:</h3>
-            <ol>
-                <li><strong>Scraper Agent:</strong> Reads 10 selected product tabs and uses <code>web_extract_links</code> to find technical specs.</li>
-                <li><strong>Analyst Agent:</strong> Takes the outputted specs, compares them, and formats a Markdown table.</li>
-                <li><strong>Output Agent:</strong> Writes a final executive summary and saves it as a new, persistent text node on your canvas.</li>
-            </ol>
         </div>
     </section>
 
@@ -404,6 +384,22 @@ function smartScrollToSection(targetId) {
             </ul>
         </div>
     </section>
+    
+    <!-- AI Research Agents Section -->
+    <section class="agents-section" id="ai-agents">
+        <h2>🤖 AI Agents Pipeline</h2>
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="smartScrollToSection('#mcp-section')">⬇️</span>
+            <span class="nav-arrow-up" onclick="smartScrollToSection('#chat-websites')">⬆️</span>
+            <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
+            <h3>Example Pipeline:</h3>
+            <ol>
+                <li><strong>Scraper Agent:</strong> Reads 10 selected product tabs and uses <code>web_extract_links</code> to find technical specs.</li>
+                <li><strong>Analyst Agent:</strong> Takes the outputted specs, compares them, and formats a Markdown table.</li>
+                <li><strong>Output Agent:</strong> Writes a final executive summary and saves it as a new, persistent text node on your canvas.</li>
+            </ol>
+        </div>
+    </section>
 
     <!-- Document OCR Section -->
     <section class="ocr-section" id="ocr-section">
@@ -462,53 +458,9 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
-    <!-- Canvas & Sync Section -->
-    <section class="sync-section" id="canvas-sync">
-        <h2>🔄 Canvas ↔ Browser Sync</h2>
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#intended-users')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#ocr-section')">⬆️</span>
-            <p>Your desktop canvas and your browser stay aligned through a controlled bidirectional sync.</p>
-            <h3>Canvas → Browser:</h3>
-            <ul>
-                <li>Organize tabs spatially on the desktop canvas or let the AI cluster them semantically.</li>
-                <li>Review the layout and click "Apply".</li>
-                <li>Your browser's native tab groups are instantly updated to match your visual workspace.</li>
-            </ul>
-            <h3>Browser → Canvas:</h3>
-            <ul>
-                <li>Create groups or open new tabs directly in your browser.</li>
-                <li>TabNeuron's lightweight polling API detects the changes.</li>
-                <li>The new tabs and groups are automatically pulled onto your desktop canvas.</li>
-            </ul>
-            <p><em>Note: While our architecture is browser-agnostic, the current bridge extension only supports Chromium-based browsers (Chrome, Edge, Brave, etc.).</em></p>
-            
-            <figure class="mindmap-figure">
-                <img src="mindmap.png" alt="TabNeuron Mindmap - Visual representation of tab groups" class="mindmap-screenshot">
-                <figcaption class="image-caption">Mindmap - Visual representation of tab groups and their relationships</figcaption>
-            </figure>
-        </div>
-    </section>
-
-    <!-- Intended Users Section -->
-    <section class="users-section" id="intended-users">
-        <h2>Intended Users</h2>
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#ai-model-config')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#canvas-sync')">⬆️</span>
-            <p>TabNeuron is designed for users who need to organize and analyze web content:</p>
-            <ul>
-                <li><strong>Researchers:</strong> Manage research tabs, compare sources, and synthesize information across multiple websites.</li>
-                <li><strong>Students:</strong> Organize study materials, extract key points from articles, and create structured notes.</li>
-                <li><strong>Professionals:</strong> Track competitors, monitor industry news, and automate information gathering.</li>
-                <li><strong>Developers:</strong> Extract code examples, compare documentation, and build research workflows.</li>
-            </ul>
-        </div>
-    </section>
-
     <!-- AI Model Configuration Section -->
     <section class="config-section" id="ai-model-config">
-        <h2>🧠 AI Model Configuration</h2>
+        <h2>🧠 AI Model Manager</h2>
         <div class="cta-box">
             <span class="nav-arrow-down" onclick="smartScrollToSection('#browser-extension')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#intended-users')">⬆️</span>
@@ -560,30 +512,31 @@ function smartScrollToSection(targetId) {
             <tr><td>⚡ Rights</td><td>Standard user</td></tr>
         </table>
     </section>
-
-    <!-- Final Download Section -->
+    
+        <!-- Final Download Section -->
     <section class="final-download-section">
         <div class="cta-box" id="final-download">
             <span class="nav-arrow-down" onclick="smartScrollToSection('#support-donations')">⬇️</span>
             <span class="nav-arrow-up" onclick="smartScrollToSection('#system-requirements')">⬆️</span>
             <h3>Get TabNeuron</h3>
-            <p>Download and install the application.</p>
+            <p>Download the application, then install the Chrome extension.</p>
 
             <div class="download-buttons">
-                <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary btn-large">Download (Portable)</a>
-            
-            <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn btn-primary">Chrome Web Store: Tetramatrix Connector</a>
-
-             <a href="chrome-extension.crx" class="btn btn-primary btn-large">Chrome Extension</a>
-            
-             <a href="README.txt" class="btn btn-primary btn-large">Readme</a>
+            	   <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary btn-large">Download (Portable)</a>
+  	                
+                  <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn btn-primary btn-large"> Chrome Web Store: Tetramatrix Connector</a>
+  	                                    
+             		<a href="README.txt" class="btn btn-primary btn-large">Readme</a>
             </div>
 
-                <pre class="code-block-md5"><code>
-        					$ md5sum.exe TabNeuron.exe v1.0.3 a6f1907331dea10fe9da8ac59b071269
-        				</code></pre>
-        				
+              <pre><code>$ md5sum.exe TabNeuron.exe v1.0.3 a6f1907331dea10fe9da8ac59b071269</code></pre>
+      				
             <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%" /></a>
+       
+       
+                 <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
+                    <p><strong>After installation:</strong>Configure the browser extension and click Start. Then launch TabNeuron and select Organize Tabs to begin the synchronization. The app will display the synchronization progress. Done! The extension connects to <code>localhost:5555</code> (default port).</p>
+                </div>
         </div>
     </section>
 
