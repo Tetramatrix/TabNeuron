@@ -16,48 +16,6 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-<script>
-function scrollToSection(targetId) {
-    const targetElement = document.getElementById(targetId.replace('#', ''));
-    if (targetElement) {
-        const rect = targetElement.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-        if (isVisible && rect.top < window.innerHeight * 0.1) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-        } else {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    }
-}
-
-function smartScrollToSection(targetId) {
-    const targetElement = document.getElementById(targetId.replace('#', ''));
-    if (targetElement) {
-        const rect = targetElement.getBoundingClientRect();
-        const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
-
-        if (isInViewport) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-        } else {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    }
-}
-</script>
-</body>
     <aside class="left">
         <nav class="fixed-nav">
         </nav>
@@ -77,21 +35,22 @@ function smartScrollToSection(targetId) {
 
     <nav class="horizontal-toc-nav">
         <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#screenshots">Screenshots</a></li>
-            <li><a href="#installation">Installation</a></li>
-            <li><a href="#configuration">Configuration</a></li>
-            <li><a href="#permissions">Permissions</a></li>
-            <li><a href="#privacy">Privacy</a></li>
-            <li><a href="#support">Support</a></li>
+            <li><a href="#overview-h2">Overview</a></li>
+            <li><a href="#how-it-works-h2">How It Works</a></li>
+            <li><a href="#screenshots-h2">Screenshots</a></li>
+            <li><a href="#installation-h2">Installation</a></li>
+            <li><a href="#configuration-h2">Configuration</a></li>
+            <li><a href="#permissions-h2">Permissions</a></li>
+            <li><a href="#privacy-h2">Privacy</a></li>
+            <li><a href="#support-h2">Support</a></li>
         </ul>
     </nav>
 
+    <h2 id="overview-h2">Overview</h2>
     <section class="extension-section" id="overview">
-        <h2>Overview</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#how-it-works')">⬇️</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
             <p>TabNeuron Connector is a lightweight Chrome extension that serves as a bridge between your browser and the TabNeuron desktop application. It enables bidirectional communication via localhost, allowing your browser tabs to sync with an infinite 2D spatial canvas workspace.</p>
             <p><strong>Key Benefits:</strong></p>
             <ul>
@@ -104,13 +63,13 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <h2 id="how-it-works-h2">How It Works</h2>
     <section class="extension-section" id="how-it-works">
-        <h2>How It Works</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#screenshots')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#overview')">⬆️</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
             <p>The TabNeuron Connector extension reads tab URLs, titles, and page content from your Chrome browser and forwards them to the TabNeuron desktop application running locally on your machine via <code>localhost:5555</code>.</p>
-            <h3>Why This Extension is Needed:</h3>
+            <h4>Why This Extension is Needed:</h4>
             <p>Chrome extensions are the only way to access browser tab data programmatically. TabNeuron uses this bridge to:</p>
             <ul>
                 <li><strong>Extract Tab Metadata:</strong> Titles, URLs, favicons, and Open Graph tags</li>
@@ -122,14 +81,14 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <h2 id="screenshots-h2">Screenshots</h2>
     <section class="extension-section" id="screenshots">
-        <h2>Screenshots</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#installation')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#how-it-works')">⬆️</span>
-            
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+
             <h3>Promotional Tiles</h3>
-            
+            <div>
             <figure class="product-fig">
                 <img src="tabneuron_ScrollTile_crx_1400x560_en_scaled.png" alt="TabNeuron Connector - Scroll Tile Banner" class="screenshot">
                 <figcaption class="image-caption">TabNeuron Connector - Chrome Web Store Feature Banner</figcaption>
@@ -139,11 +98,10 @@ function smartScrollToSection(targetId) {
                 <img src="tabneuron_AdsTile_crx_440x280_en_scaled.png" alt="TabNeuron Connector - Ads Tile" class="screenshot">
                 <figcaption class="image-caption">TabNeuron Connector - Promotional Tile</figcaption>
             </figure>
-
-            <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
-
+						</div>
+           
             <h3>Extension Interface</h3>
-
+						<div>
             <figure class="product-fig">
                 <img src="connector_status.png" alt="TabNeuron Connector - Status Panel" class="screenshot">
                 <figcaption class="image-caption">Connector Status Panel - View connection status and polling activity</figcaption>
@@ -168,23 +126,24 @@ function smartScrollToSection(targetId) {
                 <img src="connector_settings_tab_options.png" alt="TabNeuron Connector - Tab Options" class="screenshot">
                 <figcaption class="image-caption">Tab Options - Configure tab group synchronization settings</figcaption>
             </figure>
+            </div>
         </div>
     </section>
 
+    <h2 id="installation-h2">Installation</h2>
     <section class="extension-section" id="installation">
-        <h2>Installation</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#configuration')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#screenshots')">⬆️</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
 
-            <h3>Install from Chrome Web Store</h3>
+            <h4>Install from Chrome Web Store</h4>
             <p>The TabNeuron Connector extension is available in the Chrome Web Store for one-click installation:</p>
             
             <div class="download-buttons" style="margin: 2rem 0;">
                 <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" target="_blank" class="btn btn-primary btn-large">🚀 Install from Chrome Web Store</a>
             </div>
 
-            <h3>Installation Steps:</h3>
+            <h4>Installation Steps:</h4>
             <ol>
                 <li>Click the "Install from Chrome Web Store" button above</li>
                 <li>On the Chrome Web Store page, click <strong>"Add to Chrome"</strong></li>
@@ -199,13 +158,13 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <h2 id="configuration-h2">Configuration</h2>
     <section class="extension-section" id="configuration">
-        <h2>Configuration</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#permissions')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#installation')">⬆️</span>
-            
-            <h3>Connection Settings</h3>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+
+            <h4>Connection Settings</h4>
             <p>After installation, configure the extension to connect to TabNeuron:</p>
             <ol>
                 <li>Click the TabNeuron Connector icon in Chrome's toolbar</li>
@@ -216,14 +175,14 @@ function smartScrollToSection(targetId) {
                 <li>Click <strong>"▶️ Start"</strong> to begin synchronization</li>
             </ol>
 
-            <h3>Content Extraction Options</h3>
+            <h4>Content Extraction Options</h4>
             <ul>
                 <li><strong>Content Length:</strong> Choose between 500-10000 characters per page</li>
                 <li><strong>Strip Ads:</strong> Automatically remove advertising content</li>
                 <li><strong>Extract Metadata:</strong> Enable Open Graph tags and descriptions</li>
             </ul>
 
-            <h3>Tab Sync Options</h3>
+            <h4>Tab Sync Options</h4>
             <ul>
                 <li><strong>Sync Tab Groups:</strong> Mirror Chrome's native tab groups</li>
                 <li><strong>Auto-Sync:</strong> Automatically detect and sync new tabs</li>
@@ -236,12 +195,12 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <h2 id="permissions-h2">Permissions</h2>
     <section class="extension-section" id="permissions">
-        <h2>Permissions</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#privacy')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#configuration')">⬆️</span>
-            
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+
             <p>The TabNeuron Connector requests the following permissions, all used solely for local communication with the desktop application:</p>
             
             <table class="feature-table">
@@ -279,12 +238,12 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <h2 id="privacy-h2">Privacy & Data Handling</h2>
     <section class="extension-section" id="privacy">
-        <h2>Privacy & Data Handling</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="smartScrollToSection('#support')">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#permissions')">⬆️</span>
-            
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+
             <p><strong>TabNeuron Connector is designed with privacy-first principles:</strong></p>
             
             <ul>
@@ -299,12 +258,12 @@ function smartScrollToSection(targetId) {
         </div>
     </section>
 
+    <h2 id="support-h2">Support & Resources</h2>
     <section class="extension-section" id="support">
-        <h2>Support & Resources</h2>
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬇️</span>
-            <span class="nav-arrow-up" onclick="smartScrollToSection('#privacy')">⬆️</span>
-            
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+
             <p>Need help or have questions about TabNeuron Connector?</p>
             
             <div class="external-links">
@@ -316,6 +275,7 @@ function smartScrollToSection(targetId) {
             <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
 
             <h3>Report Issues</h3>
+            
             <p>Found a bug or have a feature request? Please report it on our GitHub repository or join the discussion on Discord.</p>
 
             <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #64b5f6; margin-top: 1rem;">
@@ -326,6 +286,8 @@ function smartScrollToSection(targetId) {
 
     <section class="extension-section" id="back-to-main">
         <div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
             <h3>Get Started with TabNeuron</h3>
             <p>Download the TabNeuron desktop application and start organizing your browser tabs with AI.</p>
             <div class="download-buttons">
@@ -335,5 +297,8 @@ function smartScrollToSection(targetId) {
     </section>
 
     </main>
+
+<script src="main.js"></script>
+
 </body>
 </html>
