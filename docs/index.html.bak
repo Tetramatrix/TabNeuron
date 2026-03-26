@@ -162,7 +162,7 @@
                     <li><strong>Document OCR & Context:</strong> Extract text from PDFs, images, and web pages. Enhance agent knowledge with OCR-processed documents.</li>
                 		<li><strong>Advanced Model Management:</strong> Connect to multiple cloud, on-prem and local LLM backends including OpenAI, Mistral, Lemonade, Llamacpp, LM Studio, Ollama and mnany other compatible services. The model manager lists all available models and allows users to activate or deactivate models as needed for specific tasks.
 	                    <ul>
-	                        <li><strong>Local and On-Prem Services:</strong>Lemonade, Llamacpp, LM Studio Ollama and other self-hosted LLM solutions</li>
+	                        <li><strong>Local and On-Prem Services:</strong>Lemonade, Llamacpp, LM Studio, Ollama and other self-hosted LLM solutions</li>
 	                        <li><strong>Cloud Services:</strong> OpenAI, Mistral, and other cloud-based AI platforms</li>
 	                        <li><strong>Flexible Configuration:</strong> Switch between different AI backends based on your needs, privacy requirements, and performance considerations</li>
 	                    </ul>
