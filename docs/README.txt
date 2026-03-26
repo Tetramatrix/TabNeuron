@@ -144,8 +144,8 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 
 📥 Downloads 📥
 
-🔹 Latest version: TabNeuron.exe v1.0.3
-🔢 MD5 Checksum (.exe): c4941caca4baf74e53b45bb1938de2a1
+🔹 Latest version: TabNeuron.exe v1.0.4
+🔢 MD5 Checksum (.exe): 7b8d69f9775b09b7f49e1a5660322206
 🔹 Chrome Extension: chrome-extension.crx
 🌐 Website: http://tetramatrix.github.io/TabNeuron
 💬 Discord: https://discord.gg/4QkQSfSATF
@@ -153,6 +153,11 @@ TabNeuron requires a lightweight bridge extension to communicate with Chrome.
 
 
 📋 Changelog 📋
+
+📅 March 26, 2026 — Version 1.0.4
+
+Bugfix: Chat History
+
 
 📅 March 15, 2026 — Version 1.0.2 - 1.0.3
 
