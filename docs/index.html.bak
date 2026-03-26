@@ -170,25 +170,7 @@
         
     
     
-    <!-- AI Model Configuration Section -->
-    <h2 id="ai-model-config-h2">AI Model Manager</h2>
-    <section class="config-section" id="ai-model-config">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>TabNeuron is backend-agnostic. Choose the engine that fits your privacy needs and hardware capabilities:</p>
-            <ul>
-                <li><strong>Local-First & Offline (Privacy):</strong> Connect to Ollama, Llama.cpp, or use the built-in portable model (~806MB). Analyze your tabs entirely offline so your browsing data never leaves your machine. <em>(Note: Running 8B+ models locally requires at least 16 GB RAM or 8 GB VRAM for smooth performance).</em></li>
-                <li><strong>Cloud-Scale (Performance):</strong> Connect your API keys for OpenAI, Mistral, Lemonade, or others. Recommended for complex, multi-tab reasoning tasks, highly accurate agent pipelines, and bypassing local hardware limits.</li>
-            </ul>
 
-            <figure class="model-manager-figure">
-                <img src="modelmanager.png" alt="TabNeuron Model Manager Interface" class="model-manager-screenshot">
-                <figcaption class="image-caption">Model Manager - Activate and manage AI models</figcaption>
-            </figure>
-         <p><strong>Note:</strong> Cloud models provide the best performance for tab analysis and chat. Local models work offline but may have reduced accuracy for complex tasks.</p>
-       </div>
-    </section>
         
     <!-- Canvas & Sync Section -->
     <h2 id="canvas-sync-h2">🔄 Visual AI Workspace ↔ Browser Sync</h2>
@@ -227,6 +209,27 @@
     </section>
 
 
+    <!-- AI Model Configuration Section -->
+    <h2 id="ai-model-config-h2">AI Model Manager</h2>
+    <section class="config-section" id="ai-model-config">
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+            <p>TabNeuron is backend-agnostic. Choose the engine that fits your privacy needs and hardware capabilities:</p>
+            <ul>
+                <li><strong>Local-First & Offline (Privacy):</strong> Connect to Ollama, Llama.cpp, or use the built-in portable model (~806MB). Analyze your tabs entirely offline so your browsing data never leaves your machine. <em>(Note: Running 8B+ models locally requires at least 16 GB RAM or 8 GB VRAM for smooth performance).</em></li>
+                <li><strong>Cloud-Scale (Performance):</strong> Connect your API keys for OpenAI, Mistral, Lemonade, or others. Recommended for complex, multi-tab reasoning tasks, highly accurate agent pipelines, and bypassing local hardware limits.</li>
+            </ul>
+
+            <figure class="model-manager-figure">
+                <img src="modelmanager.png" alt="TabNeuron Model Manager Interface" class="model-manager-screenshot">
+                <figcaption class="image-caption">Model Manager - Activate and manage AI models</figcaption>
+            </figure>
+         <p><strong>Note:</strong> Cloud models provide the best performance for tab analysis and chat. Local models work offline but may have reduced accuracy for complex tasks.</p>
+       </div>
+    </section>
+    
+    
     <!-- Chat with Websites Section -->
     <h2 id="chat-websites-h2">💬 Chat with Websites</h2>
     <section class="chat-section" id="chat-websites">
@@ -726,7 +729,8 @@
         
     <footer class="main-footer">
         <p class="footer-text">
-            Developed by <b>Tetramatrix</b> | Available for digital workspaces | Free for everyone
+             🏢 Developed by <b>Tetramatrix</b> | 🔧 Specially optimized for AMD Ryzen systems | 💝 Free for everyone
+    </p>
         </p>
     </footer>
 
