@@ -9,7 +9,12 @@ We live in our browsers, but traditional tabs are dead ends. They don't talk to 
 
 🔑 Core Capabilities
 * Visual Canvas Editor: 2D spatial organization with drag & drop tools.
-* Mindmap Overview: Generates a structural overview of your groups.
+🧠 Advanced Model Management: Connect to multiple cloud, on-prem and local LLM backends including OpenAI, Mistral, Lemonade, Llamacpp, LM Studio, Ollama and mnany other compatible services. The model manager lists all available models and allows users to activate or deactivate models as needed for specific tasks.
+es:
+  • Local and On-Prem Services: Lemonade, Llamacpp, LM Studio, Ollama and other self-hosted LLM solutions
+  • Cloud Services: OpenAI, Mistral, Gemini and other cloud-based AI platforms
+  • Flexible Configuration: Easily switch between different AI backends based on your needs, privacy requirements, and performance considerations
+* Mindmap Overview: Generates a structural overview of your groups and tabs.
 * Validated Browser Sync: Real-time bidirectional sync between the canvas and Chrome Tab Groups.
 * Tab Screenshots: Automatic screenshots provide a scaled preview on the canvas.
 * Deep Metadata: Extracts title, URL, description, and Open Graph tags for semantic analysis.
@@ -26,7 +31,6 @@ We live in our browsers, but traditional tabs are dead ends. They don't talk to 
   • File Operations: read_file, read_file_from_line, write_file, list_directory, create_directory, move_file, search_files, get_file_info, edit_file, get_filesystem_info
   • Web Content Tools: web_fetch_content, web_scrape_page, web_extract_links, web_search, web_get_metadata, web_save_snapshot
 * 4-Tier AI Memory System: Short-term memory, conversation summaries, long-term memory (personas, facts, preferences), and document search.
-* 40x Faster RAG Retrieval: Optimized startup from 4s to under 0.1s. Token-efficient, targeted answers.
 * Chat History: All past conversations stored in a sidebar. Search, reload, delete — nothing gets lost.
 * Document OCR: Extract text from PDFs, images, and web pages. Tesseract OCR support for scanned content.
 * Google Gemini Support: Add your API key and use Gemini models including free tier options.

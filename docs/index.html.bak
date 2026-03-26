@@ -160,6 +160,14 @@
                     <li><strong>4-Tier AI Memory System:</strong> Advanced memory architecture with short-term memory, conversation summaries, long-term memory (personas, facts, preferences), and document search. Each layer builds on the last for intelligent, context-aware responses.</li>
                     <li><strong>40x Faster RAG Retrieval:</strong> Optimized startup from 4s to under 0.1s. Token-efficient, targeted answers with full user control over stored data.</li>
                     <li><strong>Document OCR & Context:</strong> Extract text from PDFs, images, and web pages. Enhance agent knowledge with OCR-processed documents.</li>
+                		<li><strong>Advanced Model Management:</strong> Connect to multiple cloud, on-prem and local LLM backends including OpenAI, Mistral, Lemonade, Llamacpp, LM Studio, Ollama and mnany other compatible services. The model manager lists all available models and allows users to activate or deactivate models as needed for specific tasks.
+	                    <ul>
+	                        <li><strong>Local and On-Prem Services:</strong>Lemonade, Llamacpp, LM Studio Ollama and other self-hosted LLM solutions</li>
+	                        <li><strong>Cloud Services:</strong> OpenAI, Mistral, and other cloud-based AI platforms</li>
+	                        <li><strong>Flexible Configuration:</strong> Switch between different AI backends based on your needs, privacy requirements, and performance considerations</li>
+	                    </ul>
+	                </li>
+                
                 </ul>
             </div>
 
@@ -225,7 +233,7 @@
                 <img src="modelmanager.png" alt="TabNeuron Model Manager Interface" class="model-manager-screenshot">
                 <figcaption class="image-caption">Model Manager - Activate and manage AI models</figcaption>
             </figure>
-         <p><strong>Note:</strong> Cloud models provide the best performance for tab analysis and chat. Local models work offline but may have reduced accuracy for complex tasks.</p>
+         <p><strong>Note:</strong> Cloud models provide the best performance for tab analysis and chat. Local or on-premise models work offline but may have reduced accuracy for complex tasks.</p>
        </div>
     </section>
     
