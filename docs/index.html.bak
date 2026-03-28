@@ -57,6 +57,7 @@
             <li><a href="#ocr-section-h2">Document OCR</a></li>            
             <li><a href="#browser-extension-h2">Browser Extension</a></li>
             <li><a href="#system-requirements-h2">System Requirements</a></li>
+            <li><a href="#final-download">Download TabNeuron</a></li>
             <li><a href="#support-donations-h2">Support & Donations</a></li>
             <li><a href="#other-products-h2">Other Products</a></li>
         </ul>
@@ -158,7 +159,6 @@
                         </ul>
                     </li>
                     <li><strong>4-Tier AI Memory System:</strong> Advanced memory architecture with short-term memory, conversation summaries, long-term memory (personas, facts, preferences), and document search. Each layer builds on the last for intelligent, context-aware responses.</li>
-                    <li><strong>40x Faster RAG Retrieval:</strong> Optimized startup from 4s to under 0.1s. Token-efficient, targeted answers with full user control over stored data.</li>
                     <li><strong>Document OCR & Context:</strong> Extract text from PDFs, images, and web pages. Enhance agent knowledge with OCR-processed documents.</li>
                 		<li><strong>Advanced Model Management:</strong> Connect to multiple cloud, on-prem and local LLM backends including OpenAI, Mistral, Lemonade, Llamacpp, LM Studio, Ollama and mnany other compatible services. The model manager lists all available models and allows users to activate or deactivate models as needed for specific tasks.
 	                    <ul>
@@ -538,7 +538,7 @@
              		<a href="README.txt" class="btn btn-primary btn-large">Readme</a>
             </div>
 
-              <pre><code>$ md5sum.exe TabNeuron.exe v1.0.4 7b8d69f9775b09b7f49e1a5660322206</code></pre>
+              <pre><code>$ md5sum.exe TabNeuron.exe v1.0.5 8c77fd846a76f80d476116f8910ec78b</code></pre>
       				
             <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%" /></a>
        
