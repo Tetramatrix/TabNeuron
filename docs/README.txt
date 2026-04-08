@@ -165,14 +165,36 @@ To create agent pipelines:
 
 📥 Downloads 📥
 
-🔹 Latest version: TabNeuron.exe v1.0.6
-🔢 MD5 Checksum (.exe): 7113b797496c14f52f1f65b1f60bcd0f
+🔹 Latest version: TabNeuron.exe v1.0.8
+🔢 MD5 Checksum (.exe): b31fef3e321607ed08f1c41802ad9bb8
 🌐 Website: http://tetramatrix.github.io/TabNeuron
 🏪 Microsoft Store: https://apps.microsoft.com/store/detail/9nh7qk4nczfl
 💬 Discord: https://discord.gg/4QkQSfSATF
 🌐 Chrome Web Store: Tetramatrix Connector
 
 📋 Changelog 📋
+
+📅 April 8, 2026 — Version 1.0.22
+
+🐛 Bugfix: Intent Engine: Tool Call
+🐛 Bugfix: 4-Tier Memory: Fallback
+🐛 Bugfix: Chat Window: Sidebar
+
+📅 April 5, 2026 — Version 1.0.7
+
+🌐 Global Memory Storage — A personal AI that learns and shares! Memories are stored globally and available to ALL agents, creating a unified knowledge base
+🔄 Memory Sync Hub — Import/Export memories between projects, share knowledge across agents, full control over your AI's memory
+🔄 Dynamic Mid-Term Memory — Smarter conversation compression with configurable thresholds, better control over memory transitions
+🆕 Model Manager — 2-pane window with 🍋 Lemonade Backend: Chat models (upper pane) and Embedding models (bottom pane) side by side for simultaneous multi-model support. (🍋 Lemonade only)
+🆕 MCP Manager — Visual interface for managing MCP servers. Enable/disable, configure, and monitor servers without editing config files.
+🆕 Gmail MCP Server — Full agentic Gmail control: list, get, send, label, trash, and archive emails. Archive command saves emails in 3 formats (JSON, EML, MBOX) — perfect for backups.
+🧠 4-Tier Memory Improvements — Profile-First retrieval (61% token savings), conversation compaction (93% token reduction), auto-extraction from conversations.
+🔀 Intelligent Router & Intent Engine — Smart tool call routing, intent classification (memory search, tool call, document query), max 3 tool calls per request (loop prevention).
+💬 Chat History Awareness — Agent remembers from your last conversation. Prompts augmented with semantic memories + episodic summaries.
+📊 Live Session Stats — Real-time token usage, tokens/sec, and time-to-first-token displayed in the chat window. Monitor AI performance: input/output tokens, prompt tokens, and response speed. (🍋 Lemonade backend only)
+🐛 Bugfix: 4-Tier Memory & RAG improvements
+🐛 Bugfix: MCP server tool calls
+🐛 Bugfix: Chat engine stability
 
 📅 March 29, 2026 — Version 1.0.6
 
