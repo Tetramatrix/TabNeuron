@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
-    <title>TabNeuron - Spatial Tab Management & AI Research Workspace</title>
-    <meta name="description" content="TabNeuron: The native desktop workspace for your browser tabs. Map your web session onto an infinite 2D canvas, automate research with AI pipelines, command built-in MCP web tools, and sync bidirectionally with your browser.">
-    <meta name="keywords" content="Spatial Tab Management, Desktop Browser Workspace, AI Web Research, Infinite Canvas, Browser Tab Sync, AI Agent Pipelines, MCP Server, Local LLM Integration, Chrome Tab Groups, Visual Knowledge Management">
+    <title>TabNeuron - AI Spatial Tab Manager & Research Workspace</title>
+    <meta name="description" content="TabNeuron solves the problem that tabs are hidden in browser bars, AI forgets between sessions, and research is manual. Map your web session onto an infinite 2D canvas, organize tabs spatially, chat with websites using local or cloud AI, automate research with AI agent pipelines, and sync bidirectionally with Chrome Tab Groups. AI memory extracts facts, preferences, and personas from your chats, building long-term profiles that make answers more accurate over time. Old conversations auto-compact to save tokens. Built-in MCP server gives your AI file and web access. Run models locally so nothing leaves your machine, or connect to cloud AI.">
+    <meta name="keywords" content="AI Spatial Tab Manager, Browser Tab Canvas, Chat with Websites, AI Research Agents, MCP Server, AI Memory, Long-Term Memory, Auto Compaction, Browser Extension, Chrome Tab Groups Sync, Document OCR, RAG, Local AI, Private AI, Token Efficiency, Web Research Automation">
     <meta name="author" content="Tetramatrix">
-    <meta property="og:title" content="TabNeuron - Spatial Tab Management & AI Research Workspace">
-    <meta property="og:description" content="TabNeuron: The native desktop workspace for your browser tabs. Map your web session onto an infinite 2D canvas, automate research with AI pipelines, command built-in MCP web tools, and sync bidirectionally with your browser.">
+    <meta property="og:title" content="TabNeuron - AI Spatial Tab Manager & Research Workspace">
+    <meta property="og:description" content="TabNeuron solves the problem that tabs are hidden in browser bars, AI forgets between sessions, and research is manual. Map your web session onto an infinite 2D canvas, organize tabs spatially, chat with websites, automate research with AI agent pipelines, and sync bidirectionally with Chrome Tab Groups.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="main.png">
 
@@ -36,7 +36,7 @@
     <main class="wikidoc">
         <header class="page-header">
             <h1>TabNeuron</h1>
-            <h3 data-no-toggle="true">Spatial Tab Management & AI Research Workspace</h3>
+            <h3 data-no-toggle="true">AI Spatial Tab Manager & Research Workspace</h3>
             <figure class="logo-container">
                 <img src="logo_small.png" alt="TabNeuron Logo" class="logo">
             </figure>
@@ -47,14 +47,14 @@
         <ul>
             <li><a href="#inspiration-h2">Inspiration</a></li>
             <li><a href="#what-is-tabneuron-h2">What is TabNeuron?</a></li>
-            <li><a href="#core-capabilities-h2">Core Capabilities</a></li>           
+            <li><a href="#core-capabilities-h2">Core Capabilities</a></li>
             <li><a href="#canvas-sync-h2">Canvas & Sync</a></li>
-            <li><a href="#ai-model-config-h2">AI Model Manager</a></li>
+            <li><a href="#ai-memory-rag-h2">AI Memory & Smart Routing</a></li>
+            <li><a href="#mcp-section-h2">MCP Server & Integrations</a></li>
+            <li><a href="#ocr-section-h2">Document Processing & OCR</a></li>
+            <li><a href="#ai-backends-h2">AI Backends & Models</a></li>
             <li><a href="#chat-websites-h2">Chat with Websites</a></li>
             <li><a href="#ai-agents-h2">AI Research Agents</a></li>
-            <li><a href="#mcp-section-h2">MCP Server</a></li>
-            <li><a href="#ai-memory-rag-h2">AI Memory & RAG</a></li>
-            <li><a href="#ocr-section-h2">Document OCR</a></li>            
             <li><a href="#browser-extension-h2">Browser Extension</a></li>
             <li><a href="#system-requirements-h2">System Requirements</a></li>
             <li><a href="#final-download-h2">Get TabNeuron</a></li>
@@ -67,32 +67,27 @@
     <h2 id="inspiration-h2">Inspiration</h2>
     <section class="inspiration-section" id="inspiration">
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+
             <p>Most tab managers are confined to tiny browser sidebars or dropdown menus, trapping your research in flat, ephemeral lists. We built TabNeuron because complex web research requires space and permanence. By pulling your browser tabs out onto a native desktop canvas, you gain an infinite 2D workspace to visually group information, analyze it with AI, and take true ownership of your browsing sessions.</p>
         </div>
     </section>
 
-    <h2 id="what-is-tabneuron-h2">What is TabNeuron?</h2>
+ 		<h2 id="what-is-tabneuron-h2">What is TabNeuron?</h2>
     <section class="intro-section" id="what-is-tabneuron">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>TabNeuron is a standalone desktop application that connects to your browser via a lightweight extension. It maps your active browsing session onto an infinite visual canvas. You can organize tabs spatially, chat with the extracted page content using local or cloud AI, and build agent pipelines to automate web research.</p>
 
-<!--<p><em><strong>Beta Notice:</strong> TabNeuron v1.0.0 is our initial public release, feature-complete and actively evolving. While core capabilities including canvas sync, multi-tab chat, AI agents, and the MCP server are fully functional, early adopters may encounter edge cases as we continue to harden the experience. We're building for power users who want full control over their data, and your feedback directly shapes what comes next.</em></p>-->
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+            <p>TabNeuron solves the problem that tabs are hidden in browser bars, AI forgets everything between sessions, and web research is manual. Map your active browsing session onto an infinite visual canvas. Organize tabs spatially instead of scrolling through flat lists. Chat with websites to get instant answers without manual reading. Automate research with AI agent pipelines — scrape, analyze, and output in sequence. Sync bidirectionally with Chrome Tab Groups so your browser and workspace stay aligned. AI memory that extracts facts, skills, and preferences from your chats, making answers more accurate over time. Run AI models locally so nothing leaves your machine, or connect to cloud AI.</p>
 
         <!-- Video Section -->
-        <section class="video-section">
             <div class="responsive-iframe-container">
                 <iframe src="https://www.youtube.com/embed/J_zfEXgZwrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <p class="video-caption"><em>Demonstration of TabNeuron workspace with browser tabs</em></p>
-        </section>
-
-
-        </div>
-
+  </section>
 
         <!-- Google Ads - Top Banner -->
         <!--
@@ -109,7 +104,6 @@
 
         <!-- Download Section -->
         <!--
-
         <section class="download-section" id="download-section">
             <div class="cta-box">
                 <span class="nav-arrow-down" onclick="smartScrollToSection('#core-capabilities')">⬇️</span>
@@ -123,168 +117,355 @@
                     <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn btn-primary">Chrome Web Store: Tetramatrix Connector</a>
 
                     <a href="chrome-extension.crx" class="btn btn-primary">Chrome Extension: Tetramatrix Connector</a>
-                    
+
                     <a href="README.txt" class="btn btn-primary">Readme</a>
                 </div>
 
                 <pre class="code-block-md5"><code>
         					$ md5sum.exe TabNeuron.exe v1.0.1 05e49fd33ef195a1415f018c1c1525b4
         				</code></pre>
-        
+
                 <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%"/></a>
             </div>
         </section>
 -->
 
- </section>
- 
- 
-        <h2 id="core-capabilities-h2">Core Capabilities</h2>
+				<h2 id="core-capabilities-h2">Core Capabilities</h2>
         <section class="capabilities-section" id="core-capabilities">
+
             <div class="cta-box">
-                <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-                <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-                <ul>
-                    <li><strong>Native Desktop Workspace:</strong> Break out of the browser UI. Manage tabs on an infinite 2D spatial canvas with drag, drop, and WYSIWYG grouping tools.</li>
-                    <li><strong>Data Ownership & Backups:</strong> Save your visual workspace states locally to disk. Close your browser, and your research session remains safely backed up and restorable.</li>
-                    <li><strong>Validated App ↔ Browser Sync:</strong> AI suggests semantic tab groupings, but you stay in control. Review your visual layout and click "Apply" to sync the structure back to your browser's tab groups.</li>
-                    <li><strong>Mindmap Visualization:</strong> Toggle a structured mindmap view to get a high-level overview of all nested groups and tabs.</li>
-                    <li><strong>Visual Previews & Metadata:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags are extracted for every tab, giving you instant visual context without switching windows.</li>
-                    <li><strong>Multi-Tab Chat:</strong> Select multiple tabs on the canvas and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
-                    <li><strong>AI Agent Pipelines:</strong> Build no-code automated workflows where the output of one agent (e.g., extracting specs) becomes the input for the next (e.g., formatting a comparison table).</li>
-                    <li><strong>Built-in MCP Server:</strong> Native Model Context Protocol server giving your AI direct file system and web access:
-                        <ul>
-                            <li><strong>File Operations:</strong> read_file, read_file_from_line, write_file, list_directory, create_directory, move_file, search_files, get_file_info, edit_file, get_filesystem_info</li>
-                            <li><strong>Web Content Tools:</strong> web_fetch_content, web_scrape_page, web_extract_links, web_search, web_get_metadata, web_save_snapshot</li>
-                        </ul>
-                    </li>
-                    <li><strong>4-Tier AI Memory System:</strong> Advanced memory architecture with short-term memory, conversation summaries, long-term memory (personas, facts, preferences), and document search. Each layer builds on the last for intelligent, context-aware responses.</li>
-                    <li><strong>Document OCR & Context:</strong> Extract text from PDFs, images, and web pages. Enhance agent knowledge with OCR-processed documents.</li>
-                		<li><strong>Advanced Model Management:</strong> Connect to multiple cloud, on-prem and local LLM backends including OpenAI, Mistral, Lemonade, Llamacpp, LM Studio, Ollama and mnany other compatible services. The model manager lists all available models and allows users to activate or deactivate models as needed for specific tasks.
-	                    <ul>
-	                        <li><strong>Local and On-Prem Services:</strong> Lemonade, Llamacpp, LM Studio, Ollama and other self-hosted LLM solutions</li>
-	                        <li><strong>Cloud Services:</strong> OpenAI, Mistral, Gemini and other cloud-based AI platforms</li>
-	                        <li><strong>Flexible Configuration:</strong> Switch between different AI backends based on your needs, privacy requirements, and performance considerations</li>
-	                    </ul>
-	                </li>
-                
-                </ul>
+                <p>What TabNeuron solves — each category expands to show how it works.</p>
             </div>
 
-            <figure class="chatbot-figure">
-                <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
-            </figure>
-        </section>
-        
-    
-    
+            <!-- 1. Canvas & Sync -->
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 📂 Organize Tabs on Canvas
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> "Which tab has that info?" — Scrolling through dozens of hidden tabs in browser bars, losing context.</p>
+                    <ul>
+                        <li><strong>Solution:</strong> AI groups tabs on a 2D canvas by topic — visually find tabs by what they're about, not where they're buried.</li>
+                        <li><strong>Canvas Editor:</strong> Drag and drop, rename, resize — full visual control.</li>
+                        <li><strong>Mind Maps:</strong> Generate visual representations of tab groups to reveal hidden relationships.</li>
+                    </ul>
+                   </div>
+                </div>
 
-        
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 🔄 Canvas ↔ Browser Sync
+                </h3>
+                <div class="capability-content" style="display:none;">
+            			<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Workspace and browser are disconnected — changes in one don't reflect in the other.</p>
+                    <ul>
+                        <li><strong>Solution:</strong> Bidirectional sync with Chrome Tab Groups — canvas changes push to browser, browser changes pull to canvas.</li>
+                        <li><strong>Workspace → Browser:</strong> AI suggests semantic groupings, you review and click "Apply" — browser tab groups update instantly.</li>
+                        <li><strong>Browser → Workspace:</strong> Create groups or open tabs in browser — TabNeuron's polling API detects changes and pulls them onto the canvas.</li>
+                    </ul>
+                  </div>
+                </div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 💬 Chat with Websites
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Opening and reading across multiple tabs takes too long. Research means comparing, copying, synthesizing manually.</p>
+                    <ul>
+                        <li><strong>Solution:</strong> Select multiple tabs and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
+                        <li><strong>DOM Extraction:</strong> Page content and metadata fed directly into LLM context — no manual reading.</li>
+                        <li><strong>Multi-Tab Chat:</strong> "Compare specs across 4 review tabs" → result saved locally.</li>
+                    </ul>
+                    <figure class="chatbot-figure">
+                        <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
+                        <figcaption>Agent Chat — Full access to websites, files, and the web. Compare, extract, summarize — all through conversation. Shows token usage, tok/sec and TTFT for 🍋 Lemonade backends.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 🤖 AI Agent Pipelines
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Repetitive web research is manual — open tabs, extract data, compare, format, save — every time.</p>
+                    <ul>
+                        <li><strong>Solution:</strong> Build no-code automated workflows where one agent's output becomes the next agent's input.</li>
+                        <li><strong>Scraper Agent:</strong> Reads selected tabs, uses web_extract_links to find specs.</li>
+                        <li><strong>Analyst Agent:</strong> Takes output, compares, formats a Markdown table.</li>
+                        <li><strong>Output Agent:</strong> Writes executive summary, saves as persistent text node on canvas.</li>
+                    </ul>
+                  </div>
+                </div>
+
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 📸 Visual Previews & Metadata
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Can't tell what a tab contains without switching to it — title alone isn't enough.</p>
+                    <ul>
+                        <li><strong>Solution:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags extracted for every tab — instant visual context.</li>
+                        <li><strong>Data Ownership:</strong> Save workspace states locally to disk. Close browser, research session remains safely backed up.</li>
+                    </ul>
+                  </div>
+                </div>
+
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 🧠 AI Memory That Remembers
+                </h3>
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> AI forgets who you are after every session. Long chats are expensive and slow.</p>
+                    <ul>
+                        <li><strong>Solution:</strong> Auto-extracts facts, skills, preferences, and personas from conversations. Gets better over time.</li>
+                        <li><strong>Auto-Compaction:</strong> Old conversations summarized → 93% token savings, full context preserved.</li>
+                        <li><strong>Global Memory:</strong> Shared across all agents, import/export, fully manageable.</li>
+                    </ul>
+                  </div>
+                </div>
+
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 🔌 MCP Server & Integrations
+                </h3>
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Repetitive file tasks are manual. Web research means opening multiple tabs, comparing, copying. Research takes forever.</p>
+                    <ul>
+                        <li><strong>MCP Manager:</strong> Visual interface — enable/disable servers, configure settings, monitor health.</li>
+                        <li><strong>File Operations:</strong> read, write, move, search, edit — all through conversation.</li>
+                        <li><strong>Web Tools:</strong> Fetch, scrape, search, extract — AI has direct web access.</li>
+                        <li><strong>External Servers:</strong> Connect Google Drive, GitHub, PostgreSQL, custom tools.</li>
+                    </ul>
+                  </div>
+                </div>
+
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> ☁️ AI Backends — Local or Cloud
+                </h3>
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Data goes to cloud providers — no privacy. Or local models are hard to configure.</p>
+                    <ul>
+                        <li><strong>Local:</strong> 🍋 Lemonade (NPU acceleration), Ollama, Llama.cpp, LM Studio — nothing leaves your machine.</li>
+                        <li><strong>Cloud:</strong> OpenAI, Mistral, Gemini (free tier), and more — when you need power.</li>
+                        <li><strong>Model Manager:</strong> Activate/deactivate models per task — 2-pane view (🍋 Lemonade only) for chat + embedding simultaneously.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> 📦 Technical Details
+                </h3>
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
+                    <ul>
+                        <li><strong>Portable:</strong> Runs from USB, extract anywhere, data stays under your control.</li>
+                        <li><strong>Centralized Storage:</strong> All data in a single <code>.tabneuron/</code> folder. Existing installs migrate automatically.</li>
+                        <li><strong>Browser Bridge:</strong> Lightweight extension connects via local polling API — no data leaves your machine.</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+        <figure class="screenshot-figure">
+        <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="sorana-screenshot">
+        <figcaption>Visual Canvas: Browser tabs organized spatially with AI-powered grouping</figcaption>
+    </figure>
+
+        <figure class="screenshot-figure">
+        <img src="mindmap.png" alt="TabNeuron Mind Map Screenshot" class="sorana-screenshot">
+        <figcaption>Mind Map Generation: Visualize tab groups and their relationships</figcaption>
+    </figure>
+	</section>
+
+
     <!-- Canvas & Sync Section -->
     <h2 id="canvas-sync-h2">🔄 Visual AI Workspace ↔ Browser Sync</h2>
     <section class="sync-section" id="canvas-sync">
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>Your workspace and your browser stay aligned through a controlled bidirectional sync.</p>
-            <h3>Workspace → Browser:</h3>
-            <div>
-            <ul>
-                <li>Organize tabs spatially on the desktop canvas or let the AI cluster them semantically.</li>
-                <li>Review the layout and click "Apply".</li>
-                <li>Your browser's native tab groups are instantly updated to match your visual workspace.</li>
-            </ul>
-            </div>
-            
-            <h3>Browser → Workspace:</h3>
-            <div>
-            <ul>
-                <li>Create groups or open new tabs directly in your browser.</li>
-                <li>TabNeuron's lightweight polling API detects the changes.</li>
-                <li>The new tabs and groups are automatically pulled onto your desktop canvas.</li>
-            </ul>
-            <p><em>Note: While our architecture is browser-agnostic, the current bridge extension only supports Chromium-based browsers
-            	    (Chrome, Edge, Brave, etc.).</em></p>
 
-            </div>
-            
-            
-           <figure class="mindmap-figure">
-                <img src="mindmap.png" alt="TabNeuron Mindmap - Visual representation of tab groups" class="mindmap-screenshot">
-                <figcaption class="image-caption">Mindmap - Visual representation of tab groups and their relationships</figcaption>
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Workspace → Browser
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ul>
+                        <li>Organize tabs spatially on the desktop canvas or let the AI cluster them semantically.</li>
+                        <li>Review the layout and click "Apply".</li>
+                        <li>Your browser's native tab groups are instantly updated to match your visual workspace.</li>
+                    </ul>
+                   </div>
+                </div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Browser → Workspace
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ul>
+                        <li>Create groups or open new tabs directly in your browser.</li>
+                        <li>TabNeuron's lightweight polling API detects the changes.</li>
+                        <li>The new tabs and groups are automatically pulled onto your desktop canvas.</li>
+                    </ul>
+                    <p><em>Note: While our architecture is browser-agnostic, the current bridge extension only supports Chromium-based browsers (Chrome, Edge, Brave, etc.).</em></p>
+                  </div>
+                </div>
+
+            <figure class="screenshot-figure">
+                <img src="mindmap.png" alt="TabNeuron Mindmap - Visual representation of tab groups" class="sorana-screenshot">
+                <figcaption>Mindmap - Visual representation of tab groups and their relationships</figcaption>
             </figure>
         </div>
     </section>
 
 
-    <!-- AI Model Configuration Section -->
-    <h2 id="ai-model-config-h2">AI Model Manager</h2>
-    <section class="config-section" id="ai-model-config">
+		<h2 id="ai-memory-rag-h2">AI Memory & Smart Routing</h2>
+    <section class="ai-memory-rag-section" id="ai-memory-rag">
+
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>TabNeuron is backend-agnostic. Choose the engine that fits your privacy needs and hardware capabilities:</p>
-            <ul>
-                <li><strong>Local-First & Offline (Privacy):</strong> Connect to Ollama, Llama.cpp, or use the built-in portable model (~806MB). Analyze your tabs entirely offline so your browsing data never leaves your machine. <em>(Note: Running 8B+ models locally requires at least 16 GB RAM or 8 GB VRAM for smooth performance).</em></li>
-                <li><strong>Cloud-Scale (Performance):</strong> Connect your API keys for OpenAI, Mistral, Lemonade, or others. Recommended for complex, multi-tab reasoning tasks, highly accurate agent pipelines, and bypassing local hardware limits.</li>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+            <p>TabNeuron's AI remembers who you are, what you prefer, and what you've discussed — making every answer more accurate while using dramatically fewer tokens. Perfect for local and private inference.</p>
+
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Memory That Learns Over Time
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> AI starts from scratch every session — forgets who you are, what you do, what you prefer.</p>
+                    <ul>
+                <li><strong>Active Conversation</strong> — Your current chat, always in context</li>
+                <li><strong>Auto-Compaction</strong> — Long chats compressed into summaries (93% token reduction). Context stays, cost drops.</li>
+                <li><strong>Observations</strong> — Facts, preferences, and skills auto-extracted from every message</li>
+                <li><strong>Profiles</strong> — Observations consolidated into entity summaries (you, companies, topics) — 61% fewer tokens</li>
+            </ul>
+          </div>
+                </div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> How It Works
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ul>
+                <li><strong>Auto-Extraction:</strong> Every message analyzed — memories saved automatically, no manual effort</li>
+                <li><strong>Profile-First Retrieval:</strong> Compact profiles loaded first, detailed observations as fallback — fast and precise</li>
+                <li><strong>Adaptive Document Search:</strong> Semantic search → BM25 → Keyword → Full Text — precise, fast, works offline</li>
+                <li><strong>Conversation Compaction:</strong> 17,000 → 1,200 tokens while keeping full context</li>
+                <li><strong>Cross-Agent Memory:</strong> Share memories between agents, import/export, global memories</li>
             </ul>
 
-            <figure class="model-manager-figure">
-                <img src="modelmanager.png" alt="TabNeuron Model Manager Interface" class="model-manager-screenshot">
-                <figcaption class="image-caption">Model Manager - Activate and manage AI models</figcaption>
+            <figure class="screenshot-figure">
+                <img src="Longterm_person_memory.png" alt="Long-Term Person Memory Management Interface" class="sorana-screenshot">
+                <figcaption>Long-Term Memory: Automatically extracted user facts, preferences, and persona data</figcaption>
             </figure>
-         <p><strong>Note:</strong> Cloud models provide the best performance for tab analysis and chat. Local or on-premise models work offline but may have reduced accuracy for complex tasks.</p>
-       </div>
-    </section>
-    
-    
-    <!-- Chat with Websites Section -->
-    <h2 id="chat-websites-h2">💬 Chat with Websites</h2>
-    <section class="chat-section" id="chat-websites">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>Talk directly to your open tabs. TabNeuron extracts the DOM content and metadata from your selected tabs and feeds it into your chosen LLM context.</p>
-            <h3>How it Works:</h3>
-            <div>
-            <ol>
-                <li>Create an agent.</li>
-                <li>Add add any tabs to the agents group.</li>
-                <li>Open the context menu and select "Chat".</li>
-                <li>Ask natural language questions to synthesize data across all selected sources.</li>
-            </ol>
-            </div>
-            <h3>Use Cases:</h3>
-            <div>
-            <ul>
-                <li>"Compare the technical specifications across these 4 review tabs."</li>
-                <li>"Extract all Python code blocks from this tutorial and format them."</li>
-                <li>"Read these 5 news articles and summarize the overarching timeline."</li>
-                <li>"Summarize this article"</li>                
+
+            <figure class="screenshot-figure">
+                <img src="chat_history.png" alt="Chat History Sidebar Interface" class="sorana-screenshot">
+                <figcaption>Chat History Sidebar: Access all past conversations instantly</figcaption>
+            </figure>
+                </div>
+						</div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Smart Tool Routing
+                </h3>
+                <div class="capability-content" style="display:none;">
+            <div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> AI doesn't know whether to search memory, call a tool, or query documents — wastes tokens on wrong actions.</p>
+                    <ul>
+                <li><strong>Intent Classification:</strong> Detects memory search, tool calls, document queries, or hybrid intents automatically</li>
+                <li><strong>Entity Extraction:</strong> Identifies companies, users, topics from natural language</li>
+                <li><strong>Smart Routing:</strong> Routes to correct MCP server (file ops, web tools) — no wasted calls</li>
+                <li><strong>Loop Prevention:</strong> Max 3 tool calls per request — prevents infinite loops</li>
+                <li><strong>Multi-Language:</strong> English + German intent patterns supported</li>
             </ul>
+
+            <figure class="screenshot-figure">
+                <img src="chat_manager.png" alt="Chat Manager Interface" class="sorana-screenshot">
+                <figcaption>Chat Manager: View, search, and manage conversation history</figcaption>
+            </figure>
+
+            <figure class="screenshot-figure">
+                <img src="rag.png" alt="RAG Document Manager Interface" class="sorana-screenshot">
+                <figcaption>RAG Document Manager: Upload, view, and manage documents for AI context retrieval</figcaption>
+            </figure>
+                </div>
+						</div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Key Benefits
+                </h3>
+                <div class="capability-content" style="display:none;">
+                  <div class="cta-box capability-group">
+                    <ul>
+                <li><strong>Token Efficiency:</strong> Only relevant context loaded — profile-first retrieval, fallback only when needed. Dramatically fewer tokens, faster answers.</li>
+                <li><strong>Live Session Stats:</strong> Real-time performance metrics — tokens/sec, time-to-first-token, input/output tokens — visible in every chat. <span class="lemonade-only">(🍋 Lemonade only)</span></li>
+                <li><strong>Global Memory:</strong> Learns from every conversation — memories shared across ALL agents, creating a unified knowledge base.</li>
+                <li><strong>Memory Import/Export:</strong> Transfer memories between projects, backup and share knowledge.</li>
+                <li><strong>Configurable Compaction:</strong> Control when and how conversations are compressed — perfect thresholds for your workflow.</li>
+                <li><strong>NPU Acceleration:</strong> 🍋 Lemonade with FastFlowLM for native AMD Ryzen NPU acceleration. Falls back to text-based retrieval if no NPU available.</li>
+                <li><strong>Multi-Language:</strong> English + German for memory routing, 25+ languages for tool intents, 15+ languages for document retrieval — all auto-detected.</li>
+            </ul>
+                </div>
+
+              </div>
             </div>
         </div>
     </section>
 
 
-    
-    
-    <!-- MCP Server Section -->
-    <h2 id="mcp-section-h2">🔌 MCP Server Usage Guide</h2>
+
+
+
+		<h2 id="mcp-section-h2">MCP Server & Integrations</h2>
     <section class="mcp-section" id="mcp-section">
+
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>TabNeuron includes a built-in MCP (Model Context Protocol) server that enables advanced file operations and web content access through AI agents. To use these capabilities:</p>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+            <p>TabNeuron solves the problem that file tasks, web research, and email management are all manual, disconnected workflows. Through MCP servers, your AI can interact with files, web content, and external services — all through conversation. Connect any third-party MCP server (Google Drive, GitHub, PostgreSQL, custom tools) for unlimited extensibility.</p>
             <ol>
+                <li>Open MCP Manager to configure and enable servers</li>
+                <li>Connect external MCP servers if needed (Google Drive, GitHub, databases, etc.)</li>
                 <li>Create an agent in the workspace</li>
                 <li>Right-click on the agent title and select "Chat"</li>
-                <li>Interact directly with all files, folders, and web content</li>
+                <li>Interact directly with files, folders, web content, and external services</li>
             </ol>
 
-            <h3>File Operations</h3>
-            <div>
-            <p>Common file operations you can perform in the agent chat:</p>
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> MCP Manager
+                </h3>
+                <div class="capability-content" style="display:none;">
+
+                	<div class="cta-box capability-group">
+
+                    <p><strong>Problem:</strong> Managing MCP servers means editing config files manually — error-prone and tedious.</p>
+                    <p><strong>Solution:</strong> Visual interface for managing MCP servers. Enable/disable servers, configure settings, and monitor connection health — all without touching config files. Connect any compatible external MCP server for unlimited extensibility.</p>
+
+            <figure class="screenshot-figure">
+                <img src="mcpmanager.png" alt="MCP Manager Interface" class="sorana-screenshot">
+                <figcaption>MCP Manager: Visually configure and enable MCP servers</figcaption>
+            </figure>
+						</div>
+					</div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> File Operations
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Repetitive file tasks — creating folders, moving files, reading, editing — require manual clicking and navigation.</p>
+                    <p><strong>Solution:</strong> Automate file operations through conversation:</p>
             <ul>
                 <li>"List the first 10 files in the current directory" (uses list_directory)</li>
                 <li>"Search all text files in the workspace" (uses search_files)</li>
@@ -298,11 +479,16 @@
                 <li>"Show available storage space and supported operations" (uses get_filesystem_info)</li>
                 <li>"Summarize document.txt and create a markdown summary document" (uses read_file + write_file)</li>
             </ul>
-						</div>
-            
-            <h3>Web Content Tools</h3>
-            <div>
-            <p>Built-in MCP web content tools give your AI direct web access. Combine file operations with web content for even more powerful agents:</p>
+                </div>
+   				</div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Web Content Tools
+                </h3>
+                <div class="capability-content" style="display:none;">
+          <div class="cta-box capability-group">
+                    <p><strong>Problem:</strong> Research means opening multiple tabs, comparing information, copying data, saving results — fragmented and time-consuming.</p>
+                    <p><strong>Solution:</strong> Built-in web tools give your AI direct access. One query → fetch, compare, save locally:</p>
             <ul>
                 <li><strong>web_fetch_content:</strong> Fetch and read content from any URL</li>
                 <li><strong>web_scrape_page:</strong> Scrape full webpage content</li>
@@ -322,121 +508,40 @@
                 <li>"Fetch the latest news about AI and summarize"</li>
                 <li>"Compare prices from multiple online shops"</li>
             </ul>
-						</div>
-						
-            <h3>Combined workflows:</h3>
-            <div>
+
+            <p><strong>Combined workflows:</strong></p>
             <ul>
                 <li>"Fetch product specs from the manufacturer website and save to a local file"</li>
                 <li>"Search for documentation, download PDFs, and organize into folders"</li>
                 <li>"Extract data from web sources, analyze with local files, and generate a report"</li>
             </ul>
-            </div>
+                </div>
+   				</div>
+           </div>
         </div>
     </section>
 
-    <!-- AI Memory & RAG Section -->
-    <h2 id="ai-memory-rag-h2">🧠 Advanced AI Memory & RAG System</h2>
-    <section class="ai-memory-rag-section" id="ai-memory-rag">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>TabNeuron introduces a 4-tier memory architecture combined with 4-tier RAG (Retrieval-Augmented Generation) for intelligent, context-aware responses that save tokens and deliver faster, targeted answers — with full user control.</p>
-
-            <h3>4-Tier AI Memory System</h3>
-            <div>
-            <p>Each memory layer builds on the last, creating a comprehensive memory system that makes your AI agents more intelligent over time:</p>
-            <ul>
-                <li><strong>Short-Term Memory:</strong> Active conversation context within the current chat session</li>
-                <li><strong>Summaries:</strong> Automatic conversation compression to preserve key insights without token bloat</li>
-                <li><strong>Long-Term Memory:</strong> Persistent storage for user personas, facts, preferences, and skills — automatically extracted from conversations</li>
-                <li><strong>Document Search:</strong> RAG-based retrieval from uploaded documents and web pages for precise, context-rich answers</li>
-            </ul>
-						
-            <figure class="screenshot-figure">
-                <img src="Longterm_person_memory.png" alt="Long-Term Person Memory Management Interface" class="sorana-screenshot">
-                <figcaption>Long-Term Memory: Automatically extracted user facts, preferences, and persona data</figcaption>
-            </figure>
-						</div>
-						
-						
-            <h3>Chat History & Conversation Management</h3>
-            <div>
-            <p>All your past conversations are stored in a sidebar for easy access. Search, reload, and delete chats — nothing gets lost.</p>
-
-            <figure class="screenshot-figure">
-                <img src="chat_history.png" alt="Chat History Sidebar Interface" class="sorana-screenshot">
-                <figcaption>Chat History Sidebar: Access all past conversations instantly</figcaption>
-            </figure>
-
-            <figure class="screenshot-figure">
-                <img src="chat_manager.png" alt="Chat Manager Interface" class="sorana-screenshot">
-                <figcaption>Chat Manager: View, search, and manage conversation history</figcaption>
-            </figure>
-						</div>
-
-            <h3>RAG Retrieval</h3>
-            <div>
-            <p>Optimized RAG startup. The 4-tier RAG system ensures token-efficient, targeted answers:</p>
-            <ul>
-                <li><strong>Tier 1:</strong> Semantic</li>
-                <li><strong>Tier 2:</strong> Lexical</li>
-                <li><strong>Tier 3:</strong> Keyword</li>
-                <li><strong>Tier 4:</strong> Full document context</li>
-            </ul>
-
-            <figure class="screenshot-figure">
-                <img src="rag.png" alt="RAG Document Manager Interface" class="sorana-screenshot">
-                <figcaption>RAG Document Manager: Upload, view, and manage documents for AI context retrieval</figcaption>
-            </figure>
-					</div>
-					
-            <h3>Key Benefits</h3>
-           <div>
-            <ul>
-                <li><strong>Token Efficiency:</strong> Smart memory layering reduces token usage by serving only relevant context</li>
-                <li><strong>Faster Responses:</strong> 40x speedup in RAG retrieval means near-instant answers</li>
-                <li><strong>Full User Control:</strong> All data stored locally — you control what's remembered</li>
-                <li><strong>NPU Acceleration:</strong> Uses 🍋 Lemonade backend with integrated FastFlowLM NPU for Windows Ryzen. 🍋 Lemonade is AMD's high-performance AI server (C++ based) integrating multiple backends including FastFlowLM for native NPU acceleration. Falls back to text-based retrieval if no NPU is available.</li>
-                <li><strong>Multi-Language:</strong> 15 languages supported with auto-detection</li>
-            </ul>
-          </div>
-        </div>
-    </section>
-    
-    <!-- AI Research Agents Section -->
-    <h2 id="ai-agents-h2">🤖 AI Agents Pipeline</h2>
-    <section class="agents-section" id="ai-agents">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
-            <h4>Example Pipeline:</h4>
-            <ol>
-                <li><strong>Scraper Agent:</strong> Reads 10 selected product tabs and uses <code>web_extract_links</code> to find technical specs.</li>
-                <li><strong>Analyst Agent:</strong> Takes the outputted specs, compares them, and formats a Markdown table.</li>
-                <li><strong>Output Agent:</strong> Writes a final executive summary and saves it as a new, persistent text node on your canvas.</li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- Document OCR Section -->
-    <h2 id="ocr-section-h2">📄 Document OCR and Context Enhancement</h2>
+		 <h2 id="ocr-section-h2">Document Processing & OCR</h2>
     <section class="ocr-section" id="ocr-section">
+
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>
-                Document OCR and Context Enhancement allows users to enrich agents with specific knowledge by dragging and dropping documents directly onto agents. After organizing tabs spatially, users can make documents accessible to agents by processing them through OCR, converting them into contextual information. This is accomplished via the context menu options 'Document Overview' and 'Process Documents,' which is particularly valuable for PDFs and image-based documents.
+                <strong>Problem:</strong> Scanned PDFs and images are invisible to AI — no text content to search or chat with.
             </p>
             <p>
-                It's important to distinguish this from MCP server functionality. While the MCP server allows file interaction during chats, it currently lacks OCR capabilities and can only access text-based file content.
+                <strong>Solution:</strong> OCR extracts text from scanned documents, images, and PDFs. Once processed, documents become searchable and indexed via adaptive retrieval (semantic search → keywords → full-text fallback) so AI finds precise answers from your documents. Process documents via the context menu ('Document Overview' and 'Process Documents') — particularly valuable for PDFs and image-based documents.
             </p>
 
-            <h3>Document OCR Capabilities</h3>
-            <div>
-            <p>
-                TabNeuron includes powerful Optical Character Recognition (OCR) capabilities for processing various document types with support for common character encodings:
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> OCR Capabilities
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p>
+                TabNeuron processes various document types, extracting text so AI can work with them:
             </p>
             <ul>
                 <li><strong>Text PDFs:</strong> Extract text from PDF documents (supports embedded text and OCR for scanned content)</li>
@@ -456,32 +561,198 @@
                 </li>
                 <li><strong>PDFs with Images:</strong> Built-in method for OCR processing of PDFs containing images</li>
             </ul>
-						</div>
-						
+                </div>
+  </div>
+
             <article class="ocr-requirements">
-                <h3>Requirements for PDF Image OCR</h3>
-                <div>
-                <p>
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Requirements for PDF Image OCR
+                </h3>
+                <div class="capability-content" style="display:none;">
+       <div class="cta-box capability-group">
+                    <p>
                     To enable OCR for PDFs with images, you need to install the official Tesseract OCR engine with default settings and ensure it's available in your system PATH. Tesseract is an open-source OCR engine that provides high-quality text extraction from images.
                 </p>
                 <p>Download Tesseract from:</p>
                 <div class="external-links">
                     <a href="https://github.com/tesseract-ocr/tesseract" target="_blank" class="btn btn-primary">Tesseract OCR GitHub</a>
                 </div>
-                </div>                
+
+                </div>
+             </div>
             </article>
 
             <article class="encoding-notes">
-                <h3>Encoding Support Notes</h3>
-                <div>
-                <p>
-                    The application primarily uses UTF-8 encoding for document processing and falls back to Latin-1 (ISO-8859-1) when UTF-8 decoding fails. For optimal results, we recommend using UTF-8 encoding for your documents. This ensures the best compatibility with international characters and special symbols.            
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Encoding Support Notes
+                </h3>
+                <div class="capability-content" style="display:none;">
+                   <div class="cta-box capability-group">
+                    <p>
+                    The application primarily uses UTF-8 encoding for document processing and falls back to Latin-1 (ISO-8859-1) when UTF-8 decoding fails. For optimal results, we recommend using UTF-8 encoding for your documents. This ensures the best compatibility with international characters and special symbols.
                 </p>
-                
                 </div>
+              </div>
             </article>
-            
 
+        </div>
+    </section>
+
+		<h2 id="ai-backends-h2">AI Backends & Models</h2>
+    <section class="technical-section" id="ai-backends">
+
+            <div class="cta-box capability-group">
+
+		            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+		            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> AI Model Performance
+                </h3>
+                <div class="capability-content" style="display:none;">
+                 <div class="cta-box capability-group">
+                    <p>
+                TabNeuron uses AI models to intelligently group tabs on the canvas and power chat, agents, and research. The built-in default model is lightweight and works offline, but may not always classify tabs perfectly, especially for less common content. For optimal performance, we strongly recommend using Llama 3.1 8b Instruct or higher models. Processing time depends entirely on the number of tabs - fewer tabs mean faster processing. Naturally, the best performance is achieved with cloud services.
+            		</p>
+                </div>
+								</div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> AI Integration
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p>TabNeuron supports connection to both on-prem and cloud-based AI services:</p>
+		            <ul>
+		                <li><strong>Built-in Models:</strong> Pre-configured models accessible through the model manager</li>
+		                <li><strong>Local and On-Prem Services:</strong> 🍋 Lemonade (with FastFlowLM NPU), Llama.cpp, Ollama, and other self-hosted LLM solutions</li>
+		                <li><strong>Cloud Services:</strong> OpenAI, Mistral, Google Gemini, and other cloud-based AI platforms</li>
+		            </ul>
+                </div>
+							</div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Model Manager Split View
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p>The Model Manager features a split view when using <strong>🍋 Lemonade</strong> as the backend. 🍋 Lemonade supports multi-model loading, allowing both a chat model and an embedding model to run simultaneously:</p>
+	            <ul>
+	                <li><strong>Upper Pane:</strong> Chat/Completion models (for conversation and reasoning)</li>
+	                <li><strong>Bottom Pane:</strong> Embedding models (for semantic search and RAG) — runs on NPU or GPU</li>
+	            </ul>
+	            <p>Embedding models power the 4-tier RAG system's Tier 1 (NPU Embeddings). Without an embedding model, the system gracefully falls back: <strong>BM25 → Keyword → Full Text</strong>. Currently, only 🍋 Lemonade supports multi-model loading. Other backends (Ollama, LM Studio, etc.) do not support loading an embedding model alongside a chat model — but the 4-tier RAG system ensures full functionality even without embeddings.</p>
+
+	            <figure class="screenshot-figure">
+	    		    <img src="modelmanager.png" alt="TabNeuron Model Manager Screenshot" class="sorana-screenshot">
+	    				</figure>
+                </div>
+              </div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Hardware Requirements
+                </h3>
+                <div class="capability-content" style="display:none;">
+                   <div class="cta-box capability-group">
+                    <ul>
+		                <li><strong>Built-in Models:</strong> Range from 1B parameter (806MB) to 20B parameter (8-16GB)</li>
+		                <li><strong>Recommended 8B Models (e.g., Llama 3.1 8b Instruct):</strong> Minimum 8 GB RAM or 4 GB VRAM for smooth operation</li>
+		                <li><strong>Hardware Requirements Increase with Model Size:</strong> Larger models with more parameters require higher specifications</li>
+		                <li><strong>Cloud Models:</strong> No local hardware requirements (requires internet connection)</li>
+		            </ul>
+                </div>
+              </div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Recommendation
+                </h3>
+                <div class="capability-content" style="display:none;">
+
+                   <div class="cta-box capability-group">
+                    <p><strong>🍋 Lemonade</strong> For optimal local and on-prem performance with both GPU and NPU acceleration, we recommend:</p>
+                <div class="partner-buttons" style="margin-top: 10px;">
+                    <a href="https://lemonade-server.ai/" target="_blank" class="btn-partner">🍋 Lemonade</a>
+                    <a href="https://fastflowlm.com/" target="_blank" class="btn-partner-fastflow">⚡ FastFlowLM</a>
+                </div>
+
+                <p style="font-size: 13px; margin-top: 8px; color: #ccc;">
+                    🍋 Lemonade is AMD's new high-performance AI server (C++ based) with integrated backends including Llama.cpp, Whisper, and FastFlowLM for native Ryzen NPU acceleration.
+                </p>
+
+
+          	<p>
+                <strong>Note:</strong> Larger models can provide better tab grouping and analysis, but require more memory and processing power. Processing time is directly proportional to the number of tabs - fewer tabs result in faster processing.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- Chat with Websites Section -->
+    <h2 id="chat-websites-h2">💬 Chat with Websites</h2>
+    <section class="chat-section" id="chat-websites">
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+            <p>Talk directly to your open tabs. TabNeuron extracts the DOM content and metadata from your selected tabs and feeds it into your chosen LLM context.</p>
+
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> How it Works
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ol>
+                        <li>Create an agent.</li>
+                        <li>Add any tabs to the agent's group.</li>
+                        <li>Open the context menu and select "Chat".</li>
+                        <li>Ask natural language questions to synthesize data across all selected sources.</li>
+                    </ol>
+                   </div>
+                </div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Use Cases
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ul>
+                        <li>"Compare the technical specifications across these 4 review tabs."</li>
+                        <li>"Extract all Python code blocks from this tutorial and format them."</li>
+                        <li>"Read these 5 news articles and summarize the overarching timeline."</li>
+                        <li>"Summarize this article"</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- AI Research Agents Section -->
+    <h2 id="ai-agents-h2">🤖 AI Research Agents Pipeline</h2>
+    <section class="agents-section" id="ai-agents">
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+            <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
+
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Example Pipeline
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ol>
+                        <li><strong>Scraper Agent:</strong> Reads 10 selected product tabs and uses <code>web_extract_links</code> to find technical specs.</li>
+                        <li><strong>Analyst Agent:</strong> Takes the outputted specs, compares them, and formats a Markdown table.</li>
+                        <li><strong>Output Agent:</strong> Writes a final executive summary and saves it as a new, persistent text node on your canvas.</li>
+                    </ol>
+                   </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -491,77 +762,92 @@
     <h2 id="browser-extension-h2">📦 Browser Extension Setup</h2>
     <section class="extension-section" id="browser-extension">
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>Because TabNeuron is a native desktop app, it uses a lightweight extension merely as a bridge to communicate with your browser via a local polling API.</p>
-            <h4>Configuration Bridge:</h4>
-            <ul>
-                <li><strong>Host:</strong> localhost</li>
-                <li><strong>Port:</strong> 5555</li>
-                <li><strong>Sync:</strong> Polling API (default 2s interval)</li>
-            </ul>
+
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Configuration Bridge
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <ul>
+                        <li><strong>Host:</strong> localhost</li>
+                        <li><strong>Port:</strong> 5555</li>
+                        <li><strong>Sync:</strong> Polling API (default 2s interval)</li>
+                    </ul>
+                   </div>
+                </div>
+            </div>
+
             <p style="margin-top: 1.5rem;"><strong>Need help?</strong> Visit our <a href="extension-support.html" class="btn btn-primary">Chrome Extension Support Page</a> for detailed installation guides, screenshots, and troubleshooting.</p>
         </div>
     </section>
 
-    <h2 id="system-requirements-h2">System Requirements</h2>
+		<h2 id="system-requirements-h2">System Requirements</h2>
     <section class="requirements-section" id="system-requirements">
+
         <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <table class="req-table">
             <tr><th>Component</th><th>Minimum</th></tr>
             <tr><td>OS</td><td>Windows 11 (64-bit)</td></tr>
             <tr><td>🌐 Browser</td><td>Google Chrome (required for extension)</td></tr>
             <tr><td>🧠 AI Support</td><td>Built-in models or on-prem/cloud AI services</td></tr>
             <tr><td>💾 RAM</td><td>&ge; 4 GB</td></tr>
-            <tr><td>💽 Storage</td><td>Minimum 2 GB (app + model)</td></tr>
+            <tr><td>💽 Storage</td><td>Minimum 2 GB (app + model) + .tabneuron/ data folder</td></tr>
             <tr><td>⚡ Rights</td><td>Standard user</td></tr>
         </table>
     </section>
-    
-        <!-- Final Download Section -->
-    <h2 id="final-download-h2">🚀 Get TabNeuron</h2>
+
+    <!-- Final Download Section -->
+     <h2 id="final-download-h2">🚀 Get TabNeuron</h2>
     <section class="final-download-section">
-        <div class="cta-box" id="final-download">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+
+    	<div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
 
             <p>Download the application, then install the Chrome extension.</p>
 
             <div class="download-buttons">
-            	   <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary btn-large">Download (Portable)</a>
-  	                
-                  <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn btn-primary btn-large"> Chrome Web Store: Tetramatrix Connector</a>
-  	                                    
-             		<a href="README.txt" class="btn btn-primary btn-large">Readme</a>
+                <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary btn-large">Download (Portable)</a>
+                <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn btn-primary btn-large">Chrome Web Store: Tetramatrix Connector</a>
+                <a href="README.txt" class="btn btn-primary">Readme</a>
             </div>
 
-              <pre><code>$ md5sum.exe TabNeuron.exe v1.0.6 7113b797496c14f52f1f65b1f60bcd0f</code></pre>
-      				
+             <code>$ md5sum.exe TabNeuron.exe v1.0.6 7113b797496c14f52f1f65b1f60bcd0f</code>
+
             <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%" /></a>
-       
-       
-                 <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
-                    <p><strong>After installation:</strong>Configure the browser extension and click Start. Then launch TabNeuron and select Organize Tabs to begin the synchronization. The app will display the synchronization progress. Done! The extension connects to <code>localhost:5555</code> (default port).</p>
-                </div>
+
+            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
+                <p><strong>After installation:</strong> Configure the browser extension and click Start. Then launch TabNeuron and select Organize Tabs to begin the synchronization. The app will display the synchronization progress. Done! The extension connects to <code>localhost:5555</code> (default port).</p>
+            </div>
+
         </div>
     </section>
 
-    <h2 id="support-donations-h2">Support & Donations</h2>
+
+
+
+
+
+		<h2 id="support-donations-h2">Support & Donations</h2>
     <section class="support-section" id="support-donations">
 
         <div class="cta-box" id="discord-community">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <h4>Join our Discord community</h4>
-            
+
+            <h3>Join our Discord community</h3>
             <div class="external-links">
                 <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">TabNeuron Discord</a>
             </div>
 
-            <h4>Leave a review or star the project</h4>
+            <h3>Leave a review or star the project</h3>
+            <div>
             <a href="https://alternativeto.net/software/tabneuron/" target="_blank"><img src="AlternativeTo.png" width="20%" alt="The Visual AI Web Workspace" /></a>
+						</div>
 
             <h3>Support via PayPal or Bitcoin Cash</h3>
             <div class="payment-options">
@@ -582,158 +868,160 @@
                     </figure>
                 </div>
             </div>
+
+
         </div>
     </section>
 
-    <h2 id="other-products-h2">Discover our other tools and games:</h2>
+		<h2 id="other-products-h2">Discover our other tools and games</h2>
     <section class="other-products-section" id="other-products">
 
-            <div class="cta-box" id="other-products-list">
-            <p>Check out our other products and tools:</p>
-            <ul>
-                <li><strong>🚀 Spaceship</strong> - Retro Arcade Mini Game</li>
-                <li><strong>🧩 Sorana</strong> - Visual AI Workspace & Personal AI Agent</li>
-                <li><strong>⚡ RyzenZPilot</strong> - AMD Ryzen Power Management</li>
-                <li><strong>🤖 Aicono</strong> - AI Desktop Icon Organizer</li>
-            </ul>
-        </div>
+			<div class="cta-box capability-group">
 
-				<h3>New Spaceship - Retro Mini Game</h3>
-        <div class="cta-box" id="spaceship-intro">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            
+				 <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span>New Spaceship - Retro Mini Game</h3>
+
+        <div class="capability-content" style="display:none;" id="spaceship-intro">
+
             <p>Retro Arcade 2d side-scroller bullet-hell shmup game</p>
 
-                   <h3>Website</h3>
-                   <div>
-        <figure class="product-fig">
-            <a href="http://tetramatrix.github.io/spaceship" target="_blank">
-                <img src="start.jpg" title="Retro Arcade 2d side-scroller bullet-hell shmup game" alt="Spaceship" />
-            </a>
-        </figure>
+					<div class="cta-box capability-group">
+	            <h4 class="style-box">Website</h4>
+	            <figure class="product-fig">
+	                <a href="http://tetramatrix.github.io/spaceship" target="_blank">
+	                    <img src="start.jpg" title="Retro Arcade 2d side-scroller bullet-hell shmup game" alt="Spaceship" />
+	                </a>
+	            </figure>
+
+
+	            <h4 class="style-box">Featured on itch.io</h4>
+	            <figure class="product-fig">
+	                <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship">
+	                    <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship - Retro Mini Game" />
+	                </a>
+	            </figure>
+
+	            <h4 class="style-box">Featured on IndieDB</h4>
+	            <figure class="product-fig">
+	                <a href="https://www.indiedb.com/games/new-spaceship" title="View New Spaceship on IndieDB" target="_blank">
+	                    <img src="https://button.indiedb.com/popularity/medium/games/86877.png" alt="New Spaceship" />
+	                </a>
+	            </figure>
+	        </div>
         </div>
 
-        <h3>Featured on itch.io</h3>
-        <div>
-        <figure class="product-fig">
-            <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship">
-                <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship - Retro Mini Game" />
-            </a>
-        </figure>
-				</div>
 
-        <h3>Featured on IndieDB</h3>
-        <figure class="product-fig">
-            <a href="https://www.indiedb.com/games/new-spaceship" title="View New Spaceship on IndieDB" target="_blank">
-                <img src="https://button.indiedb.com/popularity/medium/games/86877.png" alt="New Spaceship" />
-            </a>
-        </figure>
-				</div>
+				<h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span>🧩 Sorana - Visual AI Workspace & Personal AI Agent</h3>
+        <div class="capability-content" style="display:none;" id="sorana-intro">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+
+            <p>Sorana is an AI-powered visual workspace that transforms how you organize and interact with digital files. Using semantic AI analysis, it automatically groups related files and folders onto a spatial 2D canvas, replacing traditional hierarchies with intuitive visual layouts. Build drag-and-drop workspaces and no-code agent pipelines, connect to on-prem or cloud AI backends (OpenAI, Mistral, LLamacpp, 🍋 Lemonade, Ollama), and keep your data under your control.</p>
+            <figure class="screenshot-figure">
+                <a href="http://tetramatrix.github.io/Sorana" target="_blank"><img src="Sorana_main.png" alt="Sorana Visual AI Workspace Interface" class="sorana-screenshot"></a>
+                <figcaption>Sorana: Files organized on an infinite 2D canvas with AI-powered grouping</figcaption>
+            </figure>
+
+				<div class="cta-box capability-group">
+
+             <h4 class="style-box">Website & Community</h4>
+            <div class="download-buttons">
+                <a href="http://tetramatrix.github.io/Sorana" target="_blank" class="btn btn-primary">🌐 Website</a>
+                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">💬 Discord</a>
+            </div>
+
+            <h4 class="style-box">Featured on Softpedia:</h4>
+            <p>
+                <a href="https://www.softpedia.com/get/System/File-Management/Sorana.shtml" target="_blank"><img src="softpedia.png" width="200px" height="60px" alt="Get it from Softpedia" /></a>
+            </p>
+
+            <h4 class="style-box">Featured on Microsoft Store:</h4>
+            <p>
+                <a href="https://apps.microsoft.com/detail/9n8c43pzc1rn" target="_blank"><img src="ms-store.svg" width="200px" height="60px" alt="Get it from Microsoft" /></a>
+            </p>
         </div>
+</div>
 
- 				<h3>RyzenZPilot - AMD Ryzen Power Management Tool</h3>
-        <div class="cta-box" id="ryzenzpilot-intro">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            
+				<h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span>RyzenZPilot - AMD Ryzen Power Management Tool</h3>
+        <div class="capability-content" style="display:none;" id="ryzenzpilot-intro">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+
             <p>RyzenZPilot is a powerful tool for managing AMD Ryzen processor power settings on Windows.
             It allows users to adjust CPU performance, power limits, and thermal configurations
             for optimal performance and efficiency.</p>
 
-             <h3>Website</h3>
-             <div>
+
+			<div class="cta-box capability-group">
+
+            <h4 class="style-box">Website</h4>
             <figure class="product-fig">
                 <a href="http://tetramatrix.github.io/RyzenZPilot" target="_blank">
                     <img src="RyzenZPilot_3.1.3.png" title="AMD Ryzen Power Management Tool" alt="RyzenZPilot" />
                 </a>
             </figure>
-						</div>
         </div>
+			</div>
 
-				<h3>Aicono - AI Intelligent Desktop Icon Autopilot</h3>
-        <div class="cta-box" id="aicono-intro">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            
+				<h3 class="capability-toggle" onclick="toggleCapability(this)">
+            <span class="toggle-icon">+</span>Aicono - AI Intelligent Desktop Icon Autopilot</h3>
+
+        <div class="capability-content" style="display:none;" id="aicono-intro">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+
             <p>Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!</p>
 
-            <h3>Website</h3>
-            <div>
+
+			<div class="cta-box capability-group">
+
+            <h4 class="style-box">Website</h4>
             <figure class="product-fig">
                 <a href="http://tetramatrix.github.io/Aicono" target="_blank">
                     <img src="main.png" title="AI Intelligent Desktop Icon Autopilot" alt="Aicono" />
                 </a>
             </figure>
-						</div>
 
-            <h3>Featured on Microsoft Store</h3>
-            <div>
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+            <span class="toggle-icon">+</span>Featured on Microsoft Store</h3>
+            <div class="capability-content" style="display:none;">
             <figure class="store-fig">
                 <a href="https://apps.microsoft.com/store/detail/XP8LNKJ7H4B1WS" target="_blank">
-                    <img src="ms-store.svg" width="40%" height="40%" alt="Get it from Microsoft" />
+                    <img src="ms-store.svg" width="50%" height="50%" alt="Get it from Microsoft" />
                 </a>
             </figure>
 						</div>
-						
-            <h3>Featured on Softpedia</h3>
-            <div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+            <span class="toggle-icon">+</span>Featured on Softpedia</h3>
+            <div class="capability-content" style="display:none;">
             <figure class="store-fig">
                 <a href="https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml" target="_blank">
                     <img src="softpedia.png" width="40%" height="40%" alt="Get it from Softpedia" />
                 </a>
             </figure>
 						</div>
-						
-           <h3>Featured on AlternativeTo</h3>
-            <div>
+
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
+            <span class="toggle-icon">+</span>Featured on AlternativeTo</h3>
+            <div class="capability-content" style="display:none;">
             <figure class="store-fig">
                 <a href="https://alternativeto.net/software/aicono" title="Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!" target="_blank">
                     <img src="AlternativeTo.png" width="20%" alt="Aicono - AI Intelligent Desktop Icon Autopilot" />
                 </a>
             </figure>
-            </div>
-        </div>
-
-
-				 <h3>🧩 Sorana - The Visual AI Workspace:</h3>
-        <div class="cta-box" id="sorana-intro">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-           
-            <p>Sorana is an AI-powered visual workspace that transforms how you organize and interact with digital files. Using semantic AI analysis, it automatically groups related files and folders onto a spatial 2D canvas, replacing traditional hierarchies with intuitive visual layouts. Build drag-and-drop workspaces and no-code agent pipelines, connect to on-prem or cloud AI backends (OpenAI, Mistral, LLamacpp, Lemonade, Ollama), and keep your data under your control.</p>
-
-            <h3>Homepage:</h3>
-            <div>
-            <p>
-                <a href="https://tetramatrix.github.io/Sorana/" target="_blank">
-                	<img src="Sorana_main.png" width="400px" title="Sorana - The Visual AI Workspace" />
-                </a>
-            </p>
 						</div>
-						
-            <h3>Featured on Softpedia:</h3>
-            <div>
-            <p>
-                <a href="https://www.softpedia.com/get/System/File-Management/Sorana.shtml" target="_blank"><img src="softpedia.png"  width="40%" height="40%"  alt="Get it from Softpedia" /></a>
-            </p>
-						</div>
-						
-            <h3>Featured on Microsoft Store:</h3>
-            <div>
-            <p>
-                <a href="https://apps.microsoft.com/detail/9n8c43pzc1rn" target="_blank"><img src="ms-store.svg"  width="40%" height="40%"  alt="Get it from Microsoft" /></a>
-            </p>
-            </div>
         </div>
-
+</div>
     </section>
 
 
         <div class="cta-box">
             <p style="text-align:center; color:#888;"><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="color:#888; text-decoration:none;">↑ Back to Top</a></p>
         </div>
-        
+
     <footer class="main-footer">
         <p class="footer-text">
              🏢 Developed by <b>Tetramatrix</b> | 🔧 Specially optimized for AMD Ryzen systems | 💝 Free for everyone
