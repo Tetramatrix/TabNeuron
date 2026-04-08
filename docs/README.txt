@@ -174,7 +174,7 @@ To create agent pipelines:
 
 📋 Changelog 📋
 
-📅 April 8, 2026 — Version 1.0.22
+📅 April 8, 2026 — Version 1.0.8
 
 🐛 Bugfix: Intent Engine: Tool Call
 🐛 Bugfix: 4-Tier Memory: Fallback
