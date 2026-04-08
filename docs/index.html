@@ -317,11 +317,6 @@
                     <p><em>Note: While our architecture is browser-agnostic, the current bridge extension only supports Chromium-based browsers (Chrome, Edge, Brave, etc.).</em></p>
                   </div>
                 </div>
-
-            <figure class="screenshot-figure">
-                <img src="mindmap.png" alt="TabNeuron Mindmap - Visual representation of tab groups" class="sorana-screenshot">
-                <figcaption>Mindmap - Visual representation of tab groups and their relationships</figcaption>
-            </figure>
         </div>
     </section>
 
@@ -364,19 +359,19 @@
             </ul>
 
             <figure class="screenshot-figure">
-                <img src="Longterm_person_memory.png" alt="Long-Term Person Memory Management Interface" class="sorana-screenshot">
+                <img src="memories.png" alt="Long-Term Person Memory Management Interface" class="sorana-screenshot">
                 <figcaption>Long-Term Memory: Automatically extracted user facts, preferences, and persona data</figcaption>
             </figure>
 
             <figure class="screenshot-figure">
-                <img src="chat_history.png" alt="Chat History Sidebar Interface" class="sorana-screenshot">
-                <figcaption>Chat History Sidebar: Access all past conversations instantly</figcaption>
+                <img src="global_memories.png" alt="Global Memory Storage Interface" class="sorana-screenshot">
+                <figcaption>Global Memory Storage: A personal AI that learns — memories shared across all agents</figcaption>
             </figure>
                 </div>
 						</div>
 
             <h3 class="capability-toggle" onclick="toggleCapability(this)">
-                    <span class="toggle-icon">+</span> Smart Tool Routing
+                    <span class="toggle-icon">+</span> Intent Classification & Smart Routing
                 </h3>
                 <div class="capability-content" style="display:none;">
             <div class="cta-box capability-group">
@@ -390,13 +385,13 @@
             </ul>
 
             <figure class="screenshot-figure">
-                <img src="chat_manager.png" alt="Chat Manager Interface" class="sorana-screenshot">
-                <figcaption>Chat Manager: View, search, and manage conversation history</figcaption>
+                <img src="chat-sidebar.png" alt="Chat History Sidebar Interface" class="sorana-screenshot">
+                <figcaption>Chat History Sidebar: Access all past conversations instantly</figcaption>
             </figure>
 
             <figure class="screenshot-figure">
-                <img src="rag.png" alt="RAG Document Manager Interface" class="sorana-screenshot">
-                <figcaption>RAG Document Manager: Upload, view, and manage documents for AI context retrieval</figcaption>
+                <img src="chat_manager.png" alt="Chat Manager Interface" class="sorana-screenshot">
+                <figcaption>Chat Manager: View, search, and manage conversation history</figcaption>
             </figure>
                 </div>
 						</div>
@@ -415,6 +410,11 @@
                 <li><strong>NPU Acceleration:</strong> 🍋 Lemonade with FastFlowLM for native AMD Ryzen NPU acceleration. Falls back to text-based retrieval if no NPU available.</li>
                 <li><strong>Multi-Language:</strong> English + German for memory routing, 25+ languages for tool intents, 15+ languages for document retrieval — all auto-detected.</li>
             </ul>
+
+            <figure class="screenshot-figure">
+                <img src="rag.png" alt="RAG Document Manager Interface" class="sorana-screenshot">
+                <figcaption>RAG Document Manager: Upload, view, and manage documents for AI context retrieval</figcaption>
+            </figure>
                 </div>
 
               </div>
@@ -722,6 +722,11 @@
                         <li>"Read these 5 news articles and summarize the overarching timeline."</li>
                         <li>"Summarize this article"</li>
                     </ul>
+
+                    <figure class="chatbot-figure">
+                        <img src="chat.png" alt="TabNeuron Agent Chat" class="chatbot-screenshot">
+                        <figcaption>Agent Chat — Full access to files, web content and the live internet. Create, edit, search, fetch and summarize — all through conversation. Shows token usage, tok/sec and TTFT for 🍋 Lemonade backends.</figcaption>
+                    </figure>
                   </div>
                 </div>
             </div>
@@ -750,6 +755,11 @@
                         <li><strong>Analyst Agent:</strong> Takes the outputted specs, compares them, and formats a Markdown table.</li>
                         <li><strong>Output Agent:</strong> Writes a final executive summary and saves it as a new, persistent text node on your canvas.</li>
                     </ol>
+
+                    <figure class="screenshot-figure">
+                        <img src="agents.png" alt="TabNeuron AI Research Agents" class="sorana-screenshot">
+                        <figcaption>Agent Pipeline: Chain agents together — one agent's output becomes the next agent's input</figcaption>
+                    </figure>
                    </div>
                 </div>
             </div>
