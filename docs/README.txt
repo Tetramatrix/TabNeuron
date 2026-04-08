@@ -166,7 +166,7 @@ To create agent pipelines:
 📥 Downloads 📥
 
 🔹 Latest version: TabNeuron.exe v1.0.8
-🔢 MD5 Checksum (.exe): b31fef3e321607ed08f1c41802ad9bb8
+🔢 MD5 Checksum (.exe): 721041f3b8d60b4f2035edcaec87d0e0
 🌐 Website: http://tetramatrix.github.io/TabNeuron
 🏪 Microsoft Store: https://apps.microsoft.com/store/detail/9nh7qk4nczfl
 💬 Discord: https://discord.gg/4QkQSfSATF
@@ -179,6 +179,8 @@ To create agent pipelines:
 🐛 Bugfix: Intent Engine: Tool Call
 🐛 Bugfix: 4-Tier Memory: Fallback
 🐛 Bugfix: Chat Window: Sidebar
+🐛 Bugfix: Config Path 
+🐛 Bugfix: MCP Server toggle
 
 📅 April 5, 2026 — Version 1.0.7
 
