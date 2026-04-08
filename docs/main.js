@@ -1,6 +1,22 @@
 /**
- * Scroll and Toggle Functions for TabNeuron Documentation
+ * Scroll functions for TabNeuron Documentation
  */
+
+/**
+ * Find the H2 element before a section
+ * @param {HTMLElement} section - The section element
+ * @returns {HTMLElement|null} - The H2 element or null
+ */
+function findH2ForSection(section) {
+    let prevElement = section.previousElementSibling;
+    while (prevElement && prevElement.tagName !== 'H2' && prevElement.tagName !== 'SECTION') {
+        prevElement = prevElement.previousElementSibling;
+    }
+    if (prevElement && prevElement.tagName === 'H2') {
+        return prevElement;
+    }
+    return null;
+}
 
 /**
  * Scroll to a section with smart positioning
@@ -13,19 +29,27 @@ function scrollToSection(targetId) {
         if (targetElement.tagName === 'H2') {
             toggleSection(targetElement);
         }
+        // If target is a SECTION, find the H2 and toggle it
+        else if (targetElement.tagName === 'SECTION') {
+            const h2Element = findH2ForSection(targetElement);
+            if (h2Element) {
+                toggleSection(h2Element);
+            }
+        }
 
-        // Check if the element is already visible
+        // Überprüfe, ob das Element bereits sichtbar ist
         const rect = targetElement.getBoundingClientRect();
         const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
 
-        // If the element is visible but at the top, scroll so it's in the center
+        // Wenn das Element sichtbar ist, aber am oberen Rand, scrollen wir so, dass es in der Mitte ist
         if (isVisible && rect.top < window.innerHeight * 0.1) {
+            // Scrollen, sodass das Element in der Mitte des Viewports ist
             targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
         } else {
-            // Otherwise normal scrolling
+            // Ansonsten normales Scrollen
             targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -35,7 +59,7 @@ function scrollToSection(targetId) {
 }
 
 /**
- * Alternative function that always centers when the element is already visible
+ * Alternative Funktion, die immer zentriert, wenn das Element bereits sichtbar ist
  * @param {string} targetId - The ID of the target section (with or without #)
  */
 function smartScrollToSection(targetId) {
@@ -45,18 +69,25 @@ function smartScrollToSection(targetId) {
         if (targetElement.tagName === 'H2') {
             toggleSection(targetElement);
         }
+        // If target is a SECTION, find the H2 and toggle it
+        else if (targetElement.tagName === 'SECTION') {
+            const h2Element = findH2ForSection(targetElement);
+            if (h2Element) {
+                toggleSection(h2Element);
+            }
+        }
 
         const rect = targetElement.getBoundingClientRect();
         const isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
 
         if (isInViewport) {
-            // If the element is already visible, center it
+            // Wenn das Element bereits sichtbar ist, zentriere es
             targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'center'
             });
         } else {
-            // Otherwise scroll to the beginning of the element
+            // Ansonsten scroll zum Anfang des Elements
             targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -64,6 +95,11 @@ function smartScrollToSection(targetId) {
         }
     }
 }
+
+/**
+ * Collapsible Sections for TabNeuron Documentation
+ * Makes all H2 elements in the main element clickable to toggle their sections
+ */
 
 /**
  * Toggle the visibility of a section associated with an H2 element
@@ -86,9 +122,11 @@ function toggleSection(h2Element) {
         const arrows = nextElement.querySelectorAll('.nav-arrow-down, .nav-arrow-up');
         arrows.forEach(function(arrow) {
             if (nextElement.classList.contains('collapsed')) {
-                arrow.textContent = '+';  // collapsed = plus
+                arrow.textContent = '+';
+                arrow.classList.remove('rotated');
             } else {
-                arrow.textContent = '−';  // open = minus
+                arrow.textContent = '+';
+                arrow.classList.add('rotated');
             }
         });
     }
@@ -129,21 +167,21 @@ function toggleSectionFromArrow(arrowElement) {
     // Toggle the section
     parentSection.classList.toggle('collapsed');
 
-    // Update arrow symbols in this cta-box only
+    // Update arrow symbols in this cta-box only (use rotated + instead of −)
     const downArrow = ctaBox.querySelector('.nav-arrow-down');
     const upArrow = ctaBox.querySelector('.nav-arrow-up');
 
     if (parentSection.classList.contains('collapsed')) {
-        if (downArrow) downArrow.textContent = '+';  // collapsed = plus
-        if (upArrow) upArrow.textContent = '+';
+        if (downArrow) { downArrow.textContent = '+'; downArrow.classList.remove('rotated'); }
+        if (upArrow) { upArrow.textContent = '+'; upArrow.classList.remove('rotated'); }
     } else {
-        if (downArrow) downArrow.textContent = '−';  // open = minus
-        if (upArrow) upArrow.textContent = '−';
+        if (downArrow) { downArrow.textContent = '+'; downArrow.classList.add('rotated'); }
+        if (upArrow) { upArrow.textContent = '+'; upArrow.classList.add('rotated'); }
     }
 
     // Also update the H2 symbol if there is one in this section
-    const h2InSection = parentSection.previousElementSibling;
-    if (h2InSection && h2InSection.tagName === 'H2') {
+    const h2InSection = parentSection.querySelector('h2');
+    if (h2InSection) {
         if (parentSection.classList.contains('collapsed')) {
             h2InSection.classList.add('collapsed');
         } else {
@@ -167,6 +205,8 @@ function toggleSectionFromArrow(arrowElement) {
     h3Elements.forEach(function(h3) {
         // Skip if data-no-toggle is set
         if (h3.getAttribute('data-no-toggle') === 'true') return;
+        // Skip capability toggle headers
+        if (h3.classList.contains('capability-toggle')) return;
 
         h3.classList.add('collapsible');
         // Find and collapse the next div
@@ -179,10 +219,11 @@ function toggleSectionFromArrow(arrowElement) {
         }
     });
 
-    // Set all arrows to + (collapsed state)
+    // Set all arrows to + (collapsed state, no rotation)
     const allArrows = document.querySelectorAll('.nav-arrow-down, .nav-arrow-up');
     allArrows.forEach(function(arrow) {
         arrow.textContent = '+';
+        arrow.classList.remove('rotated');
     });
 
     // Initialize H2 collapsible functionality
@@ -204,6 +245,8 @@ function toggleSectionFromArrow(arrowElement) {
     h3Elements.forEach(function(h3) {
         // Skip if data-no-toggle is set
         if (h3.getAttribute('data-no-toggle') === 'true') return;
+        // Skip capability toggle headers
+        if (h3.classList.contains('capability-toggle')) return;
 
         h3.addEventListener('click', function(e) {
             // Don't toggle if clicking on a link inside the h3
@@ -212,4 +255,135 @@ function toggleSectionFromArrow(arrowElement) {
             }
         });
     });
+})();
+
+/**
+ * Toggle capability group visibility
+ * @param {HTMLElement} toggleElement - The h3 element clicked
+ */
+function toggleCapability(toggleElement) {
+    const content = toggleElement.nextElementSibling;
+    if (!content) return;
+
+    const isHidden = content.style.display === 'none';
+    content.style.display = isHidden ? 'block' : 'none';
+
+    if (isHidden) {
+        toggleElement.classList.add('active');
+    } else {
+        toggleElement.classList.remove('active');
+    }
+}
+
+/**
+ * Lightbox — Click-to-enlarge images
+ * Responsive, mobile-friendly, no dependencies
+ */
+(function() {
+    // Create lightbox overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.id = 'lightbox-overlay';
+    overlay.innerHTML = '<img src="" alt="" class="lightbox-active-img"><div class="lightbox-caption"></div>';
+    document.body.appendChild(overlay);
+
+    const lightboxImg = overlay.querySelector('.lightbox-active-img');
+    const lightboxCaption = overlay.querySelector('.lightbox-caption');
+    let currentScrollY = 0;
+    let touchStartY = 0;
+
+    /**
+     * Open the lightbox with a given image
+     * @param {HTMLImageElement} img - The source image element
+     */
+    function openLightbox(img) {
+        currentScrollY = window.scrollY;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        overlay.classList.add('active');
+        document.body.classList.add('lightbox-open');
+
+        // Show caption if the image has a parent figure with figcaption
+        const figure = img.closest('figure');
+        const figcaption = figure ? figure.querySelector('figcaption') : null;
+        if (figcaption) {
+            lightboxCaption.textContent = figcaption.textContent;
+            lightboxCaption.style.display = 'block';
+        } else {
+            lightboxCaption.style.display = 'none';
+        }
+    }
+
+    /**
+     * Close the lightbox
+     */
+    function closeLightbox() {
+        overlay.classList.remove('active');
+        document.body.classList.remove('lightbox-open');
+        // Restore scroll position
+        window.scrollTo(0, currentScrollY);
+    }
+
+    // Attach click handlers to all screenshots
+    function initLightboxLinks() {
+        // Wrap eligible images in lightbox links
+        const selectors = '.sorana-screenshot, .chatbot-screenshot';
+        document.querySelectorAll(selectors).forEach(function(img) {
+            // Skip if already wrapped
+            if (img.parentElement && img.parentElement.classList.contains('lightbox-link')) return;
+
+            const link = document.createElement('a');
+            link.className = 'lightbox-link';
+            link.href = img.src;
+            link.title = 'Click to enlarge';
+            link.setAttribute('aria-label', 'Enlarge image');
+            img.parentNode.insertBefore(link, img);
+            link.appendChild(img);
+
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                openLightbox(img);
+            });
+        });
+    }
+
+    // Close on overlay click (not on image click)
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeLightbox();
+        }
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // Mobile: swipe down to close
+    overlay.addEventListener('touchstart', function(e) {
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    overlay.addEventListener('touchend', function(e) {
+        const touchEndY = e.changedTouches[0].clientY;
+        const swipeDistance = touchEndY - touchStartY;
+        // Swipe down more than 80px → close
+        if (swipeDistance > 80) {
+            closeLightbox();
+        }
+    }, { passive: true });
+
+    // Prevent image drag from opening new tab on mobile
+    lightboxImg.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, { passive: false });
+
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLightboxLinks);
+    } else {
+        initLightboxLinks();
+    }
 })();
