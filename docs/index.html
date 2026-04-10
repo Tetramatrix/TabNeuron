@@ -52,6 +52,7 @@
             <li><a href="#ai-memory-rag-h2">AI Memory & Smart Routing</a></li>
             <li><a href="#mcp-section-h2">MCP Server & Integrations</a></li>
             <li><a href="#ocr-section-h2">Document Processing & OCR</a></li>
+            <li><a href="#vision-section-h2">Vision & Image Analysis</a></li>
             <li><a href="#ai-backends-h2">AI Backends & Models</a></li>
             <li><a href="#chat-websites-h2">Chat with Websites</a></li>
             <li><a href="#ai-agents-h2">AI Research Agents</a></li>
@@ -598,6 +599,65 @@
         </div>
     </section>
 
+	 <h2 id="vision-section-h2">👁️ Vision & Image Analysis</h2>
+    <section class="vision-section" id="vision-section">
+
+        <div class="cta-box">
+            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
+            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
+            <p>
+                <strong>Problem:</strong> "What's in this image/screenshot/tab?" — Opening images, trying to extract text or understand visual content manually.
+            </p>
+            <p>
+                <strong>Solution:</strong> Analyze images, screenshots, and webpage visuals with local AI vision models. Ask questions about image content, extract text from photos, analyze diagrams, understand charts — all through conversation. Or add image analysis results directly to your document index for future RAG searches.
+            </p>
+
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Vision Capabilities
+                </h3>
+                <div class="capability-content" style="display:none;">
+                	<div class="cta-box capability-group">
+                    <p>
+                TabNeuron's vision models can analyze various image types, extracting understanding so AI can work with visual content:
+            </p>
+            <ul>
+                <li><strong>Screenshots:</strong> Analyze webpage screenshots, error messages, UI elements — understand what's on screen</li>
+                <li><strong>Photographs:</strong> Extract text from photos, identify objects, understand scenes and contexts</li>
+                <li><strong>Diagrams & Charts:</strong> Analyze graphs, flowcharts, infographics — extract data and relationships</li>
+                <li><strong>Documents:</strong> Extract text and understand layout from images of documents, forms, receipts</li>
+            </ul>
+            <p><strong>Supported formats:</strong> JPEG, PNG, GIF, WEBP, BMP</p>
+            <p><strong>Example queries:</strong></p>
+            <ul>
+                <li>"What does this error message say?"</li>
+                <li>"Extract the text from this photo of a handwritten note"</li>
+                <li>"Describe the trend shown in this chart"</li>
+                <li>"What objects are visible in this image?"</li>
+                <li>"Summarize the key points from this diagram"</li>
+            </ul>
+                </div>
+  				</div>
+
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
+                    <span class="toggle-icon">+</span> Requirements
+                </h3>
+                <div class="capability-content" style="display:none;">
+   			    <div class="cta-box capability-group">
+                    <p>
+                    Vision analysis requires a vision-capable AI model. TabNeuron supports various local vision models:
+                </p>
+                <ul>
+                    <li><strong>Recommended Local Vision Models:</strong> Qwen3.5, Gemma 4, Llama 4 Scout, and other vision-capable models</li>
+                    <li><strong>Cloud Vision:</strong> Support for cloud-based vision models coming soon</li>
+                </ul>
+                <p><em>Note: Vision capabilities depend on the loaded model. Ensure you have a vision-capable model active for image analysis.</em></p>
+
+                </div>
+             </div>
+        </div>
+    </section>
+
 		<h2 id="ai-backends-h2">AI Backends & Models</h2>
     <section class="technical-section" id="ai-backends">
 
@@ -828,7 +888,7 @@
                 <a href="README.txt" class="btn btn-primary">Readme</a>
             </div>
 
-             <code>$ md5sum.exe TabNeuron.exe v1.0.8 721041f3b8d60b4f2035edcaec87d0e0</code>
+             <code>$ md5sum.exe TabNeuron.exe v1.0.9 7c7542727428030e09881dd9d662acbe</code>
 
             <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%" /></a>
 

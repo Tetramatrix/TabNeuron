@@ -50,6 +50,12 @@ Problem: Scanned PDFs and images are invisible to AI — no text content for age
 Solution: OCR extracts text from scanned documents, images, and PDFs. Once processed, documents become fully searchable and available for AI chat and document indexing (RAG). Drag documents onto agents to enrich their knowledge.
 Supported: Text PDFs, scanned PDFs with images (requires Tesseract OCR), plain text files (UTF-8, Latin-1), source code files (.py, .cpp, .js, .java, etc.).
 
+👁️ Vision / Image Analysis
+Problem: "What's in this image/screenshot/tab?" — Opening images, trying to extract text or understand visual content manually.
+Solution: Analyze images, screenshots, and webpage visuals with local AI vision models. Ask questions about image content, extract text from photos, analyze diagrams, understand charts — all through conversation. Or add image analysis results directly to your document index for future RAG searches.
+Supported formats: JPEG, PNG, GIF, WEBP, BMP
+How it works: Requires a vision-capable local model (Qwen3.5, Gemma 4, Llama 4 Scout, etc.). Cloud vision support coming soon.
+
 🧠 AI Memory (Facts, Skills, Preferences, Personas)
 Problem: AI starts from scratch every session — forgets who you are, what you research, what you prefer.
 Solution: Automatically extracts facts, skills, preferences, and persona data from every conversation. Builds long-term profiles that improve answer quality over time. Memories are shared across all agents, importable/exportable, and fully manageable.
@@ -165,8 +171,8 @@ To create agent pipelines:
 
 📥 Downloads 📥
 
-🔹 Latest version: TabNeuron.exe v1.0.8
-🔢 MD5 Checksum (.exe): 69565bc473ae3349a3f4f952d61ff17f
+🔹 Latest version: TabNeuron.exe v1.0.9
+🔢 MD5 Checksum (.exe): 7c7542727428030e09881dd9d662acbe
 🌐 Website: http://tetramatrix.github.io/TabNeuron
 🏪 Microsoft Store: https://apps.microsoft.com/store/detail/9nh7qk4nczfl
 💬 Discord: https://discord.gg/4QkQSfSATF

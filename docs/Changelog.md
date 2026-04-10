@@ -1,13 +1,31 @@
 📋 Changelog 📋
 
+📅 April 10, 2026 — Version 1.0.9
+
+🆕 Chat Window: Copy last button
+
+🆕 Vision support in Chat \& RAG
+
+🐛 Bugfix: Intent Engine
+🐛 Bugfix: Tool Call: Graceful fallback
+
+🐛 Bugfix: Model Manager: Auto-Discovery
+
+🐛 Bugfix: Intent Engine - File tool detection
+🐛 Bugfix: Tool Call: Source Path
+
+🐛 Bugfix: Chat Window Rendering
+
 📅 April 9, 2026 — Version 1.0.8
 
 🐛 Bugfix: Intent Engine: Tool Call
 🐛 Bugfix: Tool Call: Graceful fallback
 🐛 Bugfix: 4-Tier Memory: Fallback
 🐛 Bugfix: Chat Window: Sidebar
-🐛 Bugfix: Config Path 
+🐛 Bugfix: Config Path
 🐛 Bugfix: MCP Server toggle
+
+🐛 Bugfix: Model Manager: Auto-Discovery
 
 📅 April 5, 2026 — Version 1.0.7
 
@@ -18,10 +36,10 @@
 🆕 MCP Manager — Visual interface for managing MCP servers. Enable/disable, configure, and monitor servers without editing config files.
 🆕 Gmail MCP Server — Full agentic Gmail control: list, get, send, label, trash, and archive emails. Archive command saves emails in 3 formats (JSON, EML, MBOX) — perfect for backups.
 🧠 4-Tier Memory Improvements — Profile-First retrieval (61% token savings), conversation compaction (93% token reduction), auto-extraction from conversations.
-🔀 Intelligent Router & Intent Engine — Smart tool call routing, intent classification (memory search, tool call, document query), max 3 tool calls per request (loop prevention).
+🔀 Intelligent Router \& Intent Engine — Smart tool call routing, intent classification (memory search, tool call, document query), max 3 tool calls per request (loop prevention).
 💬 Chat History Awareness — Agent remembers from your last conversation. Prompts augmented with semantic memories + episodic summaries.
 📊 Live Session Stats — Real-time token usage, tokens/sec, and time-to-first-token displayed in the chat window. Monitor AI performance: input/output tokens, prompt tokens, and response speed. (🍋 Lemonade backend only)
-🐛 Bugfix: 4-Tier Memory & RAG improvements
+🐛 Bugfix: 4-Tier Memory \& RAG improvements
 🐛 Bugfix: MCP server tool calls
 🐛 Bugfix: Chat engine stability
 
@@ -52,10 +70,10 @@
 📅 March 15, 2026 — Version 1.0.1
 
 • Major: AI core completely rewritten — now powered by Pith SDK
-  • Scalable batch processing: handles thousands of items (no single-prompt limits)
-  • Smart prompt tiers optimized for 1B, 8B, and 30B models
-  • Breakthrough: Small models (1B, 8B) achieve now accurate grouping & categorization
-• Major: Externalized Llama.cpp with automatic download & caching
+• Scalable batch processing: handles thousands of items (no single-prompt limits)
+• Smart prompt tiers optimized for 1B, 8B, and 30B models
+• Breakthrough: Small models (1B, 8B) achieve now accurate grouping \& categorization
+• Major: Externalized Llama.cpp with automatic download \& caching
 • Major: Much smaller binary
 • Major: New "Append to Workspace" button
 • Internal: Core engine refactored for improved stability
@@ -75,6 +93,7 @@
 • Canvas ↔ Browser bidirectional sync
 • MCP Server for browser operations
 • Chrome Extension integration
-• Layout save/load to .sorana_browser.json
+• Layout save/load to .sorana\_browser.json
 • Mindmap generation
 • No-code agent orchestration
+
