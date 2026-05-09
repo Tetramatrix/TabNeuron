@@ -81,7 +81,7 @@
 	    <h2 id="core-capabilities-h2">Core Features</h2>
         <section class="capabilities-section" id="core-capabilities">
 
-            <!-- 1. Canvas & Sync -->
+            <!-- 1. Canvas & Visual Organization -->
             <div class="cta-box feature-detail-group">
                  <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
                     <span class="toggle-icon">▶</span> 📂 Organize Tabs on Canvas
@@ -97,54 +97,7 @@
                    </div>
                 </div>
 
-            <h3 class="feature-detail-toggle"  onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> 🔄 Canvas ↔ Browser Sync
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-            <div class="cta-box feature-detail-group">
-                    <p><strong>Problem:</strong> Workspace and browser are disconnected — changes in one don't reflect in the other.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> Bidirectional sync with Chrome Tab Groups — canvas changes push to browser, browser changes pull to canvas.</li>
-                        <li><strong>Workspace → Browser:</strong> AI suggests semantic groupings, you review and click "Apply" — browser tab groups update instantly.</li>
-                        <li><strong>Browser → Workspace:</strong> Create groups or open tabs in browser — TabNeuron's polling API detects changes and pulls them onto the canvas.</li>
-                    </ul>
-                  </div>
-                </div>
-
-            <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> 💬 Chat with Websites
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-                	<div class="cta-box capability-group">
-                    <p><strong>Problem:</strong> Opening and reading across multiple tabs takes too long. Research means comparing, copying, synthesizing manually.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> Select multiple tabs and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
-                        <li><strong>DOM Extraction:</strong> Page content and metadata fed directly into LLM context — no manual reading.</li>
-                        <li><strong>Multi-Tab Chat:</strong> "Compare specs across 4 review tabs" → result saved locally.</li>
-                    </ul>
-                    <figure class="chatbot-figure">
-                        <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
-                        <figcaption>Agent Chat — Full access to websites, files, and the web. Compare, extract, summarize — all through conversation. Shows token usage, tok/sec and TTFT for 🍋 Lemonade backends.</figcaption>
-                    </figure>
-                  </div>
-                </div>
-
-            <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> 🤖 AI Agent Pipelines
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-                	<div class="cta-box capability-group">
-                    <p><strong>Problem:</strong> Repetitive web research is manual — open tabs, extract data, compare, format, save — every time.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> Build no-code automated workflows where one agent's output becomes the next agent's input.</li>
-                        <li><strong>Scraper Agent:</strong> Reads selected tabs, uses web_extract_links to find specs.</li>
-                        <li><strong>Analyst Agent:</strong> Takes output, compares, formats a Markdown table.</li>
-                        <li><strong>Output Agent:</strong> Writes executive summary, saves as persistent text node on canvas.</li>
-                    </ul>
-                  </div>
-                </div>
-
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
+                <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
                     <span class="toggle-icon">▶</span> 📸 Visual Previews & Metadata
                 </h3>
                 <div class="feature-detail-content" style="display:none;">
@@ -154,65 +107,119 @@
                         <li><strong>Solution:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags extracted for every tab — instant visual context.</li>
                         <li><strong>Data Ownership:</strong> Save workspace states locally to disk. Close browser, research session remains safely backed up.</li>
                     </ul>
-                  </div>
+                   </div>
                 </div>
 
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> 🧠 AI Memory That Remembers
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
-                    <p><strong>Problem:</strong> AI forgets who you are after every session. Long chats are expensive and slow.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> Auto-extracts facts, skills, preferences, and personas from conversations. Gets better over time.</li>
-                        <li><strong>Auto-Compaction:</strong> Old conversations summarized → 93% token savings, full context preserved.</li>
-                        <li><strong>Global Memory:</strong> Shared across all agents, import/export, fully manageable.</li>
-                    </ul>
-                  </div>
-                </div>
 
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> 🔌 MCP Server & Integrations
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
-                    <p><strong>Problem:</strong> Repetitive file tasks are manual. Web research means opening multiple tabs, comparing, copying. Research takes forever.</p>
+           <!-- 2. Sync & Bridge -->
+            <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> 🔄 Canvas ↔ Browser Sync
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box feature-detail-group">
+                    <p><strong>Problem:</strong> Workspace and browser are disconnected — changes in one don't reflect in the other.</p>
                     <ul>
-                        <li><strong>MCP Manager:</strong> Visual interface — enable/disable servers, configure settings, monitor health.</li>
-                        <li><strong>File Operations:</strong> read, write, move, search, edit — all through conversation.</li>
-                        <li><strong>Web Tools:</strong> Fetch, scrape, search, extract — AI has direct web access.</li>
-                        <li><strong>External Servers:</strong> Connect Google Drive, GitHub, PostgreSQL, custom tools.</li>
+                        <li><strong>Solution:</strong> Bidirectional sync with Chrome Tab Groups — canvas changes push to browser, browser changes pull to canvas.</li>
+                        <li><strong>Workspace → Browser:</strong> AI suggests semantic groupings, you review and click "Apply" — browser tab groups update instantly.</li>
+                        <li><strong>Browser → Workspace:</strong> Create groups or open tabs in browser — TabNeuron's polling API detects changes and pulls them onto the canvas.</li>
                     </ul>
                   </div>
-                </div>
-
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> ☁️ AI Backends — Local or Cloud
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
-                    <p><strong>Problem:</strong> Data goes to cloud providers — no privacy. Or local models are hard to configure.</p>
-                    <ul>
-                        <li><strong>Local:</strong> 🍋 Lemonade (NPU acceleration), Ollama, Llama.cpp, LM Studio — nothing leaves your machine.</li>
-                        <li><strong>Cloud:</strong> OpenAI, Mistral, Gemini (free tier), and more — when you need power.</li>
-                        <li><strong>Model Manager:</strong> Activate/deactivate models per task — 2-pane view (🍋 Lemonade only) for chat + embedding simultaneously.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-                    <span class="toggle-icon">▶</span> 📦 Technical Details
-                </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
-                    <ul>
-                        <li><strong>Portable:</strong> Runs from USB, extract anywhere, data stays under your control.</li>
-                        <li><strong>Centralized Storage:</strong> All data in a single <code>.tabneuron/</code> folder. Existing installs migrate automatically.</li>
-                        <li><strong>Browser Bridge:</strong> Lightweight extension connects via local polling API — no data leaves your machine.</li>
-                    </ul>
-                  </div>
-                </div>
             </div>
+
+            <!-- 3. AI Interaction -->
+            <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> 💬 Chat with Websites
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box capability-group">
+                <p><strong>Problem:</strong> Opening and reading across multiple tabs takes too long. Research means comparing, copying, synthesizing manually.</p>
+                <ul>
+                    <li><strong>Solution:</strong> Select multiple tabs and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
+                    <li><strong>DOM Extraction:</strong> Page content and metadata fed directly into LLM context — no manual reading.</li>
+                    <li><strong>Multi-Tab Chat:</strong> "Compare specs across 4 review tabs" → result saved locally.</li>
+                </ul>
+                <figure class="chatbot-figure">
+                    <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
+                    <figcaption>Agent Chat — Full access to websites, files, and the web. Compare, extract, summarize — all through conversation. Shows token usage, tok/sec and TTFT for 🍋 Lemonade backends.</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> 🤖 AI Agent Pipelines
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box capability-group">
+                <p><strong>Problem:</strong> Repetitive web research is manual — open tabs, extract data, compare, format, save — every time.</p>
+                <ul>
+                    <li><strong>Solution:</strong> Build no-code automated workflows where one agent's output becomes the next agent's input.</li>
+                    <li><strong>Scraper Agent:</strong> Reads selected tabs, uses web_extract_links to find specs.</li>
+                    <li><strong>Analyst Agent:</strong> Takes output, compares, formats a Markdown table.</li>
+                    <li><strong>Output Agent:</strong> Writes executive summary, saves as persistent text node on canvas.</li>
+                </ul>
+              </div>
+            </div>
+
+             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> 🧠 AI Memory That Remembers
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box feature-detail-group">
+                <p><strong>Problem:</strong> AI forgets who you are after every session. Long chats are expensive and slow.</p>
+                <ul>
+                    <li><strong>Solution:</strong> Auto-extracts facts, skills, preferences, and personas from conversations. Gets better over time.</li>
+                    <li><strong>Auto-Compaction:</strong> Old conversations summarized → 93% token savings, full context preserved.</li>
+                    <li><strong>Global Memory:</strong> Shared across all agents, import/export, fully manageable.</li>
+                </ul>
+              </div>
+            </div>
+
+             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> 🔌 MCP Server & Integrations
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box feature-detail-group">
+                <p><strong>Problem:</strong> Repetitive file tasks are manual. Web research means opening multiple tabs, comparing, copying. Research takes forever.</p>
+                <ul>
+                    <li><strong>MCP Manager:</strong> Visual interface — enable/disable servers, configure settings, monitor health.</li>
+                    <li><strong>File Operations:</strong> read, write, move, search, edit — all through conversation.</li>
+                    <li><strong>Web Tools:</strong> Fetch, scrape, search, extract — AI has direct web access.</li>
+                    <li><strong>External Servers:</strong> Connect Google Drive, GitHub, PostgreSQL, custom tools.</li>
+                </ul>
+              </div>
+            </div>
+
+             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> ☁️ AI Backends — Local or Cloud
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box feature-detail-group">
+                <p><strong>Problem:</strong> Data goes to cloud providers — no privacy. Or local models are hard to configure.</p>
+                <ul>
+                    <li><strong>Local:</strong> 🍋 Lemonade (NPU acceleration), Ollama, Llama.cpp, LM Studio — nothing leaves your machine.</li>
+                    <li><strong>Cloud:</strong> OpenAI, Mistral, Gemini (free tier), and more — when you need power.</li>
+                    <li><strong>Model Manager:</strong> Activate/deactivate models per task — 2-pane view (🍋 Lemonade only) for chat + embedding simultaneously.</li>
+                </ul>
+              </div>
+            </div>
+
+             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <span class="toggle-icon">▶</span> 📦 Technical Details
+            </h3>
+            <div class="feature-detail-content" style="display:none;">
+                <div class="cta-box feature-detail-group">
+                <ul>
+                    <li><strong>Portable:</strong> Runs from USB, extract anywhere, data stays under your control.</li>
+                    <li><strong>Centralized Storage:</strong> All data in a single <code>.tabneuron/</code> folder. Existing installs migrate automatically.</li>
+                    <li><strong>Browser Bridge:</strong> Lightweight extension connects via local polling API — no data leaves your machine.</li>
+                </ul>
+              </div>
+            </div>
+            </div>
+
+            </div>
+
+ 
 
         <figure class="screenshot-figure">
         <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="sorana-screenshot">
