@@ -119,13 +119,12 @@ function toggleSection(h2Element) {
         nextElement.classList.toggle('collapsed');
 
         // Update arrows in this section
+        // Update arrow styles in this section (glyphs are set once at init)
         const arrows = nextElement.querySelectorAll('.nav-arrow-down, .nav-arrow-up');
         arrows.forEach(function(arrow) {
             if (nextElement.classList.contains('collapsed')) {
-                arrow.textContent = '+';
                 arrow.classList.remove('rotated');
             } else {
-                arrow.textContent = '+';
                 arrow.classList.add('rotated');
             }
         });
@@ -172,11 +171,11 @@ function toggleSectionFromArrow(arrowElement) {
     const upArrow = ctaBox.querySelector('.nav-arrow-up');
 
     if (parentSection.classList.contains('collapsed')) {
-        if (downArrow) { downArrow.textContent = '+'; downArrow.classList.remove('rotated'); }
-        if (upArrow) { upArrow.textContent = '+'; upArrow.classList.remove('rotated'); }
+        if (downArrow) { downArrow.classList.remove('rotated'); }
+        if (upArrow) { upArrow.classList.remove('rotated'); }
     } else {
-        if (downArrow) { downArrow.textContent = '+'; downArrow.classList.add('rotated'); }
-        if (upArrow) { upArrow.textContent = '+'; upArrow.classList.add('rotated'); }
+        if (downArrow) { downArrow.classList.add('rotated'); }
+        if (upArrow) { upArrow.classList.add('rotated'); }
     }
 
     // Also update the H2 symbol if there is one in this section
@@ -219,10 +218,14 @@ function toggleSectionFromArrow(arrowElement) {
         }
     });
 
-    // Set all arrows to + (collapsed state, no rotation)
+    // Set nav arrows to their directional glyphs (▼ and ▲)
     const allArrows = document.querySelectorAll('.nav-arrow-down, .nav-arrow-up');
     allArrows.forEach(function(arrow) {
-        arrow.textContent = '+';
+        if (arrow.classList.contains('nav-arrow-down')) {
+            arrow.textContent = '▼';
+        } else if (arrow.classList.contains('nav-arrow-up')) {
+            arrow.textContent = '▲';
+        }
         arrow.classList.remove('rotated');
     });
 
@@ -271,8 +274,10 @@ function toggleFeatureDetail(toggleElement) {
     const icon = toggleElement.querySelector('.toggle-icon');
     if (icon) {
         if (isHidden) {
+            icon.textContent = '◀';
             icon.classList.remove('rotated');
         } else {
+            icon.textContent = '▼';
             icon.classList.add('rotated');
         }
     }

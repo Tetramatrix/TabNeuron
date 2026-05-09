@@ -1892,8 +1892,7 @@ div.collapsed {
 
 .nav-arrow-down.rotated,
 .nav-arrow-up.rotated {
-  transform: rotate(45deg);
-}
+  transform: none;}
 
 @keyframes iconShineSweep {
   0% { transform: rotate(45deg) translateX(-55%); opacity: 0; }
@@ -2006,16 +2005,15 @@ div.collapsed {
   left: 100%;
 }
 
-.feature-detail-toggle.active .toggle-icon {
+.feature-detail-toggle.active .toggle-icon, .capability-toggle.active .toggle-icon {
   background: linear-gradient(135deg, rgba(76, 175, 80, 0.35) 0%, rgba(76, 175, 80, 0.18) 100%);
   border-color: rgba(76, 175, 80, 0.45);
   color: #68d391;
-  transform: rotate(90deg);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  transform: none;box-shadow: 0 4px 12px rgba(76, 175, 80, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.1);
   text-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
 }
 
-.feature-detail-toggle.active:hover .toggle-icon {
+.feature-detail-toggle.active:hover .toggle-icon, .capability-toggle.active:hover .toggle-icon {
   background: linear-gradient(135deg, rgba(76, 175, 80, 0.45) 0%, rgba(76, 175, 80, 0.25) 100%);
   border-color: rgba(76, 175, 80, 0.55);
   box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5), inset 0 1px 2px rgba(255, 255, 255, 0.15);
@@ -2152,8 +2150,7 @@ h2.collapsible:hover::before {
 
 /* Chevron badge styling */
 .chevron-badge,
-.feature-detail-toggle .toggle-icon,
-.h2-icon {
+.feature-detail-toggle .toggle-icon, .capability-toggle .toggle-icon, .h2-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2174,8 +2171,7 @@ h2.collapsible:hover::before {
 }
 
 .chevron-badge::after,
-.feature-detail-toggle .toggle-icon::after,
-.h2-icon::after {
+.feature-detail-toggle .toggle-icon::after, .capability-toggle .toggle-icon::after, .h2-icon::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -2199,7 +2195,7 @@ h2.collapsible:hover::before {
 
 h2.collapsible:hover .h2-icon,
 .chevron-badge:hover,
-.feature-detail-toggle:hover .toggle-icon {
+.feature-detail-toggle:hover .toggle-icon, .capability-toggle:hover .toggle-icon {
   background: linear-gradient(135deg, rgba(168, 216, 234, 0.35) 0%, rgba(168, 216, 234, 0.2) 100%);
   border-color: rgba(168, 216, 234, 0.5);
   box-shadow: 0 6px 16px rgba(168, 216, 234, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.15);
@@ -2303,8 +2299,7 @@ div.collapsed {
 
 .nav-arrow-down.rotated,
 .nav-arrow-up.rotated {
-  transform: rotate(45deg);
-}
+  transform: none;}
 
 /* ===========================
    Lightbox — Image Enlargement
