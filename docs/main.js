@@ -229,20 +229,23 @@ function toggleSectionFromArrow(arrowElement) {
         arrow.classList.remove('rotated');
     });
 
-    // Initialize H2 collapsible functionality
-    const h2Elements = document.querySelectorAll('main h2');
-    h2Elements.forEach(function(h2) {
-        // Skip if data-no-toggle is set
-        if (h2.getAttribute('data-no-toggle') === 'true') return;
+     // Initialize H2 collapsible functionality
+     const h2Elements = document.querySelectorAll('main h2');
+     h2Elements.forEach(function(h2) {
+         // Skip if data-no-toggle is set
+         if (h2.getAttribute('data-no-toggle') === 'true') return;
 
-        h2.classList.add('collapsible');
-        h2.addEventListener('click', function(e) {
-            // Don't toggle if clicking on a link inside the h2
-            if (e.target.tagName !== 'A') {
-                toggleSection(h2);
-            }
-        });
-    });
+         h2.classList.add('collapsible');
+         // Set arrow data attributes for Sorana-style toggle
+         h2.setAttribute('data-arrow-collapsed', '◀');
+         h2.setAttribute('data-arrow-expanded', '▼');
+         h2.addEventListener('click', function(e) {
+             // Don't toggle if clicking on a link inside the h2
+             if (e.target.tagName !== 'A') {
+                 toggleSection(h2);
+             }
+         });
+     });
 
     // Initialize H3 collapsible functionality (toggle next div)
     h3Elements.forEach(function(h3) {

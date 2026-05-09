@@ -1765,31 +1765,80 @@ figcaption {
 
 /* Collapsible H2 sections */
 h2.collapsible {
-  cursor: pointer;
-  position: relative;
-  padding-right: 40px;
-  user-select: none;
-  transition: color 0.2s ease;
+   cursor: pointer;
+   position: relative;
+   padding-right: 40px;
+   user-select: none;
+   transition: color 0.2s ease;
 }
 
 h2.collapsible:hover {
-  color: #64b5f6;
+   color: #64b5f6;
 }
 
 h2.collapsible::after {
-  content: '+';
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #666;
-  transition: transform 0.3s ease;
+   content: attr(data-arrow-expanded, "▼");
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 32px;
+   height: 32px;
+   background: linear-gradient(135deg, rgba(168, 216, 234, 0.1) 0%, rgba(168, 216, 234, 0.05) 100%);
+   border: 1px solid rgba(168, 216, 234, 0.2);
+   border-radius: 50%;
+   color: var(--pastel-blue);
+   font-size: 0.95em;
+   font-weight: 400;
+   flex-shrink: 0;
+   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.1);
+   text-shadow: 0 0 8px rgba(168, 216, 234, 0.5);
+   overflow: hidden;
 }
 
 h2.collapsible.collapsed::after {
-  content: '−';
+   content: attr(data-arrow-collapsed, "◀");
+}
+
+h2.collapsible:hover::after {
+   background: linear-gradient(135deg, rgba(168, 216, 234, 0.35) 0%, rgba(168, 216, 234, 0.2) 100%);
+   border-color: rgba(168, 216, 234, 0.5);
+   box-shadow: 0 6px 16px rgba(168, 216, 234, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.15);
+   color: #e3f2fd;
+   text-shadow: 0 0 12px rgba(168, 216, 234, 0.8);
+}
+
+h2.collapsible::after::after,
+h2.collapsible.collapsed::after::after {
+   content: '';
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   width: 200%;
+   height: 200%;
+   background: linear-gradient(
+     to right,
+     transparent 0%,
+     rgba(255, 255, 255, 0.35) 45%,
+     rgba(255, 255, 255, 0.7) 50%,
+     rgba(255, 255, 255, 0.35) 55%,
+     transparent 100%
+   );
+   transform: rotate(45deg);
+   opacity: 0;
+   transition: all 0.5s ease;
+   pointer-events: none;
+   z-index: 1;
+}
+
+h2.collapsible:hover::after::after,
+h2.collapsible.collapsed:hover::after::after {
+   opacity: 1;
+   animation: iconShineSweep 0.9s ease-in-out infinite alternate;
 }
 
 /* Collapsible H3 sections */
