@@ -236,6 +236,7 @@ function toggleSectionFromArrow(arrowElement) {
          if (h2.getAttribute('data-no-toggle') === 'true') return;
 
          h2.classList.add('collapsible');
+         h2.classList.add('collapsed'); // Start collapsed
          // Set arrow data attributes for Sorana-style toggle
          h2.setAttribute('data-arrow-collapsed', '◀');
          h2.setAttribute('data-arrow-expanded', '▼');
@@ -274,16 +275,16 @@ function toggleFeatureDetail(toggleElement) {
     const isHidden = content.style.display === 'none';
     content.style.display = isHidden ? 'block' : 'none';
 
-    const icon = toggleElement.querySelector('.toggle-icon');
-    if (icon) {
-        if (isHidden) {
-            icon.textContent = '◀';
-            icon.classList.remove('rotated');
-        } else {
-            icon.textContent = '▼';
-            icon.classList.add('rotated');
-        }
-    }
+     const icon = toggleElement.querySelector('.toggle-icon');
+     if (icon) {
+         if (isHidden) {
+             icon.textContent = '▶';
+             icon.classList.remove('rotated');
+         } else {
+             icon.textContent = '▼';
+             icon.classList.add('rotated');
+         }
+     }
 
     if (isHidden) {
         toggleElement.classList.add('active');
