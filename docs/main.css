@@ -209,6 +209,12 @@ h2:hover {
   color: #4fd1c5;
 }
 
+#setup-h2 {
+  background: linear-gradient(135deg, rgba(127, 156, 245, 0.15) 0%, rgba(127, 156, 245, 0.05) 100%);
+  border-left-color: var(--section-products);
+  color: #7f9cf5;
+}
+
 #what-is-tabneuron-h2,
 #what-is-sorana-h2 {
   background: linear-gradient(135deg, rgba(99, 179, 237, 0.15) 0%, rgba(99, 179, 237, 0.05) 100%);
@@ -296,7 +302,7 @@ h2:hover {
   color: #68d391;
 }
 
-#support-donations-h2 {
+#support-h2 {
   background: linear-gradient(135deg, rgba(246, 135, 179, 0.15) 0%, rgba(246, 135, 179, 0.05) 100%);
   border-left-color: var(--section-support);
   color: #f687b3;
@@ -1292,7 +1298,7 @@ iframe:hover, embed:hover, object:hover {
 
 /* Call to Action Box (CTA) */
 .cta-box {
-  margin: 40px 0;
+  margin: 20px 0;
   background: rgba(45, 45, 48, 0.6);
   color: var(--text-primary);
   padding: 36px 40px;
@@ -2001,7 +2007,6 @@ div.collapsed {
 
 /* === Feature Detail Groups & Toggles (Sorana Style) === */
 .feature-detail-group {
-  margin: 16px 0;
   padding: 20px 28px;
   background: rgba(45, 45, 48, 0.5);
   border: 1px solid var(--border);
@@ -2073,8 +2078,8 @@ div.collapsed {
 
 /* Content Area */
 .feature-detail-content {
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 0px;
+  padding-top: 0px;
   border-top: 1px solid var(--border);
 }
 
@@ -2435,9 +2440,9 @@ div.collapsed {
     border-radius: 10px;
   }
 
-  .feature-detail-group {
-    margin: 12px 0;
-  }
+   .feature-detail-group {
+     margin: 4px 0;
+   }
 
   .feature-detail-toggle {
     padding: 12px 36px 12px 14px;
