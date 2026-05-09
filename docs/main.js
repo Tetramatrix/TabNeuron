@@ -248,50 +248,79 @@ function toggleSectionFromArrow(arrowElement) {
          });
      });
 
-    // Initialize H3 collapsible functionality (toggle next div)
-    h3Elements.forEach(function(h3) {
-        // Skip if data-no-toggle is set
-        if (h3.getAttribute('data-no-toggle') === 'true') return;
-        // Skip feature-detail-toggle headers
-        if (h3.classList.contains('feature-detail-toggle')) return;
+     // Initialize H3 collapsible functionality (toggle next div)
+     h3Elements.forEach(function(h3) {
+         // Skip if data-no-toggle is set
+         if (h3.getAttribute('data-no-toggle') === 'true') return;
+         // Skip feature-detail-toggle headers
+         if (h3.classList.contains('feature-detail-toggle')) return;
 
-        h3.addEventListener('click', function(e) {
-            // Don't toggle if clicking on a link inside the h3
-            if (e.target.tagName !== 'A') {
-                toggleH3Section(h3);
-            }
-        });
-    });
+         h3.classList.add('collapsible');
+         // Find and collapse the next div
+         let nextElement = h3.nextElementSibling;
+         while (nextElement && nextElement.tagName !== 'DIV' && nextElement.tagName !== 'H3' && nextElement.tagName !== 'H2') {
+             nextElement = nextElement.nextElementSibling;
+         }
+         if (nextElement && nextElement.tagName === 'DIV') {
+             nextElement.classList.add('collapsed');
+         }
+
+         h3.addEventListener('click', function(e) {
+             // Don't toggle if clicking on a link inside the h3
+             if (e.target.tagName !== 'A') {
+                 toggleH3Section(h3);
+             }
+         });
+     });
+
+     // Initialize feature-detail-toggle arrows
+     document.querySelectorAll('.feature-detail-toggle').forEach(function(toggle) {
+         const icon = toggle.querySelector('.toggle-icon');
+         if (icon) {
+             // Set initial arrow based on content state
+             const content = toggle.nextElementSibling;
+             if (content && content.style.display !== 'none') {
+                 // Content is visible
+                 icon.textContent = '▼';
+             } else {
+                 // Content is hidden/collapsed
+                 icon.textContent = '▶';
+             }
+         }
+     });
 })();
 
 /**
  * Toggle feature-detail group visibility
  * @param {HTMLElement} toggleElement - The h3 element clicked
  */
-function toggleFeatureDetail(toggleElement) {
-    const content = toggleElement.nextElementSibling;
-    if (!content) return;
+ function toggleFeatureDetail(toggleElement) {
+     const content = toggleElement.nextElementSibling;
+     if (!content) return;
 
-    const isHidden = content.style.display === 'none';
-    content.style.display = isHidden ? 'block' : 'none';
+     const isHidden = content.style.display === 'none';
+     // Toggle the display
+     content.style.display = isHidden ? 'block' : 'none';
 
      const icon = toggleElement.querySelector('.toggle-icon');
      if (icon) {
-         if (isHidden) {
+         // Set arrow based on NEW state (after toggle)
+         if (content.style.display === 'none') {
+             // Now collapsed - point right
              icon.textContent = '▶';
-             icon.classList.remove('rotated');
          } else {
+             // Now expanded - point down
              icon.textContent = '▼';
-             icon.classList.add('rotated');
          }
      }
 
-    if (isHidden) {
-        toggleElement.classList.add('active');
-    } else {
-        toggleElement.classList.remove('active');
-    }
-}
+     // Update active class based on new state
+     if (content.style.display !== 'none') {
+         toggleElement.classList.add('active');
+     } else {
+         toggleElement.classList.remove('active');
+     }
+ }
 
 /**
  * Lightbox — Click-to-enlarge images
