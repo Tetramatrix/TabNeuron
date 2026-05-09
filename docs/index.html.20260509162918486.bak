@@ -139,11 +139,11 @@
             </div>
 
             <!-- 1. Canvas & Sync -->
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 📂 Organize Tabs on Canvas
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> "Which tab has that info?" — Scrolling through dozens of hidden tabs in browser bars, losing context.</p>
                     <ul>
@@ -154,11 +154,11 @@
                    </div>
                 </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 🔄 Canvas ↔ Browser Sync
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-            <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+            			<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Workspace and browser are disconnected — changes in one don't reflect in the other.</p>
                     <ul>
                         <li><strong>Solution:</strong> Bidirectional sync with Chrome Tab Groups — canvas changes push to browser, browser changes pull to canvas.</li>
@@ -168,10 +168,10 @@
                   </div>
                 </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 💬 Chat with Websites
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Opening and reading across multiple tabs takes too long. Research means comparing, copying, synthesizing manually.</p>
                     <ul>
@@ -186,10 +186,10 @@
                   </div>
                 </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 🤖 AI Agent Pipelines
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Repetitive web research is manual — open tabs, extract data, compare, format, save — every time.</p>
                     <ul>
@@ -201,10 +201,10 @@
                   </div>
                 </div>
 
-             <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 📸 Visual Previews & Metadata
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Can't tell what a tab contains without switching to it — title alone isn't enough.</p>
                     <ul>
@@ -214,11 +214,11 @@
                   </div>
                 </div>
 
-             <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 🧠 AI Memory That Remembers
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
                     <p><strong>Problem:</strong> AI forgets who you are after every session. Long chats are expensive and slow.</p>
                     <ul>
                         <li><strong>Solution:</strong> Auto-extracts facts, skills, preferences, and personas from conversations. Gets better over time.</li>
@@ -228,11 +228,11 @@
                   </div>
                 </div>
 
-             <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 🔌 MCP Server & Integrations
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Repetitive file tasks are manual. Web research means opening multiple tabs, comparing, copying. Research takes forever.</p>
                     <ul>
                         <li><strong>MCP Manager:</strong> Visual interface — enable/disable servers, configure settings, monitor health.</li>
@@ -243,11 +243,11 @@
                   </div>
                 </div>
 
-             <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+             <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> ☁️ AI Backends — Local or Cloud
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Data goes to cloud providers — no privacy. Or local models are hard to configure.</p>
                     <ul>
                         <li><strong>Local:</strong> 🍋 Lemonade (NPU acceleration), Ollama, Llama.cpp, LM Studio — nothing leaves your machine.</li>
@@ -257,11 +257,11 @@
                   </div>
                 </div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> 📦 Technical Details
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                    <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                    <div class="cta-box capability-group">
                     <ul>
                         <li><strong>Portable:</strong> Runs from USB, extract anywhere, data stays under your control.</li>
                         <li><strong>Centralized Storage:</strong> All data in a single <code>.tabneuron/</code> folder. Existing installs migrate automatically.</li>
@@ -291,11 +291,11 @@
             <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>Your workspace and your browser stay aligned through a controlled bidirectional sync.</p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Workspace → Browser
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ul>
                         <li>Organize tabs spatially on the desktop canvas or let the AI cluster them semantically.</li>
@@ -305,10 +305,10 @@
                    </div>
                 </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Browser → Workspace
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ul>
                         <li>Create groups or open new tabs directly in your browser.</li>
@@ -330,11 +330,11 @@
             <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>TabNeuron's AI remembers who you are, what you prefer, and what you've discussed — making every answer more accurate while using dramatically fewer tokens. Perfect for local and private inference.</p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Memory That Learns Over Time
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> AI starts from scratch every session — forgets who you are, what you do, what you prefer.</p>
                     <ul>
@@ -346,10 +346,10 @@
           </div>
                 </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> How It Works
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ul>
                 <li><strong>Auto-Extraction:</strong> Every message analyzed — memories saved automatically, no manual effort</li>
@@ -371,11 +371,11 @@
                 </div>
 						</div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Intent Classification & Smart Routing
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-            <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+            <div class="cta-box capability-group">
                     <p><strong>Problem:</strong> AI doesn't know whether to search memory, call a tool, or query documents — wastes tokens on wrong actions.</p>
                     <ul>
                 <li><strong>Intent Classification:</strong> Detects memory search, tool calls, document queries, or hybrid intents automatically</li>
@@ -397,11 +397,11 @@
                 </div>
 						</div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Key Benefits
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                  <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                  <div class="cta-box capability-group">
                     <ul>
                 <li><strong>Token Efficiency:</strong> Only relevant context loaded — profile-first retrieval, fallback only when needed. Dramatically fewer tokens, faster answers.</li>
                 <li><strong>Live Session Stats:</strong> Real-time performance metrics — tokens/sec, time-to-first-token, input/output tokens — visible in every chat. <span class="lemonade-only">(🍋 Lemonade only)</span></li>
@@ -442,11 +442,11 @@
                 <li>Interact directly with files, folders, web content, and external services</li>
             </ol>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> MCP Manager
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
 
                 	<div class="cta-box capability-group">
 
@@ -460,10 +460,10 @@
 						</div>
 					</div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> File Operations
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Repetitive file tasks — creating folders, moving files, reading, editing — require manual clicking and navigation.</p>
                     <p><strong>Solution:</strong> Automate file operations through conversation:</p>
@@ -483,10 +483,10 @@
                 </div>
    				</div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Web Content Tools
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
           <div class="cta-box capability-group">
                     <p><strong>Problem:</strong> Research means opening multiple tabs, comparing information, copying data, saving results — fragmented and time-consuming.</p>
                     <p><strong>Solution:</strong> Built-in web tools give your AI direct access. One query → fetch, compare, save locally:</p>
@@ -535,11 +535,11 @@
                 <strong>Solution:</strong> OCR extracts text from scanned documents, images, and PDFs. Once processed, documents become searchable and indexed via adaptive retrieval (semantic search → keywords → full-text fallback) so AI finds precise answers from your documents. Process documents via the context menu ('Document Overview' and 'Process Documents') — particularly valuable for PDFs and image-based documents.
             </p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> OCR Capabilities
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p>
                 TabNeuron processes various document types, extracting text so AI can work with them:
@@ -566,10 +566,10 @@
   </div>
 
             <article class="ocr-requirements">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Requirements for PDF Image OCR
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
        <div class="cta-box capability-group">
                     <p>
                     To enable OCR for PDFs with images, you need to install the official Tesseract OCR engine with default settings and ensure it's available in your system PATH. Tesseract is an open-source OCR engine that provides high-quality text extraction from images.
@@ -584,11 +584,11 @@
             </article>
 
             <article class="encoding-notes">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Encoding Support Notes
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                   <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                   <div class="cta-box capability-group">
                     <p>
                     The application primarily uses UTF-8 encoding for document processing and falls back to Latin-1 (ISO-8859-1) when UTF-8 decoding fails. For optimal results, we recommend using UTF-8 encoding for your documents. This ensures the best compatibility with international characters and special symbols.
                 </p>
@@ -612,11 +612,11 @@
                 <strong>Solution:</strong> Analyze images, screenshots, and webpage visuals with local AI vision models. Ask questions about image content, extract text from photos, analyze diagrams, understand charts — all through conversation. Or add image analysis results directly to your document index for future RAG searches.
             </p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Vision Capabilities
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p>
                 TabNeuron's vision models can analyze various image types, extracting understanding so AI can work with visual content:
@@ -639,10 +639,10 @@
                 </div>
   				</div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Requirements
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
    			    <div class="cta-box capability-group">
                     <p>
                     Vision analysis requires a vision-capable AI model. TabNeuron supports various local vision models:
@@ -661,26 +661,26 @@
 		<h2 id="ai-backends-h2">AI Backends & Models</h2>
     <section class="technical-section" id="ai-backends">
 
-            <div class="cta-box feature-detail-group">
+            <div class="cta-box capability-group">
 
 		            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
 		            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> AI Model Performance
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                 <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                 <div class="cta-box capability-group">
                     <p>
                 TabNeuron uses AI models to intelligently group tabs on the canvas and power chat, agents, and research. The built-in default model is lightweight and works offline, but may not always classify tabs perfectly, especially for less common content. For optimal performance, we strongly recommend using Llama 3.1 8b Instruct or higher models. Processing time depends entirely on the number of tabs - fewer tabs mean faster processing. Naturally, the best performance is achieved with cloud services.
             		</p>
                 </div>
 								</div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> AI Integration
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p>TabNeuron supports connection to both on-prem and cloud-based AI services:</p>
 		            <ul>
@@ -691,10 +691,10 @@
                 </div>
 							</div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Model Manager Split View
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <p>The Model Manager features a split view when using <strong>🍋 Lemonade</strong> as the backend. 🍋 Lemonade supports multi-model loading, allowing both a chat model and an embedding model to run simultaneously:</p>
 	            <ul>
@@ -709,11 +709,11 @@
                 </div>
               </div>
 
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Hardware Requirements
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
-                   <div class="cta-box feature-detail-group">
+                <div class="capability-content" style="display:none;">
+                   <div class="cta-box capability-group">
                     <ul>
 		                <li><strong>Built-in Models:</strong> Range from 1B parameter (806MB) to 20B parameter (8-16GB)</li>
 		                <li><strong>Recommended 8B Models (e.g., Llama 3.1 8b Instruct):</strong> Minimum 8 GB RAM or 4 GB VRAM for smooth operation</li>
@@ -723,12 +723,12 @@
                 </div>
               </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Recommendation
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
 
-                   <div class="cta-box feature-detail-group">
+                   <div class="cta-box capability-group">
                     <p><strong>🍋 Lemonade</strong> For optimal local and on-prem performance with both GPU and NPU acceleration, we recommend:</p>
                 <div class="partner-buttons" style="margin-top: 10px;">
                     <a href="https://lemonade-server.ai/" target="_blank" class="btn-partner">🍋 Lemonade</a>
@@ -756,11 +756,11 @@
             <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>Talk directly to your open tabs. TabNeuron extracts the DOM content and metadata from your selected tabs and feeds it into your chosen LLM context.</p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> How it Works
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ol>
                         <li>Create an agent.</li>
@@ -771,10 +771,10 @@
                    </div>
                 </div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Use Cases
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ul>
                         <li>"Compare the technical specifications across these 4 review tabs."</li>
@@ -804,11 +804,11 @@
             <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>Automate repetitive web research by chaining AI agents together. Build pipelines where one agent's output is directly piped into the next agent's prompt.</p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Example Pipeline
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ol>
                         <li><strong>Scraper Agent:</strong> Reads 10 selected product tabs and uses <code>web_extract_links</code> to find technical specs.</li>
@@ -836,11 +836,11 @@
             <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">-</span>
             <p>Because TabNeuron is a native desktop app, it uses a lightweight extension merely as a bridge to communicate with your browser via a local polling API.</p>
 
-            <div class="cta-box feature-detail-group">
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+            <div class="cta-box capability-group">
+                <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span> Configuration Bridge
                 </h3>
-                <div class="feature-detail-content" style="display:none;">
+                <div class="capability-content" style="display:none;">
                 	<div class="cta-box capability-group">
                     <ul>
                         <li><strong>Host:</strong> localhost</li>
@@ -948,7 +948,7 @@
 
 			<div class="cta-box capability-group">
 
-                <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
+				 <h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span>New Spaceship - Retro Mini Game</h3>
 
         <div class="capability-content" style="display:none;" id="spaceship-intro">
@@ -981,7 +981,7 @@
         </div>
 
 
-				<h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+				<h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span>🧩 Sorana - Visual AI Workspace & Personal AI Agent</h3>
         <div class="capability-content" style="display:none;" id="sorana-intro">
             <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
@@ -1013,7 +1013,7 @@
         </div>
 </div>
 
-				<h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+				<h3 class="capability-toggle" onclick="toggleCapability(this)">
                     <span class="toggle-icon">+</span>RyzenZPilot - AMD Ryzen Power Management Tool</h3>
         <div class="capability-content" style="display:none;" id="ryzenzpilot-intro">
             <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">-</span>
@@ -1035,7 +1035,7 @@
         </div>
 			</div>
 
-				<h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+				<h3 class="capability-toggle" onclick="toggleCapability(this)">
             <span class="toggle-icon">+</span>Aicono - AI Intelligent Desktop Icon Autopilot</h3>
 
         <div class="capability-content" style="display:none;" id="aicono-intro">
@@ -1054,9 +1054,9 @@
                 </a>
             </figure>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
             <span class="toggle-icon">+</span>Featured on Microsoft Store</h3>
-                <div class="feature-detail-content" style="display:none;">
+            <div class="capability-content" style="display:none;">
             <figure class="store-fig">
                 <a href="https://apps.microsoft.com/store/detail/XP8LNKJ7H4B1WS" target="_blank">
                     <img src="ms-store.svg" width="50%" height="50%" alt="Get it from Microsoft" />
@@ -1064,9 +1064,9 @@
             </figure>
 						</div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
             <span class="toggle-icon">+</span>Featured on Softpedia</h3>
-                <div class="feature-detail-content" style="display:none;">
+            <div class="capability-content" style="display:none;">
             <figure class="store-fig">
                 <a href="https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml" target="_blank">
                     <img src="softpedia.png" width="40%" height="40%" alt="Get it from Softpedia" />
@@ -1074,9 +1074,9 @@
             </figure>
 						</div>
 
-            <h3 class="capability-toggle"                 onclick="toggleFeatureDetail(this)">
+            <h3 class="capability-toggle" onclick="toggleCapability(this)">
             <span class="toggle-icon">+</span>Featured on AlternativeTo</h3>
-                <div class="feature-detail-content" style="display:none;">
+            <div class="capability-content" style="display:none;">
             <figure class="store-fig">
                 <a href="https://alternativeto.net/software/aicono" title="Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!" target="_blank">
                     <img src="AlternativeTo.png" width="20%" alt="Aicono - AI Intelligent Desktop Icon Autopilot" />
