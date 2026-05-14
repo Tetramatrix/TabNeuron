@@ -1,5 +1,9 @@
 📋 Changelog 📋
 
+📅 Mai 14, 2026 — Version 1.0.11
+
+🐛 Bugfix: Pith-SDK Grouping
+
 📅 April 10, 2026 — Version 1.0.9
 
 🆕 Chat Window: Copy last button
