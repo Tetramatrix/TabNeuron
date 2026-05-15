@@ -172,7 +172,7 @@ To create agent pipelines:
 📥 Downloads 📥
 
 🔹 Latest version: TabNeuron.exe v1.0.11
-🔢 MD5 Checksum (.exe): d7e195b05b2b8490630082d42d10e38b
+🔢 MD5 Checksum (.exe): e27b321b505cc6e069b0b32e33622f65
 🌐 Website: http://tetramatrix.github.io/TabNeuron
 🏪 Microsoft Store: https://apps.microsoft.com/store/detail/9nh7qk4nczfl
 💬 Discord: https://discord.gg/4QkQSfSATF
