@@ -17,16 +17,12 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6449563648591184"
      crossorigin="anonymous"></script>
 
-  <title>Privacy Policy | Tetramatrix Connector | TabNeuron</title>
-<meta name="description" content="Privacy Policy for Tetramatrix Connector. Learn how TabNeuron handles your data with complete transparency and local-first processing.">
+  <title>TabNeuron: Support &amp; Donate</title>
+<meta name="description" content="Support TabNeuron. Join the Discord community, leave a review or star the project on GitHub, or donate via PayPal or Bitcoin Cash.">
   <link rel="icon" type="image/png" href="logo_small.png">
-  <link rel="canonical" href="https://tetramatrix.github.io/TabNeuron/privacy.html">
+  <link rel="canonical" href="https://tetramatrix.github.io/TabNeuron/support.html">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0e0f11">
-  <meta property="og:title" content="Privacy Policy | Tetramatrix Connector | TabNeuron">
-  <meta property="og:description" content="Privacy Policy for Tetramatrix Connector. Complete transparency on data handling and local processing.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://tetramatrix.github.io/TabNeuron/main.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -97,8 +93,7 @@ body {
   padding-bottom: 240px; /* reserve space for Google Ads bottom banner */
 }
 img { display: block; max-width: 100%; height: auto; }
-ul { list-style: disc; padding-left: var(--space-5); }
-li { margin-bottom: var(--space-2); line-height: 1.6; }
+ul { list-style: none; }
 a { color: var(--color-primary); text-decoration: none; }
 a:hover { color: var(--color-primary-hover); }
 
@@ -127,7 +122,9 @@ nav {
   font-size: var(--text-sm); transition: color 160ms ease;
 }
 .nav-links a:hover { color: var(--color-text); }
-.nav-links .btn-primary { color: #0a1a17; }
+.nav-links .btn-primary {
+  color: #0a1a17;
+}
 .btn-primary {
   background: var(--color-primary);
   color: #0a1a17;
@@ -141,7 +138,9 @@ nav {
   display: inline-block;
 }
 .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); color: #fff; }
-.nav-links .btn-primary:hover { color: #fff; }
+.nav-links .btn-primary:hover {
+  color: #fff;
+}
 .btn-outline {
   border: 1px solid var(--color-border);
   color: var(--color-text);
@@ -175,7 +174,7 @@ nav {
 .hero-sub {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
-  max-width: 640px;
+  max-width: 560px;
   margin: 0 auto;
   line-height: 1.65;
 }
@@ -193,7 +192,7 @@ nav {
 }
 .section-header {
   max-width: 640px;
-  margin: 0 auto var(--space-10);
+  margin: 0 auto var(--space-12);
   text-align: center;
 }
 .section-header h2 {
@@ -208,21 +207,6 @@ nav {
   color: var(--color-text-muted);
   font-size: var(--text-base);
   line-height: 1.65;
-}
-.body-text p {
-  color: var(--color-text-muted);
-  font-size: var(--text-base);
-  line-height: 1.75;
-  margin-bottom: var(--space-4);
-}
-.body-text strong { color: var(--color-text); }
-.body-text code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
-  font-size: 0.8rem;
-  background: var(--color-surface-2);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--color-text);
 }
 
 /* ── CARDS ── */
@@ -256,28 +240,76 @@ nav {
 }
 .card a { display: inline-block; }
 
-/* ── CTA ── */
-.cta-section {
-  padding: clamp(var(--space-16), 10vw, var(--space-24)) var(--space-8);
+/* ── QR CODES / DONATE ── */
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px,100%), 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+.donate-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
   text-align: center;
-  max-width: 700px; margin: 0 auto;
 }
-.cta-section h2 {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: var(--space-5);
-}
-.cta-section h2 em { font-style: italic; color: var(--color-primary); }
-.cta-section p {
-  color: var(--color-text-muted);
+.donate-card h3 {
   font-size: var(--text-base);
-  margin-bottom: var(--space-8);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
 }
-.cta-actions {
-  display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+.donate-card img {
+  max-width: 200px;
+  margin: 0 auto var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
 }
+.donate-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
+  word-break: break-all;
+}
+.donate-card .address {
+  font-family: 'Courier New', monospace;
+  font-size: var(--text-xs);
+  color: var(--color-text);
+  background: var(--color-surface-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  word-break: break-all;
+  text-align: left;
+}
+
+/* ── REVIEW LINKS ── */
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+.review-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  transition: border-color 160ms, background 160ms;
+}
+.review-link:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-dim);
+}
+.review-link span { color: var(--color-text-muted); font-size: var(--text-xs); }
 
 /* ── FOOTER ── */
 footer {
@@ -373,57 +405,60 @@ footer a { color: var(--color-text-muted); }
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Privacy <em>Policy.</em></h1>
+  <h1>Support <em>TabNeuron.</em></h1>
   <p class="hero-sub">
-    Tetramatrix Connector. Complete transparency on data handling and local processing.
+    Join the community, share feedback, or help keep the project free with a donation.
   </p>
 </section>
 
-<!-- LAST UPDATED -->
-<section class="section" id="last-updated">
-  <div class="body-text">
-    <p><strong>Last updated: March 2026</strong></p>
-    <p>This policy applies to the Tetramatrix Connector Chrome extension and the TabNeuron desktop application. It is written to be as simple and transparent as possible.</p>
-  </div>
-</section>
-
-<!-- DATA COLLECTION -->
-<section class="section section-alt" id="data-collection">
+<!-- COMMUNITY -->
+<section class="section section-alt" id="community">
   <div class="section-header">
-    <h2>Data <em>collection.</em></h2>
-    <p>Nothing leaves your machine, ever.</p>
+    <h2>Join the <em>community.</em></h2>
+    <p>Get help, share workflows, and talk to other TabNeuron users.</p>
   </div>
-  <div class="body-text">
-    <p>Tetramatrix Connector does not collect, store, or transmit any personal user data to external servers or third parties.</p>
-    <p>There are no accounts, no cloud sync, no telemetry, and no analytics. The app and extension run entirely on your device.</p>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Discord</h3>
+      <p>Ask questions, report bugs, and hang out with the TabNeuron community in real time.</p>
+      <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn-outline">Join Discord</a>
+    </div>
+    <div class="card">
+      <h3>GitHub</h3>
+      <p>Open an issue or discussion to report bugs, share feedback, or follow development.</p>
+      <a href="https://github.com/Tetramatrix/TabNeuron" target="_blank" class="btn-outline">GitHub Feedback</a>
+    </div>
+    <div class="card">
+      <h3>Feedback on AlternativeTo</h3>
+      <p>Leave feedback on AlternativeTo to help others discover TabNeuron.</p>
+      <a href="https://alternativeto.net/software/tabneuron/" target="_blank" rel="noopener noreferrer" class="btn-outline">Leave feedback on AlternativeTo</a>
+    </div>
   </div>
 </section>
 
-<!-- LOCAL DATA PROCESSING -->
-<section class="section" id="local-data-processing">
+<!-- REVIEWS -->
+<section class="section" id="reviews">
   <div class="section-header">
-    <h2>Local data <em>processing.</em></h2>
-    <p>Your browsing session stays on your device.</p>
+    <h2>Leave a <em>review.</em></h2>
+    <p>If TabNeuron helps you, a review or a star on any of these sites makes a big difference.</p>
   </div>
-  <div class="body-text">
-    <p>The extension reads tab URLs, titles, and page content exclusively to forward them to the Tetramatrix desktop application (TabNeuron) running locally on the user's own machine via <code>localhost:5555</code>. This data never leaves the user's device.</p>
-    <p>Workspace states, chat history, AI memory, and settings are stored in a local <code>.tabneuron/</code> folder on your machine. Cloud AI providers are only contacted if you explicitly connect your own API key.</p>
-  </div>
-</section>
-
-<!-- PERMISSIONS -->
-<section class="section section-alt" id="permissions">
-  <div class="section-header">
-    <h2>Permissions.</h2>
-    <p>Used solely to enable local communication between Chrome and TabNeuron.</p>
-  </div>
-  <div class="body-text">
-    <p>Permissions (<code>tabs</code>, <code>tabGroups</code>, <code>scripting</code>, <code>storage</code>, <code>activeTab</code>) are used solely to enable communication between Chrome and local Tetramatrix applications. No data is logged or stored remotely.</p>
-    <p>See the <a href="extension-support.html">Chrome extension page</a> for a full explanation of each permission and its purpose.</p>
+  <div class="review-list">
+    <a href="https://alternativeto.net/software/tabneuron/" class="review-link" target="_blank" rel="noopener">
+      AlternativeTo <span>Leave feedback →</span>
+    </a>
+    <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="review-link" target="_blank" rel="noopener">
+      Chrome Web Store <span>Rate the extension →</span>
+    </a>
+    <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" class="review-link" target="_blank" rel="noopener">
+      Microsoft Store <span>Rate the app →</span>
+    </a>
+    <a href="https://github.com/Tetramatrix/TabNeuron" class="review-link" target="_blank" rel="noopener">
+      GitHub <span>Star the project →</span>
+    </a>
   </div>
 </section>
 
-<!-- AD SPOT - Privacy Page -->
+<!-- AD SPOT - Support Page -->
 <div class="ad-container">
   <p class="ad-label">Sponsored</p>
   <ins class="adsbygoogle"
@@ -433,40 +468,32 @@ footer a { color: var(--color-text-muted); }
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
+<!-- DONATE -->
+<section class="section section-alt" id="donate">
   <div class="section-header">
-    <h2>Contact.</h2>
-    <p>For questions, contact us via GitHub or Discord.</p>
+    <h2>Support <em>development.</em></h2>
+    <p>Donations help keep TabNeuron free, portable, and actively maintained.</p>
   </div>
-  <div class="card-grid">
-    <div class="card">
-      <h3>GitHub</h3>
-      <p>Open an issue or discussion for any privacy-related question or concern.</p>
-      <a href="https://github.com/tetramatrix" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
+  <div class="donate-grid">
+    <div class="donate-card">
+      <h3>PayPal</h3>
+      <img src="qrcode.png" alt="PayPal QR code">
+      <p>Scan the QR code or send directly via PayPal.</p>
+      <a href="https://paypal.me/Gigamegs" target="_blank" class="btn-outline">paypal.me/Gigamegs</a>
     </div>
-    <div class="card">
-      <h3>Discord</h3>
-      <p>Join the community for real-time assistance from the development team.</p>
-      <a href="https://discord.gg/4QkQSfSATF" target="_blank" rel="noopener" class="btn-outline">Join Discord</a>
+    <div class="donate-card">
+      <h3>Bitcoin Cash (BCH)</h3>
+      <img src="bch_qrcode.png" alt="Bitcoin Cash QR code">
+      <p>Send BCH to the address below.</p>
+      <div class="address">bitcoincash:qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv</div>
     </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <h2>Return to <em>TabNeuron.</em></h2>
-  <p>Learn more about TabNeuron and its features.</p>
-  <div class="cta-actions">
-    <a href="index.html" class="btn-primary">Back to TabNeuron</a>
-    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-outline">Download TabNeuron Free</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div style="margin-bottom:var(--space-3);">
-    <a href="index.html">TabNeuron Home</a> · <a href="extension-support.html">Chrome Extension</a> · <a href="support.html">Support &amp; Donate</a> · <a href="https://discord.gg/4QkQSfSATF" target="_blank" rel="noopener">Discord</a>
+    <a href="index.html">TabNeuron Home</a> · <a href="extension-support.html">Chrome Extension</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://discord.gg/4QkQSfSATF" target="_blank" rel="noopener">Discord</a>
   </div>
   <span>© 2026 TabNeuron. Built for AI explorers.</span>
 </footer>

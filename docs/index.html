@@ -1,501 +1,1976 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>TabNeuron - AI Spatial Tab Manager & Research Workspace</title>
-    <meta name="description" content="TabNeuron is an AI spatial tab manager that maps your browser tabs onto an infinite 2D canvas — find tabs by topic instead of endless switching, chat with websites and the live internet, automate research with AI agent pipelines, and sync bidirectionally with Chrome Tab Groups. Tabs are indexed with adaptive retrieval — semantic search, keywords, and full-text fallback — precise and fast. AI memory extracts facts, skills, preferences, and personas from your chats, building long-term profiles that make answers more accurate over time. Old conversations auto-compact to save tokens. Run models locally so nothing leaves your machine, or connect to cloud AI.">
-    <meta name="keywords" content="AI Spatial Tab Manager, Browser Tab Canvas, Chat with Websites, AI Research Agents, MCP Server, AI Memory, Long-Term Memory, Auto Compaction, Browser Extension, Chrome Tab Groups Sync, Document OCR, Adaptive RAG, Local AI, Private AI, Conversation History, Multi-Language AI, Token Efficiency, Web Research Automation, Privacy-Focused">
-    <meta name="author" content="Tetramatrix">
-    <meta property="og:title" content="TabNeuron - AI Spatial Tab Manager & Research Workspace">
-    <meta property="og:description" content="TabNeuron is an AI spatial tab manager that maps your browser tabs onto an infinite 2D canvas — find tabs by topic instead of endless switching, chat with websites and the live internet, automate research with AI agent pipelines, and sync bidirectionally with Chrome Tab Groups. Tabs are indexed with adaptive retrieval — semantic search, keywords, and full-text fallback — precise and fast. AI memory extracts facts, skills, preferences, and personas from your chats, building long-term profiles that make answers more accurate over time. Old conversations auto-compact to save tokens. Run models locally so nothing leaves your machine, or connect to cloud AI.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="main.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<noscript><meta http-equiv="refresh" content="0; URL=https://tetramatrix.github.io/TabNeuron/"></noscript>
+<script>
+(function(){
+  var stored=localStorage.getItem('theme');
+  if(stored){document.documentElement.setAttribute('data-theme',stored);}
+  else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches){
+    document.documentElement.setAttribute('data-theme','light');
+  }
+})();
+</script>
 
-    <!-- Google Ads (using template IDs) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6449563648591184"
-         crossorigin="anonymous"></script>
+<!-- Google Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6449563648591184"
+     crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<title>TabNeuron | AI Spatial Tab Manager & Research Workspace</title>
+<meta name="description" content="TabNeuron is an AI spatial tab manager that maps your browser tabs onto a 2D canvas: find tabs by topic instead of endless switching, chat with websites and the live internet, automate research with AI agent pipelines, and sync bidirectionally with Chrome Tab Groups. Tabs are indexed with adaptive retrieval: semantic search, keywords, and full-text fallback, precise and fast. AI memory extracts facts, skills, preferences, and personas from your chats, building long term profiles that make answers more accurate over time. Old conversations auto-compact to save tokens. Run models locally so nothing leaves your machine, or connect to cloud AI.">
+<meta name="keywords" content="AI Spatial Tab Manager, Browser Tab Canvas, Chat with Websites, AI Research Agents, MCP Server, AI Memory, Long-Term Memory, Auto Compaction, Browser Extension, Chrome Tab Groups Sync, Document OCR, Adaptive RAG, Local AI, Private AI, Conversation History, Multi-Language AI, Token Efficiency, Web Research Automation, Privacy-Focused">
+<meta name="author" content="Tetramatrix">
+<meta property="og:title" content="TabNeuron | AI Spatial Tab Manager & Research Workspace">
+<meta property="og:description" content="TabNeuron maps your browser tabs onto a 2D canvas; chat with websites and the live internet, automate research with AI agent pipelines, and sync bidirectionally with Chrome Tab Groups.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tetramatrix.github.io/TabNeuron/">
+<meta property="og:image" content="https://tetramatrix.github.io/TabNeuron/main.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TabNeuron | AI Spatial Tab Manager & Research Workspace">
+<meta name="twitter:description" content="Map your browser tabs onto a 2D canvas. Chat with websites, automate research with AI agents, and sync with Chrome Tab Groups.">
+<meta name="twitter:image" content="https://tetramatrix.github.io/TabNeuron/main.png">
+  <link rel="icon" type="image/png" href="logo_small.png">
+  <link rel="canonical" href="https://tetramatrix.github.io/TabNeuron/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0e0f11">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TabNeuron",
+      "operatingSystem": "Windows 11",
+      "applicationCategory": "WebBrowser, AIApplication",
+      "offers": { "@type": "Offer", "price": "0" },
+      "screenshot": ["main.png", "chatbot.png", "mindmap.png"],
+      "url": "https://tetramatrix.github.io/TabNeuron/",
+      "downloadUrl": "https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe",
+      "softwareVersion": "1.0.11",
+      "author": { "@type": "Organization", "name": "Tetramatrix" },
+      "sameAs": [
+        "https://github.com/Tetramatrix/TabNeuron",
+        "https://alternativeto.net/software/tabneuron/",
+        "https://apps.microsoft.com/store/detail/9nh7qk4nczfl"
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does TabNeuron cost anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TabNeuron is completely free for everyone. Download the portable executable, install the free Chrome extension, and run AI models locally or connect to cloud providers with your own key."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my data leave my machine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By default, everything stays local. TabNeuron stores its workspace data in a single .tabneuron/ folder on your machine, and the browser extension connects through a local polling API on localhost. Cloud AI providers are only used when you explicitly connect an API key."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run it from a USB stick?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. TabNeuron is a portable executable. Extract it anywhere and run it; no installation, no registry changes, no admin rights required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which browsers are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Chrome is required for the Tetramatrix Connector extension. TabNeuron syncs bidirectionally with Chrome Tab Groups through a local polling API on port 5555."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to long conversations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auto-compaction summarizes old conversations, saving up to 93% of tokens while preserving full context. AI memory also extracts facts, skills, preferences, and personas from your chats, building long term profiles that make answers more accurate over time."
+          }
+        }
+      ]
+    }
+  </script>
+
+<style>
+/* Art direction: AI tab workspace → technical, clean, confident
+   Palette: deep dark surfaces, teal accent, restrained color
+   Typography: Instrument Serif display + Inter body */
+
+:root, [data-theme="dark"] {
+  --color-bg:             #0e0f11;
+  --color-surface:        #141618;
+  --color-surface-2:      #1a1c1f;
+  --color-surface-3:      #202226;
+  --color-border:         rgba(255,255,255,0.08);
+  --color-text:           #e8eaed;
+  --color-text-muted:     #8a8f98;
+  --color-text-faint:     #4a4f58;
+  --color-primary:        #3ecfb2;
+  --color-primary-hover:  #2fb89d;
+  --color-primary-dim:    rgba(62,207,178,0.12);
+  --color-primary-glow:   rgba(62,207,178,0.06);
+  --color-free:           #4ade80;
+  --color-free-dim:       rgba(74,222,128,0.12);
+  --color-cloud:          #60a5fa;
+  --color-cloud-dim:      rgba(96,165,250,0.12);
+  --color-local:          #f59e0b;
+  --color-local-dim:      rgba(245,158,11,0.12);
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-hero: clamp(2.5rem, 1rem + 5vw, 5rem);
+
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+
+  --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
+  --radius-xl: 1rem; --radius-2xl: 1.5rem; --radius-full: 9999px;
+}
+
+[data-theme="light"] {
+  --color-bg:             #f9fafb;
+  --color-surface:        #ffffff;
+  --color-surface-2:      #f3f4f6;
+  --color-surface-3:      #e5e7eb;
+  --color-border:         rgba(0,0,0,0.08);
+  --color-text:           #111827;
+  --color-text-muted:     #6b7280;
+  --color-text-faint:     #9ca3af;
+  --color-primary:        #0d9488;
+  --color-primary-hover:  #0f766e;
+  --color-primary-dim:    rgba(13,148,136,0.1);
+  --color-primary-glow:   rgba(13,148,136,0.05);
+  --color-free:           #16a34a;
+  --color-free-dim:       rgba(22,163,74,0.1);
+  --color-cloud:          #2563eb;
+  --color-cloud-dim:      rgba(37,99,235,0.1);
+  --color-local:          #d97706;
+  --color-local-dim:      rgba(217,119,6,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 84px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero::before { animation: none; }
+  .badge-dot { animation: none; }
+  .reveal { transition: none; opacity: 1; transform: none; }
+  .screenshot-card, .screenshot-card img, .discover-card { transition: none; }
+}
+body {
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-bottom: 240px; /* reserve space for Google Ads bottom banner */
+}
+img { display: block; max-width: 100%; height: auto; }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  z-index: 100;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+}
+.skip-link:focus { top: var(--space-2); left: var(--space-2); }
+ul { list-style: none; }
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { color: var(--color-primary-hover); }
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--color-bg) 90%, transparent);
+  backdrop-filter: blur(12px);
+  transition: box-shadow 200ms ease;
+}
+nav.scrolled {
+  box-shadow: 0 1px 24px rgba(0,0,0,0.25);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.nav-logo svg { flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: var(--space-6); }
+.nav-links a {
+  color: var(--color-text-muted); text-decoration: none;
+  font-size: var(--text-sm); transition: color 160ms ease;
+}
+.nav-links a:hover { color: var(--color-text); }
+.nav-links a.active { color: var(--color-text); font-weight: 500; }
+.nav-links .btn-primary {
+  color: #0a1a17;
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: #0a1a17;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  border: none; cursor: pointer;
+  text-decoration: none;
+  transition: background 160ms ease, transform 120ms ease;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); color: #fff; }
+.nav-links .btn-primary:hover {
+  color: #fff;
+}
+.btn-outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: var(--color-primary); background: var(--color-primary-dim); }
+.btn-store {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 120ms ease;
+}
+.btn-store:hover { transform: translateY(-1px); }
+.btn-store img { height: 40px; width: auto; display: block; }
+
+/* ── HERO ── */
+.hero {
+  padding: clamp(var(--space-16), 10vw, var(--space-24)) var(--space-8);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  background: var(--color-primary-dim);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-6);
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+.hero-sub {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin: 0 auto var(--space-10);
+  line-height: 1.65;
+}
+.hero-actions {
+  display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+.hero-badge {
+  display: flex; justify-content: center;
+  margin-bottom: var(--space-12);
+}
+.hero-badge .badge {
+  font-size: var(--text-sm);
+  padding: var(--space-2) var(--space-4);
+}
+.hero-stats {
+  display: flex; gap: var(--space-8); justify-content: center; flex-wrap: wrap;
+}
+.stat {
+  text-align: center;
+  min-width: 120px;
+}
+.stat-number {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  display: block;
+  line-height: 1;
+}
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── HERO ORB ── */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10% auto;
+  height: 70%;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(62,207,178,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(96,165,250,0.08) 0%, transparent 60%);
+  filter: blur(40px);
+  animation: hero-orb 10s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+@keyframes hero-orb {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-3%, 4%) scale(1.06); }
+}
+
+/* ── SECTION REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── BADGE PULSE ── */
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.6; transform: scale(1.25); }
+}
+.badge-dot { animation: badge-pulse 2.4s ease-in-out infinite; }
+
+/* ── SCREENSHOT HOVER ── */
+.screenshot-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.screenshot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.35);
+}
+.screenshot-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+  transition: transform 300ms ease;
+}
+.screenshot-card:hover img {
+  transform: scale(1.04);
+}
+
+/* ── SCREENSHOT SHOWCASE ── */
+.showcase {
+  padding: 0 var(--space-8) var(--space-20);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.screenshot-wrap {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow:
+    0 0 0 1px rgba(62,207,178,0.08),
+    0 24px 80px rgba(0,0,0,0.6),
+    0 0 120px rgba(62,207,178,0.04);
+}
+.screenshot-wrap::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,
+    transparent 70%,
+    rgba(14,15,17,0.6) 100%);
+  z-index: 1; pointer-events: none;
+  border-radius: var(--radius-2xl);
+}
+.screenshot-wrap img {
+  width: 100%; display: block;
+  border-radius: var(--radius-2xl);
+}
+.screenshot-caption {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ── FREE BADGE FLOATING ── */
+.floating-badges {
+  display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+.badge {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border: 1px solid;
+}
+.badge.free { color: var(--color-free); background: var(--color-free-dim); border-color: rgba(74,222,128,0.25); }
+.badge.cloud { color: var(--color-cloud); background: var(--color-cloud-dim); border-color: rgba(96,165,250,0.25); }
+.badge.local { color: var(--color-local); background: var(--color-local-dim); border-color: rgba(245,158,11,0.25); }
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+/* ── FAQ ACCORDION ── */
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+}
+.faq-item summary {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-size: var(--text-lg);
+  font-weight: 300;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-left: var(--space-3);
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ── PRICING ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--space-6);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.pricing-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+  transition: border-color 200ms, box-shadow 200ms;
+}
+.pricing-card:hover {
+  border-color: rgba(62,207,178,0.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+}
+.pricing-card--accent {
+  border-color: rgba(62,207,178,0.35);
+  background: linear-gradient(180deg, rgba(62,207,178,0.06), transparent);
+}
+.pricing-card--accent:hover {
+  border-color: rgba(62,207,178,0.5);
+  box-shadow: 0 12px 40px rgba(62,207,178,0.1);
+}
+.pricing-icon {
+  width: 44px; height: 44px; border-radius: var(--radius-lg);
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-3);
+  border: 1px solid rgba(62,207,178,0.2);
+}
+.pricing-icon svg { width: 20px; height: 20px; }
+.pricing-name { font-size: var(--text-base); font-weight: 600; color: var(--color-text); margin: 0; }
+.pricing-price {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  line-height: 1;
+}
+.pricing-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+.pricing-note {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  margin: 0 0 var(--space-2);
+}
+.pricing-cta {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+/* ── SECTION BASE ── */
+.section {
+  padding: var(--space-20) var(--space-8);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-alt {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.section-header {
+  max-width: 640px;
+  margin: 0 auto var(--space-12);
+  text-align: center;
+}
+.section-header h2,
+.section-header .h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+}
+.section-header h2 em,
+.section-header .h2 em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+.section-header p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+
+/* ── HOW IT WORKS STEPS ── */
+.steps {
+  display: flex;
+  gap: var(--space-6);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-8);
+}
+.step {
+  flex: 1;
+  min-width: 180px;
+  max-width: 280px;
+  text-align: center;
+}
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary-dim);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  border: 1px solid rgba(62,207,178,0.2);
+}
+.step h3 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.step p {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+.step-arrow {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-faint);
+  font-size: var(--text-lg);
+}
+@media (max-width: 768px) {
+  .step-arrow { display: none; }
+  .steps { gap: var(--space-8); }
+}
+
+/* ── PROBLEM / SOLUTION CARDS ── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px,100%), 1fr));
+  gap: var(--space-4);
+}
+.problem-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: border-color 200ms, box-shadow 200ms;
+}
+.problem-card:hover {
+  border-color: rgba(62,207,178,0.2);
+  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+}
+.problem-card h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+  line-height: 1.35;
+}
+.problem-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: var(--space-3);
+}
+.problem-card ul {
+  list-style: disc;
+  padding-left: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.problem-card li {
+  margin-bottom: var(--space-2);
+  line-height: 1.5;
+}
+
+/* ── COMPARISON TABLE (also used for requirements) ── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-size: var(--text-sm);
+}
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+.comparison-table th {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font-weight: 600;
+}
+.comparison-table td {
+  color: var(--color-text-muted);
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table td:first-child { color: var(--color-text); font-weight: 500; }
+
+/* ── FEATURES ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px,100%), 1fr));
+  gap: var(--space-4);
+}
+.feature-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: border-color 200ms, box-shadow 200ms;
+}
+.feature-card:hover {
+  border-color: rgba(62,207,178,0.2);
+  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+}
+.feature-card.large { grid-column: span 2; }
+.feature-icon {
+  width: 36px; height: 36px;
+  background: var(--color-primary-dim);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+.feature-icon svg { width: 18px; height: 18px; }
+.feature-card h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+}
+.feature-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ── CHAT EXAMPLES ── */
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px,100%), 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+.example-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  transition: border-color 200ms, box-shadow 200ms;
+}
+.example-card:hover {
+  border-color: rgba(62,207,178,0.2);
+  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+}
+.example-card h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+.example-card ul {
+  list-style: none;
+  padding: 0;
+}
+.example-card li {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--color-border);
+  transition: border-color 160ms;
+}
+.example-card li:hover {
+  border-left-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+/* ── SCREENSHOT STRIP ── */
+.screenshot-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px,100%), 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-12);
+}
+.screenshot-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+.screenshot-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+.screenshot-card figcaption {
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── DISCOVER / OTHER APPS ── */
+.discover-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px,100%), 1fr));
+  gap: var(--space-4);
+}
+.discover-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: border-color 200ms, box-shadow 200ms;
+  display: flex;
+  flex-direction: column;
+}
+.discover-card:hover {
+  border-color: rgba(62,207,178,0.2);
+  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+  transform: translateY(-2px);
+}
+.discover-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+.discover-card-body {
+  padding: var(--space-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.discover-card h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+.discover-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+  flex: 1;
+}
+.discover-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.discover-links a {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-1) var(--space-3);
+  transition: background 160ms, border-color 160ms;
+}
+.discover-links a:hover {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary);
+}
+
+/* ── PROVIDERS ── */
+.providers-section {
+  padding: var(--space-16) var(--space-8);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+.section-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-8);
+}
+.providers-grid {
+  display: flex; flex-wrap: wrap; gap: var(--space-3);
+  justify-content: center;
+  max-width: 800px; margin: 0 auto;
+}
+.provider-chip {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  transition: border-color 160ms, color 160ms, background 160ms;
+}
+.provider-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  background: var(--color-primary-dim);
+}
+.provider-chip .icon { width: 16px; height: 16px; object-fit: contain; }
+.providers-sub-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+.providers-sub-label + .providers-grid { margin-bottom: var(--space-8); }
+.providers-grid + .providers-sub-label { margin-top: var(--space-10); }
+
+/* ── SETUP / SUPPORT CARDS ── */
+.setup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px,100%), 1fr));
+  gap: var(--space-4);
+}
+.setup-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+.setup-card h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.setup-card p,
+.setup-card li {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+.setup-card ul {
+  list-style: disc;
+  padding-left: var(--space-5);
+}
+.setup-card li { margin-bottom: var(--space-2); }
+.setup-card code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.8rem;
+  background: var(--color-surface-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--color-text);
+}
+
+/* ── CTA SECTION ── */
+.cta-section {
+  padding: clamp(var(--space-16), 10vw, var(--space-24)) var(--space-8);
+  text-align: center;
+  max-width: 700px; margin: 0 auto;
+}
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: var(--space-5);
+}
+.cta-section h2 em { font-style: italic; color: var(--color-primary); }
+.cta-section p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-8);
+}
+.cta-actions {
+  display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  max-width: 1100px; margin: 0 auto;
+}
+
+/* ── BACK TO TOP ── */
+#backToTop {
+  position: fixed;
+  right: var(--space-5);
+  bottom: var(--space-5);
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+#backToTop.show { opacity: 1; visibility: visible; }
+#backToTop:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  #backToTop { transition: none; }
+}
+
+/* ── ADSENSE INLINE ADS ── */
+.ad-container {
+  margin: var(--space-8) auto;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  text-align: center;
+  max-height: 520px; /* prevent oversized rendering */
+  min-height: 90px; /* prevent CLS while ads load */
+}
+.feature-card.ad-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  padding: var(--space-2);
+}
+.feature-card.ad-card ins {
+  width: 100%;
+  max-width: 100%;
+}
+.ad-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-2);
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  #menuToggle { display: block !important; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: var(--space-4);
+    gap: var(--space-3);
+    z-index: 40;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: var(--space-2) 0; }
+  nav { position: relative; }
+  .hero { padding: var(--space-12) var(--space-5); }
+  .showcase { padding: 0 var(--space-4) var(--space-16); }
+  .section { padding: var(--space-12) var(--space-4); }
+  .feature-card.large { grid-column: span 1; }
+  .providers-section { padding: var(--space-10) var(--space-4); }
+  .hero-stats { gap: var(--space-5); }
+  .comparison-table { font-size: var(--text-xs); }
+  .comparison-table th,
+  .comparison-table td { padding: var(--space-2); }
+  .comparison-table thead th {
+    position: sticky;
+    top: 0;
+    background: var(--color-surface-2);
+    z-index: 1;
+  }
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--color-surface-2);
+    z-index: 2;
+    min-width: 110px;
+  }
+  .comparison-table thead th:first-child { z-index: 3; }
+  .overview-grid { grid-template-columns: 1fr; }
+  .hero::before {
+    inset: -10% -30% auto;
+    height: 50%;
+    filter: blur(28px);
+  }
+  .showcase .screenshot-wrap { border-radius: var(--radius-xl); }
+}
+
+/* ── OVERVIEW / ABOUT ── */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .overview-grid { grid-template-columns: 1fr 1fr; }
+}
+.overview-text p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+.overview-text strong {
+  color: var(--color-text);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: 3px; }
+</style>
 </head>
-<body>
-    <aside class="left">
-        <nav class="fixed-nav">
-            <!-- Google Ads - Left Sidebar -->
-            <!-- Ad code removed for clarity -->
-        </nav>
-    </aside>
+<body id="main">
 
-    <aside class="right">
-        <!-- Google Ads - Right Sidebar -->
-        <!-- Ad code removed for clarity -->
-    </aside>
+<a href="#main" class="skip-link">Skip to main content</a>
 
-    <main class="wikidoc">
-        <header class="page-header">
-            <h1>TabNeuron</h1>
-            <h3 data-no-toggle="true">AI Spatial Tab Manager & Research Workspace</h3>
-            <figure class="logo-container">
-                <img src="logo_small.png" alt="TabNeuron Logo" class="logo">
-            </figure>
-        </header>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-label="TabNeuron">
+      <circle cx="14" cy="14" r="12" stroke="#3ecfb2" stroke-width="1.5" fill="none"/>
+      <circle cx="14" cy="14" r="5" fill="#3ecfb2" opacity="0.8"/>
+      <circle cx="14" cy="5" r="2" fill="#3ecfb2"/>
+      <circle cx="21.5" cy="10" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="21.5" cy="18" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="14" cy="23" r="2" fill="#3ecfb2" opacity="0.3"/>
+      <circle cx="6.5" cy="18" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="6.5" cy="10" r="2" fill="#3ecfb2" opacity="0.5"/>
+    </svg>
+    TabNeuron
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#overview">Overview</a>
+    <a href="#features">Features</a>
+    <a href="#setup">Setup</a>
+    <a href="extension-support.html">Extension</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="#discover">Discover</a>
+    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron Free</a>
+    <button id="themeToggle" aria-label="Toggle light mode" style="background:none;border:none;color:var(--color-text-muted);cursor:pointer;font-size:var(--text-lg);padding:var(--space-2);">🌙</button>
+  </div>
+  <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks" style="display:none;background:none;border:none;color:var(--color-text);cursor:pointer;font-size:var(--text-xl);padding:var(--space-2);">☰</button>
+</nav>
 
-    <!-- Horizontal Navigation Bar -->
-    <nav class="horizontal-toc-nav">
-        <ul>
-            <li><a href="#inspiration-h2">Overview</a></li>
-            <li><a href="#core-capabilities-h2">Core Features</a></li>
-            <li><a href="#integrations-h2">Integrations</a></li>
-            <li><a href="#technical-h2">Technical</a></li>
-            <li><a href="#setup-h2">Setup</a></li>
-            <li><a href="#support-h2">Support</a></li>
-            <li><a href="#other-products-h2">Discover</a></li>
-        </ul>
-    </nav>
-
-    <!-- Inspiration Section -->
-    <h2 id="inspiration-h2">Overview, Your Knowledge, Your AI, Your Rules</h2>
-    <section class="inspiration-section" id="inspiration">
-        <div class="cta-box">
-
-            <p>Most tab managers are confined to tiny browser sidebars or dropdown menus, trapping your research in flat, ephemeral lists. We built TabNeuron because complex web research requires space and permanence. By pulling your browser tabs out onto a native desktop canvas, you gain an infinite 2D workspace to visually group information, analyze it with AI, and take true ownership of your browsing sessions.</p>
-        </div>
-
-        <h3 id="what-is-tabneuron-h2" class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> About TabNeuron
-    </h3>
-
-        <div class="cta-box feature-detail-content" style="display:none;">
-
-            <p>TabNeuron solves the problem that tabs are hidden in browser bars, AI forgets everything between sessions, and web research is manual. Map your active browsing session onto an infinite visual canvas. Organize tabs spatially instead of scrolling through flat lists. Chat with websites to get instant answers without manual reading. Automate research with AI agent pipelines — scrape, analyze, and output in sequence. Sync bidirectionally with Chrome Tab Groups so your browser and workspace stay aligned. AI memory that extracts facts, skills, and preferences from your chats, making answers more accurate over time. Run AI models locally so nothing leaves your machine, or connect to cloud AI.</p>
-
-        <!-- Video Section -->
-            <div class="responsive-iframe-container">
-                <iframe src="https://www.youtube.com/embed/J_zfEXgZwrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p class="video-caption"><em>Demonstration of TabNeuron workspace with browser tabs</em></p>
-
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">
+    <span class="badge-dot" style="background:var(--color-primary)"></span>
+    AI Spatial Tab Manager / Research Workspace
+  </div>
+  <h1>One canvas for <em>every tab.</em></h1>
+  <p class="hero-sub">
+    TabNeuron maps your browser tabs onto a 2D canvas: find tabs by topic instead of endless switching,
+    chat with websites and the live internet, automate research with AI agent pipelines, and sync bidirectionally
+    with Chrome Tab Groups.
+  </p>
+  <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin:0 auto var(--space-8);max-width:520px;">
+    Portable executable. Runs from a USB stick. No install, no account, no cloud sync required.
+  </p>
+  <div class="hero-actions">
+    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron Free</a>
+    <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank" rel="noopener noreferrer" class="btn-store" aria-label="Get TabNeuron from Microsoft Store">
+      <img src="ms-store.svg" alt="Get it from Microsoft" loading="lazy" width="180" height="40">
+    </a>
+    <a href="#features" class="btn-outline">See all features ↓</a>
+  </div>
+  <div class="hero-badge">
+    <span class="badge free"><span class="badge-dot"></span>$0, free for everyone</span>
+  </div>
+  <div class="showcase" style="padding:0;max-width:1100px;">
+    <div class="screenshot-wrap">
+      <img src="main.png"
+           alt="TabNeuron main workspace screen"
+           width="1140" height="820" fetchpriority="high">
     </div>
+    <div class="floating-badges">
+      <span class="badge free"><span class="badge-dot"></span> Free &amp; portable</span>
+      <span class="badge cloud"><span class="badge-dot"></span> AI research agents</span>
+      <span class="badge local"><span class="badge-dot"></span> Local or cloud AI</span>
+    </div>
+    <p class="screenshot-caption">
+      TabNeuron maps your active browsing session onto a visual canvas. AI groups tabs by topic,
+      every tab keeps its preview, metadata, and content, and workspace states are saved locally on your machine.
+    </p>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-number">2D</span>
+      <span class="stat-label">Spatial canvas</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">2-way</span>
+      <span class="stat-label">Chrome Tab Groups sync</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">93%</span>
+      <span class="stat-label">Token savings with auto-compaction</span>
+    </div>
+    <div class="stat">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Local &amp; Private</span>
+    </div>
+  </div>
 </section>
 
-
-	    <h2 id="core-capabilities-h2">Core Features</h2>
-        <section class="capabilities-section" id="core-capabilities">
-
-            <!-- 1. Canvas & Visual Organization -->
-            <div class="cta-box">
-
-    <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 📂 Organize Tabs on Canvas
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                	<div class="cta-box capability-group">
-                    <p><strong>Problem:</strong> "Which tab has that info?" — Scrolling through dozens of hidden tabs in browser bars, losing context.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> AI groups tabs on a 2D canvas by topic — visually find tabs by what they're about, not where they're buried.</li>
-                        <li><strong>Canvas Editor:</strong> Drag and drop, rename, resize — full visual control.</li>
-                        <li><strong>Mind Maps:</strong> Generate visual representations of tab groups to reveal hidden relationships.</li>
-                    </ul>
-                   </div>
-                </div>
-
-             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 📸 Visual Previews & Metadata
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                	<div class="cta-box capability-group">
-                    <p><strong>Problem:</strong> Can't tell what a tab contains without switching to it — title alone isn't enough.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> Automatic scaled screenshots, titles, URLs, and OG-tags extracted for every tab — instant visual context.</li>
-                        <li><strong>Data Ownership:</strong> Save workspace states locally to disk. Close browser, research session remains safely backed up.</li>
-                    </ul>
-                   </div>
-                </div>
-
-
-             <!-- 2. Sync & Bridge -->
-             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 🔄 Canvas ↔ Browser Sync
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box feature-detail-group">
-                    <p><strong>Problem:</strong> Workspace and browser are disconnected — changes in one don't reflect in the other.</p>
-                    <ul>
-                        <li><strong>Solution:</strong> Bidirectional sync with Chrome Tab Groups — canvas changes push to browser, browser changes pull to canvas.</li>
-                        <li><strong>Workspace → Browser:</strong> AI suggests semantic groupings, you review and click "Apply" — browser tab groups update instantly.</li>
-                        <li><strong>Browser → Workspace:</strong> Create groups or open tabs in browser — TabNeuron's polling API detects changes and pulls them onto the canvas.</li>
-                    </ul>
-                  </div>
-            </div>
-
-             <!-- 3. AI Interaction -->
-             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 💬 Chat with Websites
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box capability-group">
-                <p><strong>Problem:</strong> Opening and reading across multiple tabs takes too long. Research means comparing, copying, synthesizing manually.</p>
-                <ul>
-                    <li><strong>Solution:</strong> Select multiple tabs and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</li>
-                    <li><strong>DOM Extraction:</strong> Page content and metadata fed directly into LLM context — no manual reading.</li>
-                    <li><strong>Multi-Tab Chat:</strong> "Compare specs across 4 review tabs" → result saved locally.</li>
-                </ul>
-                <figure class="chatbot-figure">
-                    <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="chatbot-screenshot">
-                    <figcaption>Agent Chat — Full access to websites, files, and the web. Compare, extract, summarize — all through conversation. Shows token usage, tok/sec and TTFT for 🍋 Lemonade backends.</figcaption>
-                </figure>
-              </div>
-            </div>
-
-             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 🤖 AI Agent Pipelines
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box capability-group">
-                <p><strong>Problem:</strong> Repetitive web research is manual — open tabs, extract data, compare, format, save — every time.</p>
-                <ul>
-                    <li><strong>Solution:</strong> Build no-code automated workflows where one agent's output becomes the next agent's input.</li>
-                    <li><strong>Scraper Agent:</strong> Reads selected tabs, uses web_extract_links to find specs.</li>
-                    <li><strong>Analyst Agent:</strong> Takes output, compares, formats a Markdown table.</li>
-                    <li><strong>Output Agent:</strong> Writes executive summary, saves as persistent text node on canvas.</li>
-                </ul>
-              </div>
-            </div>
-
-              <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 🧠 AI Memory That Remembers
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box feature-detail-group">
-                <p><strong>Problem:</strong> AI forgets who you are after every session. Long chats are expensive and slow.</p>
-                <ul>
-                    <li><strong>Solution:</strong> Auto-extracts facts, skills, preferences, and personas from conversations. Gets better over time.</li>
-                    <li><strong>Auto-Compaction:</strong> Old conversations summarized → 93% token savings, full context preserved.</li>
-                    <li><strong>Global Memory:</strong> Shared across all agents, import/export, fully manageable.</li>
-                </ul>
-              </div>
-            </div>
-
-              <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 🔌 MCP Server & Integrations
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box feature-detail-group">
-                <p><strong>Problem:</strong> Repetitive file tasks are manual. Web research means opening multiple tabs, comparing, copying. Research takes forever.</p>
-                <ul>
-                    <li><strong>MCP Manager:</strong> Visual interface — enable/disable servers, configure settings, monitor health.</li>
-                    <li><strong>File Operations:</strong> read, write, move, search, edit — all through conversation.</li>
-                    <li><strong>Web Tools:</strong> Fetch, scrape, search, extract — AI has direct web access.</li>
-                    <li><strong>External Servers:</strong> Connect Google Drive, GitHub, PostgreSQL, custom tools.</li>
-                </ul>
-              </div>
-            </div>
-
-              <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> ☁️ AI Backends — Local or Cloud
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box feature-detail-group">
-                <p><strong>Problem:</strong> Data goes to cloud providers — no privacy. Or local models are hard to configure.</p>
-                <ul>
-                    <li><strong>Local:</strong> 🍋 Lemonade (NPU acceleration), Ollama, Llama.cpp, LM Studio — nothing leaves your machine.</li>
-                    <li><strong>Cloud:</strong> OpenAI, Mistral, Gemini (free tier), and more — when you need power.</li>
-                    <li><strong>Model Manager:</strong> Activate/deactivate models per task — 2-pane view (🍋 Lemonade only) for chat + embedding simultaneously.</li>
-                </ul>
-              </div>
-            </div>
-
-              <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 📦 Technical Details
-    </h3>
-    <div class="feature-detail-content" style="display:none;">
-                <div class="cta-box feature-detail-group">
-                <ul>
-                    <li><strong>Portable:</strong> Runs from USB, extract anywhere, data stays under your control.</li>
-                    <li><strong>Centralized Storage:</strong> All data in a single <code>.tabneuron/</code> folder. Existing installs migrate automatically.</li>
-                    <li><strong>Browser Bridge:</strong> Lightweight extension connects via local polling API — no data leaves your machine.</li>
-                </ul>
-              </div>
-            </div>
-            </div>
-
-            </div>
-
- 
-
-        <figure class="screenshot-figure">
-        <img src="chatbot.png" alt="TabNeuron Visual Canvas Workspace" class="sorana-screenshot">
-        <figcaption>Visual Canvas: Browser tabs organized spatially with AI-powered grouping</figcaption>
-    </figure>
-
-        <figure class="screenshot-figure">
-        <img src="mindmap.png" alt="TabNeuron Mind Map Screenshot" class="sorana-screenshot">
-        <figcaption>Mind Map Generation: Visualize tab groups and their relationships</figcaption>
-    </figure>
-	</section>
-
-
-    <!-- Chat with Websites Section -->
-    
-<h2 id="setup-h2">Setup</h2>
-    <section class="requirements-section" id="system-requirements">
-
-     <h3 id="system-requirements-h2" class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 📂 System Requirements
-    </h3>
-
-        <div class="cta-box feature-detail-content" style="display:none;">
-
-        <table>
-            <tr><th>Component</th><th>Minimum</th></tr>
-            <tr><td>OS</td><td>Windows 11 (64-bit)</td></tr>
-            <tr><td>🌐 Browser</td><td>Google Chrome (required for extension)</td></tr>
-            <tr><td>🧠 AI Support</td><td>Built-in models or on-prem/cloud AI services</td></tr>
-            <tr><td>💾 RAM</td><td>&ge; 4 GB</td></tr>
-            <tr><td>💽 Storage</td><td>Minimum 2 GB (app + model) + .tabneuron/ data folder</td></tr>
-            <tr><td>⚡ Rights</td><td>Standard user</td></tr>
-        </table>
+<!-- HOW IT WORKS -->
+<section class="section" id="how-it-works">
+  <div class="section-header">
+    <h2>How it <em>works.</em></h2>
+    <p>Three steps to a research workspace that actually owns your browsing.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Install &amp; connect</h3>
+      <p>Download the portable app, install the free <a href="extension-support.html">Tetramatrix Connector extension</a> for Chrome, and they connect through a local polling API on localhost:5555.</p>
     </div>
+    <div class="step-arrow">→</div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Organize your tabs</h3>
+      <p>Your active browsing session is mapped onto a 2D canvas. AI groups tabs by topic: drag, rename, resize, and generate mind maps to see the relationships.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Chat &amp; automate</h3>
+      <p>Chat with any website or the live internet, then automate research with no-code agent pipelines that scrape, analyze, and output in sequence.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Final Download Section -->
-
-          <h3 id="final-download-h2" class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> 🚀 Claim Your Workspace
-    </h3>
-            
-   	<div class="cta-box feature-detail-content" style="display:none;">
-
-            <p>Download the application, then install the Chrome extension.</p>
-
-            <div class="download-buttons">
-                <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn btn-primary btn-large">Download (Portable)</a>
-                <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" class="btn btn-primary btn-large">Chrome Web Store: Tetramatrix Connector</a>
-                <a href="README.txt" class="btn btn-primary">Readme</a>
-            </div>
-
-             <code>$ md5sum.exe TabNeuron.exe v1.0.11 e27b321b505cc6e069b0b32e33622f65</code>
-
-            <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank"><img src="ms-store.svg" alt="Get it from Microsoft" width="40%" /></a>
-
-            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
-                <p><strong>After installation:</strong> Configure the browser extension and click Start. Then launch TabNeuron and select Organize Tabs to begin the synchronization. The app will display the synchronization progress. Done! The extension connects to <code>localhost:5555</code> (default port).</p>
-            </div>
-
-        </div>
-    </section>
-
-
-		
-<h2 id="support-h2">Support</h2>
-    <section class="support-section" id="support-donations">
-
-        <div class="cta-box" id="discord-community">
-
-              <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> Join our Discord community
-    </h3>
-
-            <div class="external-links feature-detail-content" style="display:none;">
-                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">TabNeuron Discord</a>
-            </div>
-
-
-             <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> Leave a review or star the project
-    </h3>
-
-            <div class="feature-detail-content" style="display:none;">
-            <a href="https://alternativeto.net/software/tabneuron/" target="_blank"><img src="AlternativeTo.png" width="20%" alt="The  Visual AI Web Workspace" /></a>
-						</div>
-
-
-                <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span> Support via PayPal or Bitcoin Cash
-    </h3>
-
-
-                
-            <div class="payment-options feature-detail-content" style="display:none;">
-                <div class="paypal-option">
-                    <h4>PayPal</h4>
-                    <p><a href="paypal.me/Gigamegs">paypal.me/Gigamegs</a></p>
-                    <figure class="qr-figure">
-                        <img src="qrcode.png" alt="PayPal QR Code" class="qr-code">
-                    </figure>
-                </div>
-
-                <div class="bch-option">
-                    <h4>Bitcoin Cash (BCH)</h4>
-                    <p>bitcoincash:<br/>
-                    qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv</p>
-                    <figure class="qr-figure">
-                        <img src="bch_qrcode.png" alt="Bitcoin Cash QR Code" class="qr-code">
-                    </figure>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-		<h2 id="other-products-h2">Discover our other tools and games</h2>
-    <section class="other-products-section" id="other-products">
-
-			<div class="cta-box capability-group">
-
-                 <h3 class="feature-detail-toggle" onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>New Spaceship - Retro Mini Game</h3>
-
-        <div class="capability-content" style="display:none;" id="spaceship-intro">
-
-            <p>Retro Arcade 2d side-scroller bullet-hell shmup game</p>
-
-					<div class="cta-box capability-group">
-	            <h4 class="style-box">Website</h4>
-	            <figure class="product-fig">
-	                <a href="http://tetramatrix.github.io/spaceship" target="_blank">
-	                    <img src="start.jpg" title="Retro Arcade 2d side-scroller bullet-hell shmup game" alt="Spaceship" />
-	                </a>
-	            </figure>
-
-
-	            <h4 class="style-box">Featured on itch.io</h4>
-	            <figure class="product-fig">
-	                <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship">
-	                    <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship - Retro Mini Game" />
-	                </a>
-	            </figure>
-
-	            <h4 class="style-box">Featured on IndieDB</h4>
-	            <figure class="product-fig">
-	                <a href="https://www.indiedb.com/games/new-spaceship" title="View New Spaceship on IndieDB" target="_blank">
-	                    <img src="https://button.indiedb.com/popularity/medium/games/86877.png" alt="New Spaceship" />
-	                </a>
-	            </figure>
-	        </div>
-        </div>
-
-
-				<h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>🧩 Sorana - Your Personal AI That Actually Knows You</h3>
-        <div class="capability-content" style="display:none;" id="sorana-intro">
-
-            <p>Sorana is your personal AI knowledge workspace, a second brain that actually acts. Unlike chatbots that forget you the moment you close the window, Sorana builds a lasting memory of your projects, files, and thinking style. Open it tomorrow and it already knows where you left off. Visualise your entire knowledge base on a spatial 2D canvas (like Obsidian Canvas, but AI-powered), chat with any document in plain language, and let your AI handle repetitive tasks, organising files, researching topics, managing emails, all without leaving your workspace. Everything runs on your machine. Your data stays yours.</p>
-            <figure class="screenshot-figure">
-                <a href="http://tetramatrix.github.io/Sorana" target="_blank"><img src="Sorana_main.png" alt="Sorana Visual AI Workspace Interface" class="sorana-screenshot"></a>
-                <figcaption>Sorana: Files organized on an infinite 2D canvas with AI-powered grouping</figcaption>
-            </figure>
-
-				<div class="cta-box capability-group">
-
-             <h4 class="style-box">Website & Community</h4>
-            <div class="download-buttons">
-                <a href="http://tetramatrix.github.io/Sorana" target="_blank" class="btn btn-primary">🌐 Website</a>
-                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">💬 Discord</a>
-            </div>
-
-            <h4 class="style-box">Featured on Softpedia:</h4>
-            <p>
-                <a href="https://www.softpedia.com/get/System/File-Management/Sorana.shtml" target="_blank"><img src="softpedia.png" width="200px" height="60px" alt="Get it from Softpedia" /></a>
-            </p>
-
-            <h4 class="style-box">Featured on Microsoft Store:</h4>
-            <p>
-                <a href="https://apps.microsoft.com/detail/9n8c43pzc1rn" target="_blank"><img src="ms-store.svg" width="200px" height="60px" alt="Get it from Microsoft" /></a>
-            </p>
-        </div>
+<!-- AD SPOT A -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-6449563648591184"
+       data-ad-slot="8924662119"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-				<h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>RyzenZPilot - AMD Ryzen Power Management Tool</h3>
+<!-- OVERVIEW -->
+<section class="section" id="overview">
+  <div class="section-header">
+    <h2>Your knowledge. <em>Your AI.</em> Your rules.</h2>
+    <p>Complex web research requires space and permanence. TabNeuron pulls your browser tabs out onto a native desktop canvas.</p>
+  </div>
+  <div class="overview-grid">
+    <div class="overview-text">
+      <p><strong>Most tab managers are confined to tiny browser sidebars or dropdown menus, trapping your research in flat, ephemeral lists.</strong> We built TabNeuron because complex web research requires space and permanence. By pulling your browser tabs out onto a native desktop canvas, you gain a 2D workspace to visually group information, analyze it with AI, and take true ownership of your browsing sessions.</p>
+      <p><strong>TabNeuron solves the problems that tabs are hidden in browser bars, AI forgets everything between sessions, and web research is manual.</strong> Map your active browsing session onto a visual canvas. Organize tabs spatially instead of scrolling through flat lists. Chat with websites to get instant answers without manual reading. Automate research with AI agent pipelines: scrape, analyze, and output in sequence. Sync bidirectionally with Chrome Tab Groups so your browser and workspace stay aligned.</p>
+      <p><strong>Everything runs on your machine. Your data stays yours.</strong></p>
+    </div>
+    <figure class="screenshot-card" style="margin:0;">
+      <img src="main.png" alt="TabNeuron main workspace screen" loading="lazy" width="640" height="400">
+      <figcaption>Your knowledge, your AI, your rules. Everything runs on your machine.</figcaption>
+    </figure>
+  </div>
+</section>
 
-
-        <div class="capability-content" style="display:none;" id="ryzenzpilot-intro">
-
-
-            <p>RyzenZPilot is a powerful tool for managing AMD Ryzen processor power settings on Windows.
-            It allows users to adjust CPU performance, power limits, and thermal configurations
-            for optimal performance and efficiency.</p>
-
-
-			<div class="cta-box capability-group">
-
-            <h4 class="style-box">Website</h4>
-            <figure class="product-fig">
-                <a href="http://tetramatrix.github.io/RyzenZPilot" target="_blank">
-                    <img src="RyzenZPilot_3.1.3.png" title="AMD Ryzen Power Management Tool" alt="RyzenZPilot" />
-                </a>
-            </figure>
-        </div>
-			</div>
-
-				<h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>Aicono - AI Intelligent Desktop Icon Autopilot</h3>
-
-        <div class="capability-content" style="display:none;" id="aicono-intro">
-
-            <p>Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!</p>
-
-
-			<div class="cta-box capability-group">
-
-            <h4 class="style-box">Website</h4>
-            <figure class="product-fig">
-                <a href="http://tetramatrix.github.io/Aicono" target="_blank">
-                    <img src="main.png" title="AI Intelligent Desktop Icon Autopilot" alt="Aicono" />
-                </a>
-            </figure>
-
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>Featured on Microsoft Store</h3>
-                <div class="feature-detail-content" style="display:none;">
-            <figure class="store-fig">
-                <a href="https://apps.microsoft.com/store/detail/XP8LNKJ7H4B1WS" target="_blank">
-                    <img src="ms-store.svg" width="50%" height="50%" alt="Get it from Microsoft" />
-                </a>
-            </figure>
-						</div>
-
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>Featured on Softpedia</h3>
-                <div class="feature-detail-content" style="display:none;">
-            <figure class="store-fig">
-                <a href="https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml" target="_blank">
-                    <img src="softpedia.png" width="40%" height="40%" alt="Get it from Softpedia" />
-                </a>
-            </figure>
-						</div>
-
-             <h3 class="feature-detail-toggle"                 onclick="toggleFeatureDetail(this)">
-        <span class="toggle-icon">▶</span>Featured on AlternativeTo</h3>
-                <div class="feature-detail-content" style="display:none;">
-            <figure class="store-fig">
-                <a href="https://alternativeto.net/software/aicono" title="Aicono automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly!" target="_blank">
-                    <img src="AlternativeTo.png" width="20%" alt="Aicono - AI Intelligent Desktop Icon Autopilot" />
-                </a>
-            </figure>
-						</div>
-        </div>
+<!-- AD SPOT B -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:468px;height:60px"
+       data-ad-client="ca-pub-6449563648591184"
+       data-ad-slot="6119369521"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-    </section>
 
+<!-- WHY TABNEURON -->
+<section class="section section-alt" id="why-tabneuron">
+  <div class="section-header">
+    <h2>Why TabNeuron? Because <em>research deserves space.</em></h2>
+    <p>Common browser frustrations and how TabNeuron solves them.</p>
+  </div>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <h3>Your tabs are buried in browser bars</h3>
+      <p>Scrolling through dozens of hidden tabs, losing context. "Which tab has that info?" AI groups tabs on a 2D canvas by topic, so you find tabs by what they're about, not where they're buried.</p>
+    </div>
+    <div class="problem-card">
+      <h3>AI forgets everything between sessions</h3>
+      <p>TabNeuron automatically extracts facts, skills, preferences, and personas from your conversations. Long term profiles make answers more accurate over time.</p>
+    </div>
+    <div class="problem-card">
+      <h3>Web research is manual</h3>
+      <p>Opening and reading across multiple tabs takes too long. Select multiple tabs and ask the AI to synthesize, compare, or extract data across all of them simultaneously.</p>
+    </div>
+    <div class="problem-card">
+      <h3>Workspace and browser are disconnected</h3>
+      <p>Bidirectional sync with Chrome Tab Groups: canvas changes push to the browser, browser changes pull to the canvas. Your browser and workspace stay aligned.</p>
+    </div>
+    <div class="problem-card">
+      <h3>You can't tell what a tab contains</h3>
+      <p>Titles alone aren't enough. Automatic scaled screenshots, titles, URLs, and OG-tags are extracted for every tab for instant visual context without switching.</p>
+    </div>
+    <div class="problem-card">
+      <h3>Repetitive file and web tasks are manual</h3>
+      <p>Built-in MCP server and integrations handle file operations (read, write, move, search, edit) and web tools like fetch, scrape, search, and extract, all through conversation.</p>
+    </div>
+    <div class="problem-card">
+      <h3>Your data goes to the cloud with no privacy</h3>
+      <p>Run models locally with Lemonade (NPU acceleration), Ollama, Llama.cpp, or LM Studio, so nothing leaves your machine. Connect cloud AI only when you need the power.</p>
+    </div>
+    <div class="problem-card">
+      <h3>Long chats get slow and expensive</h3>
+      <p>Auto-compaction summarizes old conversations with up to 93% token savings and full context preserved. Projects that span months stay fast and affordable.</p>
+    </div>
+  </div>
+</section>
 
-        <div class="cta-box">
-            <p style="text-align:center; color:#888;"><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="color:#888; text-decoration:none;">↑ Back to Top</a></p>
-        </div>
+<!-- CORE FEATURES -->
+<section class="section" id="features">
+  <div class="section-header">
+    <h2>Core features for <em>serious research.</em></h2>
+    <p>Everything you need in a single workspace: spatial organization, AI chat, agents, memory, and browser sync.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card large">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3>Organize Tabs on Canvas</h3>
+      <p>AI groups your open tabs on a 2D canvas by topic, so you visually find tabs by what they're about, not where they're buried. The canvas editor gives you full visual control: drag and drop, rename, and resize. Generate mind maps from your tab groups to reveal hidden relationships between topics.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/>
+        </svg>
+      </div>
+      <h3>Visual Previews &amp; Metadata</h3>
+      <p>Automatic scaled screenshots, titles, URLs, and OG-tags extracted for every tab for instant visual context. Workspace states are saved locally to disk, so closing the browser never loses your research session.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
+        </svg>
+      </div>
+      <h3>Canvas ↔ Browser Sync</h3>
+      <p>Bidirectional sync with Chrome Tab Groups. AI suggests semantic groupings; review and click "Apply" and browser tab groups update instantly. Create groups in the browser and TabNeuron's polling API detects the change and pulls it onto the canvas.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        </svg>
+      </div>
+      <h3>Chat with Websites</h3>
+      <p>Select multiple tabs and ask the AI to synthesize, compare, or extract data across all of them simultaneously. DOM extraction feeds page content and metadata directly into the LLM context with no manual reading. "Compare specs across 4 review tabs" → result saved locally.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <h3>AI Agent Pipelines</h3>
+      <p>Build no-code automated workflows where one agent's output becomes the next agent's input. A Scraper Agent reads selected tabs and extracts links and specs, an Analyst Agent compares and formats a Markdown table, and an Output Agent writes an executive summary saved as a persistent text node on the canvas.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+        </svg>
+      </div>
+      <h3>AI Memory That Remembers</h3>
+      <p>Automatically extracts facts, skills, preferences, and personas from conversations, so it gets better over time. Auto-compaction summarizes old conversations with up to 93% token savings while preserving full context, and a global memory is shared across all agents with import/export.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+        </svg>
+      </div>
+      <h3>MCP Server &amp; Integrations</h3>
+      <p>Visual MCP Manager to enable, disable, and monitor servers. File operations (read, write, move, search, edit) all through conversation. Web tools for fetch, scrape, search, and extract, plus external servers for Google Drive, GitHub, PostgreSQL, and custom tools.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/>
+        </svg>
+      </div>
+      <h3>AI Backends: Local or Cloud</h3>
+      <p>Local: Lemonade (NPU acceleration), Ollama, Llama.cpp, and LM Studio, so nothing leaves your machine. Cloud: OpenAI, Mistral, Gemini, and more when you need power. The Model Manager activates or deactivates models per task with a 2-pane view for chat and embeddings simultaneously.</p>
+    </div><div class="feature-card">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05"/><path d="M12 22.08V12"/>
+        </svg>
+      </div>
+      <h3>Portable &amp; Private</h3>
+      <p>Runs from a USB stick. Extract anywhere, no installation, no admin rights. All data lives in a single <code style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace;font-size:0.8rem;background:var(--color-surface-2);padding:2px 6px;border-radius:4px;">.tabneuron/</code> folder, and the lightweight browser bridge connects via a local polling API, so no data leaves your machine.</p>
+    </div><div class="feature-card ad-card">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-7g+ex-1i-2s+ay"
+         data-ad-client="ca-pub-6449563648591184"
+         data-ad-slot="9713451440"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+  </div>
+  <div class="screenshot-strip">
+    <figure class="screenshot-card">
+      <img src="chat-sidebar.png" alt="Chat sessions sidebar" loading="lazy" width="640" height="400">
+      <figcaption>Switch between archived chat sessions and view formatted answers.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="chat.png" alt="Formatted chat answers" loading="lazy" width="640" height="400">
+      <figcaption>See Markdown answers, separated reasoning, and tables.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="mindmap.png" alt="Mind map generation" loading="lazy" width="640" height="400">
+      <figcaption>Generate mind maps from tab groups to reveal hidden relationships.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="rag.png" alt="RAG knowledge base" loading="lazy" width="640" height="400">
+      <figcaption>Tabs are indexed with adaptive retrieval: semantic search, keywords, and full-text fallback.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="memories.png" alt="AI memory management" loading="lazy" width="640" height="400">
+      <figcaption>Facts, skills, preferences, and personas extracted over time.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="mcpmanager.png" alt="MCP Manager" loading="lazy" width="640" height="400">
+      <figcaption>Visual MCP Manager to enable, disable, and monitor integrations.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="modelmanager.png" alt="Model Manager" loading="lazy" width="640" height="400">
+      <figcaption>Activate or deactivate models per task, local or cloud.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="agents.png" alt="AI agent pipelines" loading="lazy" width="640" height="400">
+      <figcaption>No-code agent pipelines: scrape, analyze, and output in sequence.</figcaption>
+    </figure>
+  </div>
+  <div class="cta-section" style="padding:var(--space-12) 0;max-width:900px;margin:0 auto;">
+    <h2 style="margin-bottom:var(--space-3);">Ready to organize your research?</h2>
+    <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);max-width:560px;margin-left:auto;margin-right:auto;">Download the portable executable, install the free Chrome extension, and map your browsing session onto a 2D canvas.</p>
+    <div class="cta-actions">
+      <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron Free</a>
+      <a href="https://github.com/Tetramatrix/TabNeuron" class="btn-outline">View on GitHub</a>
+    </div>
+  </div>
+</section>
 
-    <footer class="main-footer">
-        <p class="footer-text">
-             🏢 Developed by <b>Tetramatrix</b> | 🔧 Specially optimized for AMD Ryzen systems | 💝 Free for everyone
+<!-- AD SPOT E -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:728px;height:90px"
+       data-ad-client="ca-pub-6449563648591184"
+       data-ad-slot="8476391393"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- CHAT EXAMPLES -->
+<section class="section" id="chat-examples">
+  <div class="section-header">
+    <h2>See what you can <em>ask TabNeuron.</em></h2>
+    <p>Your AI connects research, tabs, memory, files, and the live internet. One question can span them all.</p>
+  </div>
+  <div class="examples-grid">
+    <div class="example-card">
+      <h4>Organize &amp; Find</h4>
+      <ul>
+        <li>"Group my open tabs by topic"</li>
+        <li>"Show me all tabs related to this project"</li>
+        <li>"Generate a mind map of my research tabs"</li>
+        <li>"Rename this group to Budget 2026"</li>
+        <li>"Save this workspace state so I can come back to it"</li>
+      </ul>
+    </div>
+    <div class="example-card">
+      <h4>Chat with the Web</h4>
+      <ul>
+        <li>"Summarize this article for me"</li>
+        <li>"Compare specs across 4 review tabs"</li>
+        <li>"Extract all prices from these product pages"</li>
+        <li>"Find the key differences between these two frameworks"</li>
+        <li>"Draft a summary memo from these three articles"</li>
+      </ul>
+    </div>
+    <div class="example-card">
+      <h4>Automate Research</h4>
+      <ul>
+        <li>"Scrape specs from my open tabs, compare them, and output a Markdown table"</li>
+        <li>"Write an executive summary and save it as a text node on the canvas"</li>
+        <li>"Fetch the latest news on this topic and summarize the trends"</li>
+        <li>"Research this company and save the key facts for my interview"</li>
+        <li>"Turn these requirements into a technical spec and review it"</li>
+      </ul>
+    </div>
+    <div class="example-card">
+      <h4>Sync &amp; Control</h4>
+      <ul>
+        <li>"Apply this grouping to Chrome Tab Groups"</li>
+        <li>"Pull my newly opened browser tabs onto the canvas"</li>
+        <li>"What changed in my browser since my last sync?"</li>
+        <li>"Unsync this group from the browser"</li>
+      </ul>
+    </div>
+    <div class="example-card">
+      <h4>Memory</h4>
+      <ul>
+        <li>"Remember that I prefer primary sources"</li>
+        <li>"What did I research about solar panels last week?"</li>
+        <li>"Summarize my notes on project budgeting"</li>
+        <li>"Compare what I know about option A versus option B"</li>
+        <li>"Export my global memory profile"</li>
+      </ul>
+    </div>
+    <div class="example-card">
+      <h4>Files &amp; Tools</h4>
+      <ul>
+        <li>"Move these downloaded files into my project folder"</li>
+        <li>"Search my notes for the client meeting summary"</li>
+        <li>"Read this PDF and extract the key findings"</li>
+        <li>"Search GitHub for related issues about this feature"</li>
+        <li>"Check the health of my MCP servers"</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AD SPOT D -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:300px;height:250px"
+       data-ad-client="ca-pub-6449563648591184"
+       data-ad-slot="3798779788"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- PROVIDERS -->
+<section class="providers-section" id="providers">
+  <p class="section-label">Supported out of the box</p>
+  <p class="section-label providers-sub-label">Cloud Providers</p>
+  <div class="providers-grid">
+    <div class="provider-chip">
+      <img src="https://cdn.simpleicons.org/openai/8a8f98" class="icon" alt="" aria-hidden="true">
+      OpenAI
+    </div>
+    <div class="provider-chip">
+      <img src="https://cdn.simpleicons.org/mistral/8a8f98" class="icon" alt="" aria-hidden="true">
+      Mistral
+    </div>
+    <div class="provider-chip">
+      <img src="https://cdn.simpleicons.org/google/8a8f98" class="icon" alt="" aria-hidden="true">
+      Gemini
+    </div>
+    <div class="provider-chip">
+      <svg class="icon" viewBox="0 0 16 16" fill="#8a8f98"><circle cx="8" cy="8" r="7" fill="none" stroke="#8a8f98" stroke-width="1.5"/><circle cx="8" cy="8" r="2" fill="#8a8f98"/></svg>
+      OpenAI-compatible APIs
+    </div>
+  </div>
+  <p class="section-label providers-sub-label">Local / On-premise</p>
+  <div class="providers-grid">
+    <div class="provider-chip">
+      <svg class="icon" viewBox="0 0 16 16" fill="#8a8f98"><circle cx="8" cy="8" r="6" fill="none" stroke="#8a8f98" stroke-width="1.5"/><circle cx="8" cy="8" r="2.5" fill="#8a8f98"/></svg>
+      Lemonade (NPU)
+    </div>
+    <div class="provider-chip">
+      <svg class="icon" viewBox="0 0 16 16" fill="#8a8f98"><path d="M8 1L14 8L8 15L2 8L8 1Z" fill="none" stroke="#8a8f98" stroke-width="1.5"/></svg>
+      Ollama
+    </div>
+    <div class="provider-chip">
+      <svg class="icon" viewBox="0 0 16 16" fill="#8a8f98"><rect x="2" y="2" width="12" height="12" rx="2" fill="none" stroke="#8a8f98" stroke-width="1.5"/></svg>
+      LM Studio
+    </div>
+    <div class="provider-chip">
+      <svg class="icon" viewBox="0 0 16 16" fill="#8a8f98"><path d="M2 8h12M8 2v12" stroke="#8a8f98" stroke-width="1.5"/></svg>
+      Llama.cpp
+    </div>
+  </div>
+</section>
+
+<!-- AD SPOT F -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:336px;height:280px"
+       data-ad-client="ca-pub-6449563648591184"
+       data-ad-slot="8429838091"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- SETUP -->
+<section class="section" id="setup">
+  <div class="section-header">
+    <h2>Get started in <em>minutes.</em></h2>
+    <p>Download, install the extension, and start organizing. No installation required.</p>
+  </div>
+  <div class="setup-grid">
+    <div class="setup-card">
+      <h3>Download</h3>
+      <p>Grab the latest portable executable from GitHub. Extract it anywhere, even a USB drive.</p>
+    </div>
+    <div class="setup-card">
+      <h3>Install the Chrome extension</h3>
+      <p>Install the free Tetramatrix Connector from the Chrome Web Store, configure it, and click Start. The extension connects to <code>localhost:5555</code> (default port).</p>
+    </div>
+    <div class="setup-card">
+      <h3>Launch &amp; organize</h3>
+      <p>Launch TabNeuron and select Organize Tabs to begin the synchronization. The app displays the sync progress, and your tabs are on the canvas.</p>
+    </div>
+  </div>
+  <div style="overflow-x: auto; display: block; margin-top: var(--space-12);">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Minimum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>OS</td><td>Windows 11 (64-bit)</td></tr>
+        <tr><td>Browser</td><td>Google Chrome (required for extension)</td></tr>
+        <tr><td>AI Support</td><td>Built-in models or on-prem/cloud AI services</td></tr>
+        <tr><td>RAM</td><td>≥ 4 GB</td></tr>
+        <tr><td>Storage</td><td>Minimum 2 GB (app + model) + .tabneuron/ data folder</td></tr>
+        <tr><td>Rights</td><td>Standard user</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="cta-section" style="padding: var(--space-12) 0 0; max-width: none;">
+    <div class="cta-actions">
+      <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron (Portable)</a>
+      <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" target="_blank" rel="noopener" class="btn-outline">Chrome Web Store: Tetramatrix Connector</a>
+      <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank" rel="noopener" class="btn-outline">Microsoft Store</a>
+      <a href="README.txt" class="btn-outline">Readme</a>
+    </div>
+    <p style="font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-6);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace;">
+      $ md5sum.exe TabNeuron.exe v1.0.11 e27b321b505cc6e069b0b32e33622f65
     </p>
-        </p>
-    </footer>
+  </div>
+</section>
 
-</main>
+<!-- SUPPORT -->
+<section class="section section-alt" id="support">
+  <div class="section-header">
+    <h2>Need <em>help?</em></h2>
+    <p>Join the community, leave a review, or support the project.</p>
+  </div>
+  <div class="setup-grid">
+    <div class="setup-card">
+      <h3>Community</h3>
+      <p>Join the Discord server to ask questions, share workflows, and get help from other TabNeuron users.</p>
+      <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn-outline" style="margin-top: var(--space-4);">Join Discord</a>
+    </div>
+    <div class="setup-card">
+      <h3>Leave a review or star</h3>
+      <p>Leave feedback on AlternativeTo or star the project on GitHub to help others discover TabNeuron.</p>
+      <a href="https://alternativeto.net/software/tabneuron/" target="_blank" rel="noopener" class="btn-outline" style="margin-top: var(--space-4);">AlternativeTo Feedback</a>
+      <a href="https://github.com/Tetramatrix/TabNeuron" target="_blank" rel="noopener" class="btn-outline" style="margin-top: var(--space-3);">Star on GitHub</a>
+    </div>
+    <div class="setup-card">
+      <h3>Support via PayPal</h3>
+      <p>Donations via PayPal help keep the project free for everyone. Thank you for your support!</p>
+      <a href="https://paypal.me/Gigamegs" target="_blank" rel="noopener" class="btn-outline" style="margin-top: var(--space-4);">paypal.me/Gigamegs</a>
+    </div>
+    <div class="setup-card">
+      <h3>Support via Bitcoin Cash</h3>
+      <p>Donate Bitcoin Cash to support the project. Any amount is appreciated.</p>
+      <p style="margin-top: var(--space-3); font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace;font-size:0.8rem;word-break:break-all;">
+        bitcoincash:qrvhk77ujevd9n7jse4jewm99eg95at7tvc6m9v2vv
+      </p>
+    </div>
+  </div>
+</section>
 
-<script src="main.js"></script>
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="section-header">
+    <h2>Simple <em>pricing.</em></h2>
+    <p>TabNeuron is fully free today. A planned premium option is coming for users who want extra support.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card pricing-card--accent">
+      <div class="pricing-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3 class="pricing-name">Free</h3>
+      <div class="pricing-price">$0</div>
+      <p class="pricing-desc">Unlimited use during public preview. Bring your own API key or run local models. No account, no trial clock.</p>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21v-2"/><path d="M4 17V3"/><path d="M12 21v-6"/><path d="M12 11V3"/><path d="M20 21V13"/><path d="M20 9V3"/></svg>
+      </div>
+      <h3 class="pricing-name">Premium Support &amp; Early Access</h3>
+      <div class="pricing-price">Coming soon</div>
+      <p class="pricing-desc">Optional paid tier. Priority setup help, early access to new integrations, and direct feedback channel. All current features remain available in the free tier.</p>
+      <p class="pricing-note">Not yet available. Join Discord for updates.</p>
+      <a href="https://discord.gg/4QkQSfSATF" target="_blank" rel="noopener" class="btn-outline pricing-cta">Join Discord for updates</a>
+    </div>
+  </div>
+</section>
+
+<!-- AD SPOT G -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+	<ins class="adsbygoogle"
+	     style="display:inline-block;width:728px;height:90px"
+	     data-ad-client="ca-pub-6449563648591184"
+	     data-ad-slot="3783483244"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+<!-- DISCOVER -->
+<section class="section section-alt" id="discover">
+  <div class="section-header">
+    <h2>Discover <em>more apps.</em></h2>
+    <p>Other tools from Tetramatrix for productivity, gaming, and AI-powered workflows.</p>
+  </div>
+  <div class="discover-grid">
+    <div class="discover-card">
+      <img src="250516_ezgif.com-optimize.gif" alt="New Spaceship retro arcade game" loading="lazy" width="640" height="400">
+      <div class="discover-card-body">
+        <h3>New Spaceship</h3>
+        <p>Retro Arcade 2D side-scroller bullet-hell shmup game.</p>
+        <div class="discover-links">
+          <a href="http://tetramatrix.github.io/spaceship" target="_blank" rel="noopener">Website</a>
+          <a href="https://tetramatrix.itch.io/old-school-retro-mini-game-spaceship" target="_blank" rel="noopener">itch.io</a>
+          <a href="https://www.indiedb.com/games/new-spaceship" target="_blank" rel="noopener">IndieDB</a>
+        </div>
+      </div>
+    </div>
+    <div class="discover-card">
+      <img src="Sorana_main.png" alt="Sorana personal AI knowledge workspace" loading="lazy" width="640" height="400">
+      <div class="discover-card-body">
+        <h3>Sorana</h3>
+        <p>Your personal AI knowledge workspace, a second brain that remembers your projects, learns your preferences, and finds any file or note instantly. Fully offline on Windows.</p>
+        <div class="discover-links">
+          <a href="http://tetramatrix.github.io/Sorana" target="_blank" rel="noopener">Website</a>
+          <a href="https://discord.gg/4QkQSfSATF" target="_blank" rel="noopener">Discord</a>
+          <a href="https://apps.microsoft.com/detail/9n8c43pzc1rn" target="_blank" rel="noopener">Microsoft Store</a>
+        </div>
+      </div>
+    </div>
+    <div class="discover-card">
+      <img src="RyzenZPilot_3.1.3.png" alt="RyzenZPilot AMD power management" loading="lazy" width="640" height="400">
+      <div class="discover-card-body">
+        <h3>RyzenZPilot</h3>
+        <p>Powerful tool for managing AMD Ryzen processor power settings on Windows. Adjust CPU performance, power limits, and thermal configurations.</p>
+        <div class="discover-links">
+          <a href="http://tetramatrix.github.io/RyzenZPilot" target="_blank" rel="noopener">Website</a>
+        </div>
+      </div>
+    </div>
+    <div class="discover-card">
+      <img src="desktop_clean.png" alt="Aicono AI desktop icon organizer" loading="lazy" width="640" height="400">
+      <div class="discover-card-body">
+        <h3>Aicono</h3>
+        <p>AI Intelligent Desktop Icon Autopilot. Automatically organizes your cluttered Windows desktop using AI. Group icons intelligently, arrange them neatly.</p>
+        <div class="discover-links">
+          <a href="http://tetramatrix.github.io/Aicono" target="_blank" rel="noopener">Website</a>
+          <a href="https://apps.microsoft.com/store/detail/XP8LNKJ7H4B1WS" target="_blank" rel="noopener">Microsoft Store</a>
+          <a href="https://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/Aicono.shtml" target="_blank" rel="noopener">Softpedia</a>
+          <a href="https://alternativeto.net/software/aicono" target="_blank" rel="noopener">AlternativeTo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-header">
+    <h2>Common <em>questions.</em></h2>
+    <p>Quick answers before you download.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:var(--space-4);max-width:760px;margin:0 auto;">
+    <details class="faq-item">
+      <summary>Does TabNeuron cost anything?</summary>
+      <p>No. TabNeuron is completely free for everyone. Download the portable executable, install the free Chrome extension, and run AI models locally or connect cloud providers with your own key.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does my data leave my machine?</summary>
+      <p>By default, everything stays local. TabNeuron stores its workspace data in a local <code style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace;font-size:0.8rem;background:var(--color-surface-2);padding:2px 6px;border-radius:4px;">.tabneuron/</code> folder, and the browser extension connects through a local polling API on <code style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace;font-size:0.8rem;background:var(--color-surface-2);padding:2px 6px;border-radius:4px;">localhost:5555</code>. Cloud AI providers are only used when you explicitly connect an API key.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I run it from a USB stick?</summary>
+      <p>Yes. TabNeuron is a portable executable. Extract it anywhere and run it; no installation, no registry changes, no admin rights required.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Which browsers are supported?</summary>
+      <p>Google Chrome is required for the Tetramatrix Connector extension. TabNeuron syncs bidirectionally with Chrome Tab Groups through a local polling API on port 5555.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What happens to long conversations?</summary>
+      <p>Auto-compaction summarizes old conversations, saving up to 93% of tokens while preserving full context. AI memory also extracts facts, skills, preferences, and personas from your chats, building long term profiles that make answers more accurate over time.</p>
+    </details>
+  </div>
+</section>
+
+<!-- AD SPOT H -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+	<ins class="adsbygoogle"
+	     style="display:inline-block;width:728px;height:90px"
+	     data-ad-client="ca-pub-6449563648591184"
+	     data-ad-slot="9816026248"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+
+<!-- FOOTER CTA -->
+<section class="cta-section">
+  <h2>Start your research on a <em>spatial canvas.</em></h2>
+  <p>Download TabNeuron and turn your browser tabs into a spatial, AI-powered research workspace. Free, portable, and private.</p>
+  <div class="cta-actions">
+    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron Free</a>
+    <a href="https://apps.microsoft.com/store/detail/9nh7qk4nczfl" target="_blank" rel="noopener noreferrer" class="btn-store" aria-label="Get TabNeuron from Microsoft Store">
+      <img src="ms-store.svg" alt="Get it from Microsoft" loading="lazy" width="180" height="40">
+    </a>
+    <a href="https://github.com/Tetramatrix/TabNeuron" class="btn-outline">View on GitHub</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;align-items:center;gap:var(--space-4);flex-wrap:wrap;">
+    <span>© 2026 TabNeuron. Built for AI explorers.</span>
+    <a href="https://github.com/Tetramatrix/TabNeuron/blob/main/docs/Changelog.md" target="_blank" rel="noopener" style="color:var(--color-text-muted);text-decoration:none;font-size:var(--text-xs);">Changelog</a>
+    <a href="https://github.com/Tetramatrix/TabNeuron/issues" target="_blank" rel="noopener" style="color:var(--color-text-muted);text-decoration:none;font-size:var(--text-xs);">GitHub Issues</a>
+    <a href="https://github.com/Tetramatrix/TabNeuron" target="_blank" rel="noopener" style="color:var(--color-text-muted);text-decoration:none;font-size:var(--text-xs);">GitHub Repository</a>
+    <a href="privacy.html" style="color:var(--color-text-muted);text-decoration:none;font-size:var(--text-xs);">Privacy Policy</a>
+    <span style="color:var(--color-text-faint);font-size:var(--text-xs);">v1.0.11</span>
+  </div>
+  <div style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-text-faint);">
+    Discover more apps: <a href="http://tetramatrix.github.io/spaceship" target="_blank" rel="noopener" style="color:var(--color-text-muted);">New Spaceship</a> · <a href="http://tetramatrix.github.io/Sorana" target="_blank" rel="noopener" style="color:var(--color-text-muted);">Sorana</a> · <a href="http://tetramatrix.github.io/RyzenZPilot" target="_blank" rel="noopener" style="color:var(--color-text-muted);">RyzenZPilot</a> · <a href="http://tetramatrix.github.io/Aicono" target="_blank" rel="noopener" style="color:var(--color-text-muted);">Aicono</a>
+  </div>
+</footer>
+
+<noscript>
+  <div style="text-align:center;padding:var(--space-8);color:var(--color-text-muted);font-size:var(--text-sm);">
+    TabNeuron is free. If you find it useful, consider supporting via the links in the footer.
+  </div>
+</noscript>
+
+<button id="backToTop" title="Back to top" aria-label="Back to top">↑</button>
+
+<script>
+(function() {
+  'use strict';
+  var toggle = document.getElementById('menuToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links.classList.toggle('open');
+      toggle.textContent = expanded ? '☰' : '✕';
+    });
+  }
+  var themeBtn = document.getElementById('themeToggle');
+  var stored = localStorage.getItem('theme');
+  var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  var theme = stored || (prefersLight ? 'light' : 'dark');
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeBtn) {
+    themeBtn.textContent = theme === 'dark' ? '🌙' : '☀️';
+    themeBtn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeBtn.textContent = next === 'dark' ? '🌙' : '☀️';
+    });
+  }
+
+  /* Nav shadow on scroll */
+  var nav = document.querySelector('nav');
+  if (nav) {
+    var onScroll = function() { nav.classList.toggle('scrolled', window.scrollY > 10); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* Active nav link highlight */
+  var navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (navAnchors.length && 'IntersectionObserver' in window) {
+    var sectionMap = {};
+    navAnchors.forEach(function(a) { sectionMap[a.getAttribute('href').slice(1)] = a; });
+    var activeObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var link = sectionMap[entry.target.id];
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navAnchors.forEach(function(a) { a.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    Object.keys(sectionMap).forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) activeObserver.observe(el);
+    });
+  }
+
+  /* Section reveal on scroll */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.section, .showcase').forEach(function(el) {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
+
+  /* Back to top */
+  var btt = document.getElementById('backToTop');
+  if (btt) {
+    window.addEventListener('scroll', function() {
+      btt.classList.toggle('show', window.scrollY > 600);
+    }, { passive: true });
+    btt.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
 
 </body>
 </html>

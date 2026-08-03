@@ -1,304 +1,782 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>TabNeuron Connector - Chrome Extension Support</title>
-    <meta name="description" content="TabNeuron Connector Chrome Extension - Lightweight bridge for bidirectional sync between Chrome tabs and TabNeuron desktop workspace.">
-    <meta name="author" content="Tetramatrix">
-    <meta property="og:title" content="TabNeuron Connector - Chrome Extension Support">
-    <meta property="og:description" content="Lightweight bridge for bidirectional sync between Chrome and TabNeuron desktop application.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="tabneuron_ScrollTile_crx_1400x560_en_scaled.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function(){
+  var stored=localStorage.getItem('theme');
+  if(stored){document.documentElement.setAttribute('data-theme',stored);}
+  else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches){
+    document.documentElement.setAttribute('data-theme','light');
+  }
+})();
+</script>
 
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<!-- Google Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6449563648591184"
+     crossorigin="anonymous"></script>
+
+  <title>TabNeuron Connector | Chrome Extension Support</title>
+<meta name="description" content="TabNeuron Connector Chrome Extension. Lightweight bridge for bidirectional sync between Chrome tabs and the TabNeuron desktop workspace. Install, configure, and go.">
+  <link rel="icon" type="image/png" href="logo_small.png">
+  <link rel="canonical" href="https://tetramatrix.github.io/TabNeuron/extension-support.html">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0e0f11">
+  <meta property="og:title" content="TabNeuron Connector | Chrome Extension Support">
+  <meta property="og:description" content="Lightweight bridge for bidirectional sync between Chrome and the TabNeuron desktop application.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="tabneuron_ScrollTile_crx_1400x560_en_scaled.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root, [data-theme="dark"] {
+  --color-bg:             #0e0f11;
+  --color-surface:        #141618;
+  --color-surface-2:      #1a1c1f;
+  --color-surface-3:      #202226;
+  --color-border:         rgba(255,255,255,0.08);
+  --color-text:           #e8eaed;
+  --color-text-muted:     #8a8f98;
+  --color-text-faint:     #4a4f58;
+  --color-primary:        #3ecfb2;
+  --color-primary-hover:  #2fb89d;
+  --color-primary-dim:    rgba(62,207,178,0.12);
+  --color-free:           #4ade80;
+  --color-free-dim:       rgba(74,222,128,0.12);
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+  --text-hero: clamp(2rem, 1rem + 3vw, 3.5rem);
+
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+
+  --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
+  --radius-xl: 1rem; --radius-2xl: 1.5rem; --radius-full: 9999px;
+}
+
+[data-theme="light"] {
+  --color-bg:             #f9fafb;
+  --color-surface:        #ffffff;
+  --color-surface-2:      #f3f4f6;
+  --color-surface-3:      #e5e7eb;
+  --color-border:         rgba(0,0,0,0.08);
+  --color-text:           #111827;
+  --color-text-muted:     #6b7280;
+  --color-text-faint:     #9ca3af;
+  --color-primary:        #0d9488;
+  --color-primary-hover:  #0f766e;
+  --color-primary-dim:    rgba(13,148,136,0.1);
+  --color-free:           #16a34a;
+  --color-free-dim:       rgba(22,163,74,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 84px; }
+body {
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-bottom: 240px; /* reserve space for Google Ads bottom banner */
+}
+img { display: block; max-width: 100%; height: auto; }
+ul, ol { padding-left: var(--space-5); }
+ul { list-style: disc; }
+ol { list-style: decimal; }
+li { margin-bottom: var(--space-2); line-height: 1.6; }
+a { color: var(--color-primary); text-decoration: none; }
+a:hover { color: var(--color-primary-hover); }
+
+/* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--color-bg) 90%, transparent);
+  backdrop-filter: blur(12px);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.nav-logo svg { flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: var(--space-6); }
+.nav-links a {
+  color: var(--color-text-muted); text-decoration: none;
+  font-size: var(--text-sm); transition: color 160ms ease;
+}
+.nav-links a:hover { color: var(--color-text); }
+.nav-links .btn-primary { color: #0a1a17; }
+.btn-primary {
+  background: var(--color-primary);
+  color: #0a1a17;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  border: none; cursor: pointer;
+  text-decoration: none;
+  transition: background 160ms ease, transform 120ms ease;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); color: #fff; }
+.nav-links .btn-primary:hover { color: #fff; }
+.btn-outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+  display: inline-block;
+}
+.btn-outline:hover { border-color: var(--color-primary); background: var(--color-primary-dim); }
+
+/* ── HERO ── */
+.hero {
+  padding: clamp(var(--space-16), 10vw, var(--space-24)) var(--space-8);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-hero);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+.hero h1 em { font-style: italic; color: var(--color-primary); }
+.hero-sub {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.65;
+}
+.hero-actions {
+  display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+}
+.showcase {
+  padding: var(--space-12) var(--space-8) 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.screenshot-wrap {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow:
+    0 0 0 1px rgba(62,207,178,0.08),
+    0 24px 80px rgba(0,0,0,0.6);
+}
+.screenshot-wrap img {
+  width: 100%; display: block;
+  border-radius: var(--radius-2xl);
+}
+
+/* ── SECTIONS ── */
+.section {
+  padding: var(--space-20) var(--space-8);
+  max-width: 960px;
+  margin: 0 auto;
+}
+.section-alt {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.section-header {
+  max-width: 640px;
+  margin: 0 auto var(--space-10);
+  text-align: center;
+}
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: var(--space-4);
+}
+.section-header h2 em { font-style: italic; color: var(--color-primary); }
+.section-header p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.65;
+}
+.body-text p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+.body-text strong { color: var(--color-text); }
+.body-text ul, .body-text ol { margin-bottom: var(--space-4); }
+.body-text li { color: var(--color-text-muted); font-size: var(--text-sm); }
+.body-text code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.8rem;
+  background: var(--color-surface-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--color-text);
+}
+
+/* ── CARDS ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px,100%), 1fr));
+  gap: var(--space-4);
+}
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: border-color 200ms, box-shadow 200ms;
+}
+.card:hover {
+  border-color: rgba(62,207,178,0.2);
+  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+}
+.card h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+.card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
+}
+.card a { display: inline-block; }
+
+/* ── SCREENSHOT STRIP ── */
+.screenshot-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px,100%), 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+.screenshot-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.screenshot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.35);
+}
+.screenshot-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+.screenshot-card figcaption {
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── TABLE (permissions) ── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-size: var(--text-sm);
+}
+.comparison-table th,
+.comparison-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+.comparison-table th {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  font-weight: 600;
+}
+.comparison-table td {
+  color: var(--color-text-muted);
+}
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table td:first-child { color: var(--color-text); font-weight: 500; }
+.comparison-table code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.8rem;
+  background: var(--color-surface-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--color-text);
+}
+
+/* ── TIP BOX ── */
+.tip-box {
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-primary-dim);
+  border: 1px solid rgba(62,207,178,0.25);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+.tip-box strong { color: var(--color-text); }
+
+/* ── CTA ── */
+.cta-section {
+  padding: clamp(var(--space-16), 10vw, var(--space-24)) var(--space-8);
+  text-align: center;
+  max-width: 700px; margin: 0 auto;
+}
+.cta-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: var(--space-5);
+}
+.cta-section h2 em { font-style: italic; color: var(--color-primary); }
+.cta-section p {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-8);
+}
+.cta-actions {
+  display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  max-width: 900px; margin: 0 auto;
+}
+footer a { color: var(--color-text-muted); }
+
+/* ── ADSENSE INLINE ADS ── */
+.ad-container {
+  margin: var(--space-8) auto;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+  text-align: center;
+  max-height: 520px;
+  min-height: 60px;
+}
+.ad-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-faint);
+  margin-bottom: var(--space-2);
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  nav { padding: var(--space-4); }
+  nav { position: relative; }
+  #menuToggle { display: block !important; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: var(--space-4);
+    gap: var(--space-3);
+    z-index: 40;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: var(--space-2) 0; }
+  .hero { padding: var(--space-12) var(--space-5); }
+  .section { padding: var(--space-12) var(--space-4); }
+  .showcase { padding: var(--space-8) var(--space-4) 0; }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: 3px; }
+</style>
 </head>
 <body>
-    <aside class="left">
-        <nav class="fixed-nav">
-        </nav>
-    </aside>
 
-    <aside class="right">
-    </aside>
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-label="TabNeuron">
+      <circle cx="14" cy="14" r="12" stroke="#3ecfb2" stroke-width="1.5" fill="none"/>
+      <circle cx="14" cy="14" r="5" fill="#3ecfb2" opacity="0.8"/>
+      <circle cx="14" cy="5" r="2" fill="#3ecfb2"/>
+      <circle cx="21.5" cy="10" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="21.5" cy="18" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="14" cy="23" r="2" fill="#3ecfb2" opacity="0.3"/>
+      <circle cx="6.5" cy="18" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="6.5" cy="10" r="2" fill="#3ecfb2" opacity="0.5"/>
+    </svg>
+    TabNeuron
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#setup">Setup</a>
+    <a href="extension-support.html">Extension</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="index.html#discover">Discover</a>
+    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron Free</a>
+    <button id="themeToggle" aria-label="Toggle light mode" style="background:none;border:none;color:var(--color-text-muted);cursor:pointer;font-size:var(--text-lg);padding:var(--space-2);">🌙</button>
+  </div>
+  <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks" style="display:none;background:none;border:none;color:var(--color-text);cursor:pointer;font-size:var(--text-xl);padding:var(--space-2);">☰</button>
+</nav>
 
-    <main class="wikidoc">
-        <header class="page-header">
-            <h1>TabNeuron Connector</h1>
-            <h3>Chrome Extension Support</h3>
-            <figure class="logo-container">
-                <img src="logo_small.png" alt="TabNeuron Logo" class="logo">
-            </figure>
-        </header>
+<!-- HERO -->
+<section class="hero">
+  <h1>TabNeuron <em>Connector.</em></h1>
+  <p class="hero-sub">
+    A lightweight Chrome extension that bridges your browser to the TabNeuron desktop app.
+    Bidirectional sync via localhost, so nothing ever leaves your machine.
+  </p>
+  <div class="hero-actions">
+    <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" target="_blank" rel="noopener" class="btn-primary">Install from Chrome Web Store</a>
+    <a href="#installation" class="btn-outline">Installation guide ↓</a>
+  </div>
+</section>
 
-    <nav class="horizontal-toc-nav">
-        <ul>
-            <li><a href="#overview-h2">Overview</a></li>
-            <li><a href="#how-it-works-h2">How It Works</a></li>
-            <li><a href="#screenshots-h2">Screenshots</a></li>
-            <li><a href="#installation-h2">Installation</a></li>
-            <li><a href="#configuration-h2">Configuration</a></li>
-            <li><a href="#permissions-h2">Permissions</a></li>
-            <li><a href="#privacy-h2">Privacy</a></li>
-            <li><a href="#support-h2">Support</a></li>
-        </ul>
-    </nav>
+<div class="showcase">
+  <div class="screenshot-wrap">
+    <img src="tabneuron_ScrollTile_crx_1400x560_en_scaled.png"
+         alt="TabNeuron Connector Chrome Web Store feature banner"
+         width="1140" height="456">
+  </div>
+</div>
 
-    <h2 id="overview-h2">Overview</h2>
-    <section class="extension-section" id="overview">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>TabNeuron Connector is a lightweight Chrome extension that serves as a bridge between your browser and the TabNeuron desktop application. It enables bidirectional communication via localhost, allowing your browser tabs to sync with an infinite 2D spatial canvas workspace.</p>
-            <p><strong>Key Benefits:</strong></p>
-            <ul>
-                <li>🔄 <strong>Bidirectional Sync:</strong> Changes in Chrome reflect on the canvas and vice versa</li>
-                <li>📸 <strong>Tab Previews:</strong> Automatic screenshots and metadata extraction</li>
-                <li>🧠 <strong>AI-Powered:</strong> Enables AI analysis of tab content across multiple pages</li>
-                <li>🔒 <strong>Local-First:</strong> All data stays on your device, no external servers</li>
-                <li>⚡ <strong>Lightweight:</strong> Minimal resource usage with 2-second polling interval</li>
-            </ul>
-        </div>
-    </section>
+<!-- OVERVIEW -->
+<section class="section" id="overview">
+  <div class="section-header">
+    <h2>What is the <em>Connector?</em></h2>
+    <p>The bridge between Chrome and your spatial canvas workspace.</p>
+  </div>
+  <div class="body-text">
+    <p><strong>TabNeuron Connector is a lightweight Chrome extension that serves as a bridge between your browser and the TabNeuron desktop application.</strong> It enables bidirectional communication via localhost, allowing your browser tabs to sync with a 2D spatial canvas workspace.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🔄 Bidirectional Sync</h3>
+      <p>Changes in Chrome reflect on the canvas and vice versa.</p>
+    </div>
+    <div class="card">
+      <h3>📸 Tab Previews</h3>
+      <p>Automatic screenshots and metadata extraction for every tab.</p>
+    </div>
+    <div class="card">
+      <h3>🧠 AI-Powered</h3>
+      <p>Enables AI analysis of tab content across multiple pages.</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Local-First</h3>
+      <p>All data stays on your device, no external servers.</p>
+    </div>
+    <div class="card">
+      <h3>⚡ Lightweight</h3>
+      <p>Minimal resource usage with a 2-second polling interval.</p>
+    </div>
+  </div>
+</section>
 
-    <h2 id="how-it-works-h2">How It Works</h2>
-    <section class="extension-section" id="how-it-works">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <p>The TabNeuron Connector extension reads tab URLs, titles, and page content from your Chrome browser and forwards them to the TabNeuron desktop application running locally on your machine via <code>localhost:5555</code>.</p>
-            <h4>Why This Extension is Needed:</h4>
-            <p>Chrome extensions are the only way to access browser tab data programmatically. TabNeuron uses this bridge to:</p>
-            <ul>
-                <li><strong>Extract Tab Metadata:</strong> Titles, URLs, favicons, and Open Graph tags</li>
-                <li><strong>Capture Visual Previews:</strong> Automatic screenshots for spatial organization</li>
-                <li><strong>Read Page Content:</strong> Main content extraction (500-10000 characters, ads stripped)</li>
-                <li><strong>Sync Tab Groups:</strong> Bidirectional sync with Chrome's native tab groups</li>
-            </ul>
-            <p><em>All data processing happens locally. The extension does not collect, store, or transmit any data to external servers.</em></p>
-        </div>
-    </section>
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="how-it-works">
+  <div class="section-header">
+    <h2>How it <em>works.</em></h2>
+    <p>Local communication, private by design.</p>
+  </div>
+  <div class="body-text">
+    <p>The TabNeuron Connector extension reads tab URLs, titles, and page content from your Chrome browser and forwards them to the TabNeuron desktop application running locally on your machine via <code>localhost:5555</code>.</p>
+    <p><strong>Why this extension is needed:</strong> Chrome extensions are the only way to access browser tab data programmatically. TabNeuron uses this bridge to:</p>
+    <ul>
+      <li><strong>Extract Tab Metadata:</strong> Titles, URLs, favicons, and Open Graph tags</li>
+      <li><strong>Capture Visual Previews:</strong> Automatic screenshots for spatial organization</li>
+      <li><strong>Read Page Content:</strong> Main content extraction (500 to 10000 characters, ads stripped)</li>
+      <li><strong>Sync Tab Groups:</strong> Bidirectional sync with Chrome's native tab groups</li>
+    </ul>
+    <p><em>All data processing happens locally. The extension does not collect, store, or transmit any data to external servers.</em></p>
+  </div>
+</section>
 
-    <h2 id="screenshots-h2">Screenshots</h2>
-    <section class="extension-section" id="screenshots">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+<!-- SCREENSHOTS -->
+<section class="section" id="screenshots">
+  <div class="section-header">
+    <h2><em>Screenshots.</em></h2>
+    <p>Promotional tiles and the extension interface.</p>
+  </div>
+  <div class="screenshot-strip">
+    <figure class="screenshot-card">
+      <img src="tabneuron_AdsTile_crx_440x280_en_scaled.png" alt="TabNeuron Connector promotional tile" loading="lazy" width="640" height="400">
+      <figcaption>Chrome Web Store promotional tile.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="connector_status.png" alt="Connector status panel" loading="lazy" width="640" height="400">
+      <figcaption>Status panel. View connection status and polling activity.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="connector_status_send_options.png" alt="Connector send options" loading="lazy" width="640" height="400">
+      <figcaption>Send options. Configure what data is transmitted to TabNeuron.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="connector_settings.png" alt="Connector main settings" loading="lazy" width="640" height="400">
+      <figcaption>Main settings. Configure host, port, and polling interval.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="connector_settings_content_options.png" alt="Content extraction options" loading="lazy" width="640" height="400">
+      <figcaption>Content extraction options. Customize how page content is extracted.</figcaption>
+    </figure>
+    <figure class="screenshot-card">
+      <img src="connector_settings_tab_options.png" alt="Tab sync options" loading="lazy" width="640" height="400">
+      <figcaption>Tab options. Configure tab group synchronization settings.</figcaption>
+    </figure>
+  </div>
+</section>
 
-            <h3>Promotional Tiles</h3>
-            <div>
-            <figure class="product-fig">
-                <img src="tabneuron_ScrollTile_crx_1400x560_en_scaled.png" alt="TabNeuron Connector - Scroll Tile Banner" class="screenshot">
-                <figcaption class="image-caption">TabNeuron Connector - Chrome Web Store Feature Banner</figcaption>
-            </figure>
+<!-- INSTALLATION -->
+<section class="section section-alt" id="installation">
+  <div class="section-header">
+    <h2>Installation.</h2>
+    <p>One-click install from the Chrome Web Store.</p>
+  </div>
+  <div class="body-text">
+    <p>The TabNeuron Connector extension is available in the Chrome Web Store for one-click installation:</p>
+    <div style="margin: var(--space-6) 0;">
+      <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" target="_blank" rel="noopener" class="btn-primary">🚀 Install from Chrome Web Store</a>
+    </div>
+    <p><strong>Installation steps:</strong></p>
+    <ol>
+      <li>Click the "Install from Chrome Web Store" button above</li>
+      <li>On the Chrome Web Store page, click <strong>"Add to Chrome"</strong></li>
+      <li>Confirm by clicking <strong>"Add extension"</strong> when prompted</li>
+      <li>Once installed, the extension icon will appear in your Chrome toolbar</li>
+      <li>Click the extension icon to configure the connection to TabNeuron</li>
+    </ol>
+    <div class="tip-box">
+      <p><strong>✓ Installation complete!</strong> The extension icon should now appear in your Chrome toolbar. Click it to configure the connection to TabNeuron.</p>
+    </div>
+  </div>
+</section>
 
-            <figure class="product-fig">
-                <img src="tabneuron_AdsTile_crx_440x280_en_scaled.png" alt="TabNeuron Connector - Ads Tile" class="screenshot">
-                <figcaption class="image-caption">TabNeuron Connector - Promotional Tile</figcaption>
-            </figure>
-						</div>
-           
-            <h3>Extension Interface</h3>
-						<div>
-            <figure class="product-fig">
-                <img src="connector_status.png" alt="TabNeuron Connector - Status Panel" class="screenshot">
-                <figcaption class="image-caption">Connector Status Panel - View connection status and polling activity</figcaption>
-            </figure>
+<!-- CONFIGURATION -->
+<section class="section" id="configuration">
+  <div class="section-header">
+    <h2>Configuration.</h2>
+    <p>Point the extension at your local TabNeuron instance.</p>
+  </div>
+  <div class="body-text">
+    <p><strong>Connection settings:</strong></p>
+    <ol>
+      <li>Click the TabNeuron Connector icon in Chrome's toolbar</li>
+      <li>In the popup, navigate to <strong>Settings</strong></li>
+      <li>Set <strong>Host</strong> to: <code>localhost</code></li>
+      <li>Set <strong>Port</strong> to: <code>5555</code></li>
+      <li>Leave <strong>Polling Interval</strong> at default (2 seconds)</li>
+      <li>Click <strong>"▶️ Start"</strong> to begin synchronization</li>
+    </ol>
+    <p><strong>Content extraction options:</strong></p>
+    <ul>
+      <li><strong>Content Length:</strong> Choose between 500 and 10000 characters per page</li>
+      <li><strong>Strip Ads:</strong> Automatically remove advertising content</li>
+      <li><strong>Extract Metadata:</strong> Enable Open Graph tags and descriptions</li>
+    </ul>
+    <p><strong>Tab sync options:</strong></p>
+    <ul>
+      <li><strong>Sync Tab Groups:</strong> Mirror Chrome's native tab groups</li>
+      <li><strong>Auto-Sync:</strong> Automatically detect and sync new tabs</li>
+      <li><strong>Screenshots:</strong> Enable or disable automatic tab screenshots</li>
+    </ul>
+    <div class="tip-box">
+      <p><strong>💡 Tip:</strong> Launch the TabNeuron desktop application before clicking "Start" in the extension. The status indicator will turn green when connected successfully.</p>
+    </div>
+  </div>
+</section>
 
-            <figure class="product-fig">
-                <img src="connector_status_send_options.png" alt="TabNeuron Connector - Send Options" class="screenshot">
-                <figcaption class="image-caption">Send Options - Configure what data is transmitted to TabNeuron</figcaption>
-            </figure>
+<!-- PERMISSIONS -->
+<section class="section section-alt" id="permissions">
+  <div class="section-header">
+    <h2>Permissions.</h2>
+    <p>All permissions are used solely for local communication with the desktop application.</p>
+  </div>
+  <div style="overflow-x: auto; display: block;">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Permission</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><code>tabs</code></td><td>Read tab URLs, titles, and favicons for display on the canvas</td></tr>
+        <tr><td><code>tabGroups</code></td><td>Sync with Chrome's native tab groups for bidirectional organization</td></tr>
+        <tr><td><code>scripting</code></td><td>Inject content extraction scripts to read page metadata and main content</td></tr>
+        <tr><td><code>storage</code></td><td>Store connection settings (host, port, polling interval) locally</td></tr>
+        <tr><td><code>activeTab</code></td><td>Access the currently active tab for quick operations and screenshots</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="body-text" style="margin-top: var(--space-6);">
+    <p><em>No permissions are used to collect, log, or transmit data to external servers or third parties.</em></p>
+  </div>
+</section>
 
-            <figure class="product-fig">
-                <img src="connector_settings.png" alt="TabNeuron Connector - Main Settings" class="screenshot">
-                <figcaption class="image-caption">Main Settings - Configure host, port, and polling interval</figcaption>
-            </figure>
+<!-- PRIVACY -->
+<section class="section" id="privacy">
+  <div class="section-header">
+    <h2>Privacy &amp; <em>data handling.</em></h2>
+    <p>Designed with privacy-first principles.</p>
+  </div>
+  <div class="body-text">
+    <ul>
+      <li><strong>🔒 No External Servers:</strong> All data stays on your local machine</li>
+      <li><strong>🏠 Localhost Only:</strong> Communication happens exclusively via <code>localhost:5555</code></li>
+      <li><strong>📵 No Telemetry:</strong> No analytics, tracking, or usage data collection</li>
+      <li><strong>💾 Local Storage:</strong> Settings stored in Chrome's local storage only</li>
+      <li><strong>🔐 No Remote Logging:</strong> Tab data is never logged or stored remotely</li>
+    </ul>
+    <p>For detailed information, see our <a href="privacy.html" class="btn-outline" style="margin-top: var(--space-2);">Privacy Policy</a>.</p>
+  </div>
+</section>
 
-            <figure class="product-fig">
-                <img src="connector_settings_content_options.png" alt="TabNeuron Connector - Content Extraction Options" class="screenshot">
-                <figcaption class="image-caption">Content Extraction Options - Customize how page content is extracted</figcaption>
-            </figure>
+<!-- AD SPOT - Extension Page -->
+<div class="ad-container">
+  <p class="ad-label">Sponsored</p>
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:468px;height:60px"
+       data-ad-client="ca-pub-6449563648591184"
+       data-ad-slot="9406329687"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 
-            <figure class="product-fig">
-                <img src="connector_settings_tab_options.png" alt="TabNeuron Connector - Tab Options" class="screenshot">
-                <figcaption class="image-caption">Tab Options - Configure tab group synchronization settings</figcaption>
-            </figure>
-            </div>
-        </div>
-    </section>
+<!-- SUPPORT & RESOURCES -->
+<section class="section section-alt" id="support">
+  <div class="section-header">
+    <h2>Support &amp; <em>resources.</em></h2>
+    <p>Need help or have questions about TabNeuron Connector?</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>TabNeuron Website</h3>
+      <p>Back to the main TabNeuron landing page for the full feature overview.</p>
+      <a href="index.html" class="btn-outline">TabNeuron Website</a>
+    </div>
+    <div class="card">
+      <h3>Discord Community</h3>
+      <p>Join our Discord server for real-time assistance from the development team.</p>
+      <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn-outline">Join Discord</a>
+    </div>
+    <div class="card">
+      <h3>Report Issues</h3>
+      <p>Found a bug or have a feature request? Report it on GitHub or discuss it on Discord.</p>
+      <a href="https://github.com/Tetramatrix/TabNeuron" target="_blank" class="btn-outline">GitHub Issues</a>
+    </div>
+    <div class="card">
+      <h3>Privacy Policy</h3>
+      <p>Learn exactly what data the extension reads, stores, and never sends.</p>
+      <a href="privacy.html" class="btn-outline">Privacy Policy</a>
+    </div>
+  </div>
+</section>
 
-    <h2 id="installation-h2">Installation</h2>
-    <section class="extension-section" id="installation">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Get started with <em>TabNeuron.</em></h2>
+  <p>Download the TabNeuron desktop application and start organizing your browser tabs with AI.</p>
+  <div class="cta-actions">
+    <a href="https://github.com/Tetramatrix/TabNeuron/raw/refs/heads/main/docs/TabNeuron.exe" class="btn-primary">Download TabNeuron Free</a>
+    <a href="index.html" class="btn-outline">Back to TabNeuron</a>
+  </div>
+</section>
 
-            <h4>Install from Chrome Web Store</h4>
-            <p>The TabNeuron Connector extension is available in the Chrome Web Store for one-click installation:</p>
-            
-            <div class="download-buttons" style="margin: 2rem 0;">
-                <a href="https://chromewebstore.google.com/detail/tetramatrix-connector/okkajfohkcicdabhdkmakdlblkknnmfm?authuser=0&hl=de" target="_blank" class="btn btn-primary btn-large">🚀 Install from Chrome Web Store</a>
-            </div>
+<!-- FOOTER -->
+<footer>
+  <div style="margin-bottom:var(--space-3);">
+    <a href="index.html">TabNeuron Home</a> · <a href="support.html">Support &amp; Donate</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://discord.gg/4QkQSfSATF" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <span>© 2026 TabNeuron. Built for AI explorers.</span>
+</footer>
 
-            <h4>Installation Steps:</h4>
-            <ol>
-                <li>Click the "Install from Chrome Web Store" button above</li>
-                <li>On the Chrome Web Store page, click <strong>"Add to Chrome"</strong></li>
-                <li>Confirm by clicking <strong>"Add extension"</strong> when prompted</li>
-                <li>Once installed, the extension icon will appear in your Chrome toolbar</li>
-                <li>Click the extension icon to configure the connection to TabNeuron</li>
-            </ol>
-
-            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #4CAF50; margin-top: 1rem;">
-                <p><strong>✓ Installation Complete!</strong> The extension icon should now appear in your Chrome toolbar. Click it to configure the connection to TabNeuron.</p>
-            </div>
-        </div>
-    </section>
-
-    <h2 id="configuration-h2">Configuration</h2>
-    <section class="extension-section" id="configuration">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-
-            <h4>Connection Settings</h4>
-            <p>After installation, configure the extension to connect to TabNeuron:</p>
-            <ol>
-                <li>Click the TabNeuron Connector icon in Chrome's toolbar</li>
-                <li>In the popup, navigate to <strong>Settings</strong></li>
-                <li>Set <strong>Host</strong> to: <code>localhost</code></li>
-                <li>Set <strong>Port</strong> to: <code>5555</code></li>
-                <li>Leave <strong>Polling Interval</strong> at default (2 seconds)</li>
-                <li>Click <strong>"▶️ Start"</strong> to begin synchronization</li>
-            </ol>
-
-            <h4>Content Extraction Options</h4>
-            <ul>
-                <li><strong>Content Length:</strong> Choose between 500-10000 characters per page</li>
-                <li><strong>Strip Ads:</strong> Automatically remove advertising content</li>
-                <li><strong>Extract Metadata:</strong> Enable Open Graph tags and descriptions</li>
-            </ul>
-
-            <h4>Tab Sync Options</h4>
-            <ul>
-                <li><strong>Sync Tab Groups:</strong> Mirror Chrome's native tab groups</li>
-                <li><strong>Auto-Sync:</strong> Automatically detect and sync new tabs</li>
-                <li><strong>Screenshots:</strong> Enable/disable automatic tab screenshots</li>
-            </ul>
-
-            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #2196F3; margin-top: 1rem;">
-                <p><strong>💡 Tip:</strong> Launch the TabNeuron desktop application before clicking "Start" in the extension. The status indicator will turn green when connected successfully.</p>
-            </div>
-        </div>
-    </section>
-
-    <h2 id="permissions-h2">Permissions</h2>
-    <section class="extension-section" id="permissions">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-
-            <p>The TabNeuron Connector requests the following permissions, all used solely for local communication with the desktop application:</p>
-            
-            <table class="feature-table">
-                <thead>
-                    <tr>
-                        <th>Permission</th>
-                        <th>Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>tabs</code></td>
-                        <td>Read tab URLs, titles, and favicons for display on the canvas</td>
-                    </tr>
-                    <tr>
-                        <td><code>tabGroups</code></td>
-                        <td>Sync with Chrome's native tab groups for bidirectional organization</td>
-                    </tr>
-                    <tr>
-                        <td><code>scripting</code></td>
-                        <td>Inject content extraction scripts to read page metadata and main content</td>
-                    </tr>
-                    <tr>
-                        <td><code>storage</code></td>
-                        <td>Store connection settings (host, port, polling interval) locally</td>
-                    </tr>
-                    <tr>
-                        <td><code>activeTab</code></td>
-                        <td>Access the currently active tab for quick operations and screenshots</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <p><em>No permissions are used to collect, log, or transmit data to external servers or third parties.</em></p>
-        </div>
-    </section>
-
-    <h2 id="privacy-h2">Privacy & Data Handling</h2>
-    <section class="extension-section" id="privacy">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-
-            <p><strong>TabNeuron Connector is designed with privacy-first principles:</strong></p>
-            
-            <ul>
-                <li><strong>🔒 No External Servers:</strong> All data stays on your local machine</li>
-                <li><strong>🏠 Localhost Only:</strong> Communication happens exclusively via <code>localhost:5555</code></li>
-                <li><strong>📵 No Telemetry:</strong> No analytics, tracking, or usage data collection</li>
-                <li><strong>💾 Local Storage:</strong> Settings stored in Chrome's local storage only</li>
-                <li><strong>🔐 No Remote Logging:</strong> Tab data is never logged or stored remotely</li>
-            </ul>
-
-            <p>For detailed information, see our <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>.</p>
-        </div>
-    </section>
-
-    <h2 id="support-h2">Support & Resources</h2>
-    <section class="extension-section" id="support">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-
-            <p>Need help or have questions about TabNeuron Connector?</p>
-            
-            <div class="external-links">
-                <a href="index.html" class="btn btn-primary">TabNeuron Website</a>
-                <a href="https://discord.gg/4QkQSfSATF" target="_blank" class="btn btn-primary">Discord Community</a>
-                <a href="privacy.html" class="btn btn-primary">Privacy Policy</a>
-            </div>
-
-            <hr style="margin: 2rem 0; border: none; border-top: 1px solid #444;">
-
-            <h3>Report Issues</h3>
-            
-            <p>Found a bug or have a feature request? Please report it on our GitHub repository or join the discussion on Discord.</p>
-
-            <div class="cta-box" style="background: #1a1a2e; border-left: 4px solid #64b5f6; margin-top: 1rem;">
-                <p><strong>📧 Contact:</strong> For direct support, join our Discord server for real-time assistance from the development team.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="extension-section" id="back-to-main">
-        <div class="cta-box">
-            <span class="nav-arrow-down" onclick="toggleSectionFromArrow(this)">−</span>
-            <span class="nav-arrow-up" onclick="toggleSectionFromArrow(this)">−</span>
-            <h3>Get Started with TabNeuron</h3>
-            <p>Download the TabNeuron desktop application and start organizing your browser tabs with AI.</p>
-            <div class="download-buttons">
-                <a href="index.html" class="btn btn-primary btn-large">Back to TabNeuron</a>
-            </div>
-        </div>
-    </section>
-
-    </main>
-
-<script src="main.js"></script>
+<script>
+(function() {
+  'use strict';
+  var toggle = document.getElementById('menuToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function() {
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links.classList.toggle('open');
+      toggle.textContent = expanded ? '☰' : '✕';
+    });
+  }
+  var themeBtn = document.getElementById('themeToggle');
+  var stored = localStorage.getItem('theme');
+  var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  var theme = stored || (prefersLight ? 'light' : 'dark');
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeBtn) {
+    themeBtn.textContent = theme === 'dark' ? '🌙' : '☀️';
+    themeBtn.addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeBtn.textContent = next === 'dark' ? '🌙' : '☀️';
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
