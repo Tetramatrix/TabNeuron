@@ -121,10 +121,10 @@
   --color-text:           #e8eaed;
   --color-text-muted:     #8a8f98;
   --color-text-faint:     #4a4f58;
-  --color-primary:        #3ecfb2;
-  --color-primary-hover:  #2fb89d;
-  --color-primary-dim:    rgba(62,207,178,0.12);
-  --color-primary-glow:   rgba(62,207,178,0.06);
+  --color-primary:        #6366f1;
+  --color-primary-hover:  #4f46e5;
+  --color-primary-dim:    rgba(99,102,241,0.12);
+  --color-primary-glow:   rgba(99,102,241,0.06);
   --color-free:           #4ade80;
   --color-free-dim:       rgba(74,222,128,0.12);
   --color-cloud:          #60a5fa;
@@ -366,7 +366,7 @@ nav.scrolled {
   inset: -20% -10% auto;
   height: 70%;
   background:
-    radial-gradient(ellipse at 30% 20%, rgba(62,207,178,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 20%, rgba(99,102,241,0.12) 0%, transparent 60%),
     radial-gradient(ellipse at 70% 60%, rgba(96,165,250,0.08) 0%, transparent 60%);
   filter: blur(40px);
   animation: hero-orb 10s ease-in-out infinite alternate;
@@ -432,9 +432,9 @@ nav.scrolled {
   overflow: hidden;
   border: 1px solid var(--color-border);
   box-shadow:
-    0 0 0 1px rgba(62,207,178,0.08),
+    0 0 0 1px rgba(99,102,241,0.08),
     0 24px 80px rgba(0,0,0,0.6),
-    0 0 120px rgba(62,207,178,0.04);
+    0 0 120px rgba(99,102,241,0.04);
 }
 .screenshot-wrap::before {
   content: "";
@@ -531,16 +531,16 @@ nav.scrolled {
   transition: border-color 200ms, box-shadow 200ms;
 }
 .pricing-card:hover {
-  border-color: rgba(62,207,178,0.18);
+  border-color: rgba(99,102,241,0.18);
   box-shadow: 0 12px 40px rgba(0,0,0,0.25);
 }
 .pricing-card--accent {
-  border-color: rgba(62,207,178,0.35);
-  background: linear-gradient(180deg, rgba(62,207,178,0.06), transparent);
+  border-color: rgba(99,102,241,0.35);
+  background: linear-gradient(180deg, rgba(99,102,241,0.06), transparent);
 }
 .pricing-card--accent:hover {
-  border-color: rgba(62,207,178,0.5);
-  box-shadow: 0 12px 40px rgba(62,207,178,0.1);
+  border-color: rgba(99,102,241,0.5);
+  box-shadow: 0 12px 40px rgba(99,102,241,0.1);
 }
 .pricing-icon {
   width: 44px; height: 44px; border-radius: var(--radius-lg);
@@ -548,7 +548,7 @@ nav.scrolled {
   color: var(--color-primary);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: var(--space-3);
-  border: 1px solid rgba(62,207,178,0.2);
+  border: 1px solid rgba(99,102,241,0.2);
 }
 .pricing-icon svg { width: 20px; height: 20px; }
 .pricing-name { font-size: var(--text-base); font-weight: 600; color: var(--color-text); margin: 0; }
@@ -636,7 +636,7 @@ nav.scrolled {
   font-size: var(--text-lg);
   font-weight: 600;
   margin-bottom: var(--space-3);
-  border: 1px solid rgba(62,207,178,0.2);
+  border: 1px solid rgba(99,102,241,0.2);
 }
 .step h3 {
   font-size: var(--text-sm);
@@ -674,8 +674,8 @@ nav.scrolled {
   transition: border-color 200ms, box-shadow 200ms;
 }
 .problem-card:hover {
-  border-color: rgba(62,207,178,0.2);
-  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+  border-color: rgba(99,102,241,0.2);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.04);
 }
 .problem-card h3 {
   font-size: var(--text-base);
@@ -741,8 +741,8 @@ nav.scrolled {
   transition: border-color 200ms, box-shadow 200ms;
 }
 .feature-card:hover {
-  border-color: rgba(62,207,178,0.2);
-  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+  border-color: rgba(99,102,241,0.2);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.04);
 }
 .feature-card.large { grid-column: span 2; }
 .feature-icon {
@@ -781,8 +781,8 @@ nav.scrolled {
   transition: border-color 200ms, box-shadow 200ms;
 }
 .example-card:hover {
-  border-color: rgba(62,207,178,0.2);
-  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+  border-color: rgba(99,102,241,0.2);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.04);
 }
 .example-card h4 {
   font-size: var(--text-sm);
@@ -850,8 +850,8 @@ nav.scrolled {
   flex-direction: column;
 }
 .discover-card:hover {
-  border-color: rgba(62,207,178,0.2);
-  box-shadow: 0 8px 32px rgba(62,207,178,0.04);
+  border-color: rgba(99,102,241,0.2);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.04);
   transform: translateY(-2px);
 }
 .discover-card img {
@@ -1160,14 +1160,14 @@ footer {
 <nav>
   <a href="index.html" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-label="TabNeuron">
-      <circle cx="14" cy="14" r="12" stroke="#3ecfb2" stroke-width="1.5" fill="none"/>
-      <circle cx="14" cy="14" r="5" fill="#3ecfb2" opacity="0.8"/>
-      <circle cx="14" cy="5" r="2" fill="#3ecfb2"/>
-      <circle cx="21.5" cy="10" r="2" fill="#3ecfb2" opacity="0.5"/>
-      <circle cx="21.5" cy="18" r="2" fill="#3ecfb2" opacity="0.5"/>
-      <circle cx="14" cy="23" r="2" fill="#3ecfb2" opacity="0.3"/>
-      <circle cx="6.5" cy="18" r="2" fill="#3ecfb2" opacity="0.5"/>
-      <circle cx="6.5" cy="10" r="2" fill="#3ecfb2" opacity="0.5"/>
+      <circle cx="14" cy="14" r="12" stroke="#6366f1" stroke-width="1.5" fill="none"/>
+      <circle cx="14" cy="14" r="5" fill="#6366f1" opacity="0.8"/>
+      <circle cx="14" cy="5" r="2" fill="#6366f1"/>
+      <circle cx="21.5" cy="10" r="2" fill="#6366f1" opacity="0.5"/>
+      <circle cx="21.5" cy="18" r="2" fill="#6366f1" opacity="0.5"/>
+      <circle cx="14" cy="23" r="2" fill="#6366f1" opacity="0.3"/>
+      <circle cx="6.5" cy="18" r="2" fill="#6366f1" opacity="0.5"/>
+      <circle cx="6.5" cy="10" r="2" fill="#6366f1" opacity="0.5"/>
     </svg>
     TabNeuron
   </a>

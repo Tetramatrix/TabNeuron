@@ -1,10 +1,13 @@
 :root {
   --bg-primary: #1e1e1e;
   --bg-secondary: #2d2d30;
-  --bg-accent: #1a365d;
+  --bg-accent: #312e81;
   --text-primary: #ffffff;
   --text-secondary: #cccccc;
-  --accent-blue: #2c5282;
+  --color-primary:        #6366f1;
+  --color-primary-hover:  #4f46e5;
+  --color-primary-dim:    rgba(99,102,241,0.12);
+  --color-primary-glow:   rgba(99,102,241,0.06);
   --accent-amd: #c53030;
   --border: #404040;
 
@@ -38,13 +41,13 @@
   --border-medium: #555;
   --shadow-color-light: rgba(0, 0, 0, 0.1);
   --shadow-color-medium: rgba(0, 0, 0, 0.15);
-  --btn-primary-bg: #2c5282;
+  --btn-primary-bg: #6366f1;
   --code-bg-purple: #2d3748;
   --code-bg-highlight: rgba(0, 0, 0, 0.3);
   --code-text-highlight: #68d391;
   --table-row-alt-bg: #3a3a3d;
-  --cta-gradient-start: #2c5282;
-  --cta-gradient-end: #1a365d;
+  --cta-gradient-start: #6366f1;
+  --cta-gradient-end: #312e81;
 
   /* Section spacing */
   --section-margin: 32px 0;
@@ -337,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.2em;
   margin-top: 0.5em;
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #312e81 100%);
   border-bottom: none;
   border-left: 4px solid #68d391;
   padding: 15px 20px;
@@ -354,7 +357,7 @@ h3 {
   font-size: 1.4em;
   font-weight: 600;
   letter-spacing: -0.01em;
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #312e81 100%);
   border-left: 4px solid;
   margin-top: 36px;
   margin-bottom: 16px;
@@ -375,7 +378,7 @@ h3 {
 h1 {
   font-size: 2.2em;
   margin-top: 0.5em;
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #312e81 100%);
   border-bottom: none;
   border-left: 4px solid #68d391;
 }
@@ -516,7 +519,7 @@ h3 {
   font-size: 1.4em;
   font-weight: 600;
   letter-spacing: -0.01em;
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #312e81 100%);
   border-left: 4px solid #f6e05e;
   margin-top: 36px;
   margin-bottom: 16px;
@@ -539,7 +542,7 @@ h4.style-box {
 /* Alte h4-Styles bleiben als Fallback */
 h4 {
   font-size: 1.3em;
-  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #312e81 100%);
   border-left: 4px solid #fc8181;
   margin-top: 30px;
   margin-bottom: 14px;
@@ -583,7 +586,7 @@ table, th, td {
   hyphens: auto;
 }
 th {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--bg-accent) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--bg-accent) 100%);
   color: var(--text-primary);
   padding: 12px 8px;
   font-weight: 600;
@@ -631,11 +634,11 @@ a[style*="background: #ff4444"] {
   color: var(--text-primary) !important;
 }
 a[style*="background: #44ff44"] {
-  background: var(--accent-blue) !important;
+  background: var(--color-primary) !important;
   color: var(--text-primary) !important;
 }
 a[style*="background: linear-gradient"] {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--bg-accent) 100%) !important;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--bg-accent) 100%) !important;
   color: var(--text-primary) !important;
 }
 
@@ -1094,13 +1097,13 @@ iframe:hover, embed:hover, object:hover {
 }
 
 .btn-primary:hover {
-  background: #3182ce;
+  background: #6366f1;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   animation: pulse 0.5s ease;
 }
 .btn-primary:hover {
-  background: #3182ce;
+  background: #6366f1;
 }
 .btn-large {
   padding: 15px 30px;
@@ -1116,13 +1119,13 @@ iframe:hover, embed:hover, object:hover {
 }
 
 .btn-large:hover {
-  background: #3182ce;
+  background: #6366f1;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   animation: pulse 0.5s ease;
 }
 .btn-large:hover {
-  background: #3182ce;
+  background: #6366f1;
 }
 
 /* External Partner Buttons (Lemonade, FastFlowLM) */
@@ -1362,7 +1365,7 @@ iframe:hover, embed:hover, object:hover {
 }
 
 .feature-table th {
-  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--bg-accent) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--bg-accent) 100%);
   color: var(--text-primary);
   font-weight: 600;
   text-align: center;
@@ -1517,7 +1520,7 @@ iframe:hover, embed:hover, object:hover {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-blue) 0%, var(--bg-accent) 100%);
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--bg-accent) 100%);
 }
 
 /* Section-specific CTA box backgrounds matching h2 colors */
@@ -1646,7 +1649,7 @@ iframe:hover, embed:hover, object:hover {
 .cta-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  border-color: var(--accent-blue);
+  border-color: var(--color-primary);
 }
 
 .cta-box h3 {
@@ -2214,7 +2217,7 @@ div.collapsed {
 }
 
 .feature-detail-group:hover {
-  border-color: var(--accent-blue);
+  border-color: var(--color-primary);
 }
 
 .feature-detail-toggle {
